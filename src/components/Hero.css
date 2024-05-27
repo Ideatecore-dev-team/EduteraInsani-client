@@ -24,7 +24,7 @@
 
 .icon-1 {
   right: 125px;
-  bottom: -30px;
+  bottom: -15px;
 }
 
 .icon-2 {
@@ -35,4 +35,10 @@
 .icon-3 {
   right: 93.212px;
   top: 194px;
+}
+
+.card-hero {
+  border-radius: 0 16px 0 0;
+  width: 208px;
+  bottom: -35.5px;
 }

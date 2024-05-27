@@ -2,6 +2,11 @@ import React from "react";
 import "./Hero.css";
 import ButtonLink from "./Buttons/Buttonlink";
 import Banner from "/images/Main Banner.png";
+import Teacher1 from "/images/teacher-1.png";
+import Teacher2 from "/images/teacher-2.png";
+import Teacher3 from "/images/teacher-3.png";
+import Teacher4 from "/images/teacher-4.png";
+import Plus from "/images/Plus.png";
 
 function Hero() {
   return (
@@ -78,7 +83,7 @@ function Hero() {
                 strokeLinejoin="round"
               />
             </svg>
-            <p className="text-bas text-background">
+            <p className="text-base text-background">
               Define your future
               <br />
               with Edu Tera Insani
@@ -225,6 +230,18 @@ function Hero() {
                 </clipPath>
               </defs>
             </svg>
+          </div>
+          <div className="card-hero flex p-4 gap-2 flex-col items-start bg-background absolute mx-auto left-0 right-0 ">
+            <p className="text-base font-semibold ">
+              Expertise Pengajar <br /> International
+            </p>
+            <div className="teacher-avatar flex items-start">
+              <img src={Teacher1} className="size-10" alt="teach-pic" />
+              <img src={Teacher2} className="size-10 -ml-2" alt="teach-pic" />
+              <img src={Teacher3} className="size-10 -ml-2" alt="teach-pic" />
+              <img src={Teacher4} className="size-10 -ml-2" alt="teach-pic" />
+              <img src={Plus} className="size-10 -ml-2" alt="teach-pic" />
+            </div>
           </div>
         </div>
       </div>
