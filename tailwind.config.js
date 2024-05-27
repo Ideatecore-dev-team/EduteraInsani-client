@@ -15,6 +15,7 @@ export default {
       },
       width: {
         "base-content": "1152px",
+        "width-4": "368px",
       },
     },
   },
