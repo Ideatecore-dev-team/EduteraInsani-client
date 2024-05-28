@@ -10,7 +10,7 @@ function Navbar() {
       <nav className="navbar flex bg-white w-base-content p-3 justify-between items-center absolute">
         <div className="logo-lang flex items-center justify-center gap-4">
           <div className="logo">
-            <NavLink to="/home" className="flex items-center gap-2">
+            <NavLink to="/" className="flex items-center gap-2">
               <img src={Logo} className=" size-7" alt="logo" />
               <h3 className="text-3xl text-black font-semibold">
                 Edu Tera Insani
