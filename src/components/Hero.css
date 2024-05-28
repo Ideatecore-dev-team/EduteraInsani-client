@@ -1,0 +1,36 @@
+.hero-cta {
+  height: 500px;
+}
+
+.main-banner {
+  right: 172px;
+  top: -96px;
+}
+
+.secondary-banner {
+  height: 270px;
+  border-radius: 0px 0px 24px 24px;
+  right: 0px;
+  top: -96px;
+}
+
+.icon-1 {
+  right: 125px;
+  bottom: -15px;
+}
+
+.icon-2 {
+  left: 508.606px;
+  bottom: 119.212px;
+}
+
+.icon-3 {
+  right: 93.212px;
+  top: 194px;
+}
+
+.card-hero {
+  border-radius: 0 16px 0 0;
+  width: 208px;
+  bottom: -35.5px;
+}
