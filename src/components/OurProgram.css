@@ -1,0 +1,22 @@
+.program-cards {
+  gap: 73px;
+}
+
+.program-card {
+  height: 248px;
+}
+
+.mascot-img {
+  width: 120px;
+  height: 120px;
+}
+
+.img1 {
+  width: 89px;
+  height: 137px;
+}
+
+.class {
+  border-radius: 32px;
+  border: 2px solid #a88646;
+}
