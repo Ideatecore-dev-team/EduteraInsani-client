@@ -9,7 +9,7 @@ function Digital() {
         <img src={Vidio} alt="vidio" />
         <div className="vidio-content flex p-6 flex-col items-start gap-2 self-stretch bg-white rounded-2xl">
           <div className="vid-icons flex items-start gap-4">
-            <div className="clasroom flex size-12 p-2 justify-center items-center">
+            <div className="clasroom bg-background rounded-lg flex size-12 p-2 justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="33"
@@ -51,8 +51,8 @@ function Digital() {
                 />
               </svg>
             </div>
-            <div className="zoom flex size-12 p-2 justify-center items-center">
-              <div className=" zoom-bg size-7 flex items-center justify-center rounded-lg">
+            <div className="zoom bg-background rounded-lg flex size-12 p-2 justify-center items-center">
+              <div className="zoom-bg size-7 flex items-center justify-center rounded-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="19"
