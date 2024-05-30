@@ -1,0 +1,39 @@
+.program-cards {
+  gap: 73px;
+}
+
+.program-card {
+  height: 268px;
+}
+
+.mascot-mask {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-Large, 16px);
+  background: linear-gradient(180deg, #c39f5b 0%, #a88646 75%);
+}
+
+.omask-1 {
+  bottom: 0px;
+  left: 40px;
+}
+
+.omask-2 {
+  bottom: 106px;
+  left: 30px;
+}
+
+.omask-3 {
+  bottom: 29px;
+  left: -17px;
+}
+
+.omask-4 {
+  bottom: 19px;
+  left: 45px;
+}
+
+.class {
+  border-radius: 32px;
+  border: 2px solid #a88646;
+}
