@@ -1,0 +1,14 @@
+[
+  {
+    "imgSrc": "/images/teacher-avatar-1",
+    "name": "Nur Indrawati Pary",
+    "quote": "“Education in this era is about equipping individuals with the skills to navigate an ever-changing world. It's about fostering critical thinking, adaptability, and a lifelong love for learning that empowers people to not just succeed in their careers, but also to thrive as global citizens and thoughtful leaders.",
+    "tutor": "Tutor of Social Science"
+  },
+  {
+    "imgSrc": "/images/teacher-avatar-2",
+    "name": "Dr. Tri Yulinda",
+    "quote": "“I believe that learning is not just about understanding the laws of nature but about cultivating a sense of wonder and curiosity. It's about empowering students to question the world around them, think critically, and discover the profound connections that shape our universe.",
+    "tutor": "Tutor of Natural and Math’s Science"
+  }
+]
