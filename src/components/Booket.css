@@ -1,0 +1,33 @@
+.booklet-container {
+  background: linear-gradient(
+      92deg,
+      rgba(168, 134, 70, 0) 56.6%,
+      rgba(168, 134, 70, 0.4) 100%
+    ),
+    #fff;
+}
+
+.book {
+  right: 130px;
+  bottom: -43.506px;
+}
+
+.booklet-container .icon-4 {
+  right: 412.632px;
+  bottom: 24.715px;
+}
+
+.booklet-container .icon-5 {
+  right: 360.147px;
+  top: 19px;
+}
+
+.booklet-container .icon-6 {
+  right: 29.212px;
+  top: 73.56px;
+}
+
+.booklet-container .icon-7 {
+  right: 82.431px;
+  bottom: 6.084px;
+}

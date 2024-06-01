@@ -1,0 +1,13 @@
+.teacher-container {
+  gap: 74px;
+}
+
+.teacher-card {
+  height: 490px;
+  width: 280px;
+  padding-top: 53px;
+}
+
+.teacher-card img {
+  top: -50px;
+}

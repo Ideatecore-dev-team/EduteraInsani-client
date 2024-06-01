@@ -8,20 +8,25 @@ body {
 
 h1 {
   letter-spacing: -0.96px;
+  line-height: normal !important;
 }
 
 h2 {
   letter-spacing: -0.72px;
+  line-height: normal !important;
 }
 
 h3 {
   letter-spacing: -0.6px;
+  line-height: normal !important;
 }
 
 h4 {
   letter-spacing: -0.48px;
+  line-height: normal !important;
 }
 
 p {
   letter-spacing: -0.32px;
+  line-height: normal !important;
 }
