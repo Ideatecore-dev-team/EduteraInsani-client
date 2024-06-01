@@ -244,8 +244,8 @@ function Booklet() {
             </defs>
           </svg>
         </div>
+        <img className="book absolute" src={Book} alt="" />
       </div>
-      <img className="book absolute" src={Book} alt="" />
     </div>
   );
 }
