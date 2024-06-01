@@ -24,7 +24,10 @@ function Navbar() {
           </div>
         </div>
         <div className="menu-item flex justify-end items-center gap-3">
-          <NavLink className="flex px-4 py-3 items-center gap-2">
+          <NavLink
+            to="/about-us "
+            className="flex px-4 py-3 items-center gap-2"
+          >
             <p className="text-base font-normal text-neutral-1">Tentang</p>
           </NavLink>
           <NavLink className="flex px-4 py-3 items-center gap-2">

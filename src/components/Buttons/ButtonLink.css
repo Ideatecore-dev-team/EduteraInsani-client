@@ -4,8 +4,29 @@
 
 .border-class {
   border: 2px solid #a88646;
+  background: linear-gradient(to right, #a88646 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
+  color: #a88646;
 }
 
 .no-border {
   border: 2px solid #a88646;
+  background: #a88646;
+  color: white;
+}
+
+.no-border:hover {
+  background: #b99e6b;
+  border: 2px solid #b99e6b;
+}
+
+.border-class:hover {
+  background-position: left bottom;
+  color: white;
+}
+
+.border-class:hover svg path {
+  fill: white;
 }

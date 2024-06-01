@@ -20,8 +20,6 @@ function HomeCurriculum() {
             border={true}
             caption="Pelajari lebih lanjut"
             to="/curriculum"
-            backgroundColor="bg-white"
-            textColor="text-secondary"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

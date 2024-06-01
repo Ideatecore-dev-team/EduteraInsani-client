@@ -1,0 +1,57 @@
+.about-hero {
+  padding-top: 70px;
+  height: 538px;
+}
+
+.about-content {
+  height: 494px;
+  border-radius: 0 0 32px 32px;
+  top: 0;
+}
+
+.about-content .border-class {
+  border: 2px solid white;
+  background: linear-gradient(to right, white 50%, #0b4068 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
+  color: white;
+}
+
+.about-content .border-class:hover {
+  background-position: left bottom;
+
+  color: black;
+}
+
+.border-class:hover svg path {
+  fill: black;
+}
+.about-hero-images {
+  height: 272px;
+}
+
+.logo {
+  right: 130px;
+  top: 10px;
+}
+
+.banner {
+  right: 1.529px;
+  bottom: -146px;
+}
+
+.about-icon-1 {
+  right: -20px;
+  top: 100px;
+}
+
+.about-icon-2 {
+  right: 420px;
+  top: 100px;
+}
+
+.about-icon-3 {
+  right: -80px;
+  bottom: -30px;
+}
