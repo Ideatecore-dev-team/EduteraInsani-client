@@ -6,6 +6,7 @@ import OurProgram from "../components/OurProgram";
 import HomeCurriculum from "../components/HomeCurriculum";
 import LearningPatch from "../components/LearningPatch";
 import Teacher from "../components/Teacher";
+import Booklet from "../components/Booklet";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <HomeCurriculum />
       <LearningPatch />
       <Teacher />
+      <Booklet />
     </>
   );
 }
