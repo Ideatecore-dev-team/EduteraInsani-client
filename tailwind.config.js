@@ -19,7 +19,9 @@ export default {
         "width-3": "270px",
         "width-4": "368px",
         "width-5": "468px",
+        "width-6": "564px",
         "width-7": "662px",
+        "width-8": "955px",
       },
       height: {
         "base-content": "1152px",

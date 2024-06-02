@@ -1,0 +1,9 @@
+.map-container {
+  border-radius: 32px;
+}
+
+.content {
+  border-radius: 0 0 24px 24px;
+  right: 0px;
+  top: -97px;
+}

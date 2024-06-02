@@ -24,7 +24,7 @@
   color: black;
 }
 
-.border-class:hover svg path {
+.about-content .border-class:hover svg path {
   fill: black;
 }
 .about-hero-images {
