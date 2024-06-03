@@ -12,7 +12,8 @@ h1 {
 }
 
 h2 {
-  letter-spacing: -0.72px;
+  /* Tailwind/H2 text-4xl */
+  letter-spacing: -0.72px; 
   line-height: normal !important;
 }
 

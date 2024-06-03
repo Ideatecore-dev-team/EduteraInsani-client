@@ -6,7 +6,7 @@ export default {
       screens: {
         xs: { max: "639px" },
       },
-      colors: {
+      colors: { //bg
         primary: "#0B4068",
         secondary: "#A88646",
         "neutral-1": "#212121",
@@ -25,11 +25,19 @@ export default {
       },
       height: {
         "base-content": "1152px",
-        "width-1": "74px",
-        "width-3": "270px",
-        "width-4": "368px",
-        "width-5": "468px",
-        "width-7": "662px",
+        "height-0.1": "60px",
+        "height-1": "74px",
+        "height-3": "270px",
+        "height-3.1": "290px",
+        "height-4": "368px",
+        "height-5": "468px",
+        "height-7": "662px",
+      },
+      padding : {
+        "padding5": "5px",
+      },
+      gap :{
+        "gap10" : "10px",
       },
     },
   },
