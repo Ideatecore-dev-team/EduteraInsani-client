@@ -19,7 +19,7 @@ function Navbar() {
           </div>
           <div className="lang">
             <button className="flex items-center justify-center">
-              <img className=" w-8 h-6" src={Lang} alt="flag" />
+              {/* <img className=" w-8 h-6" src={Lang} alt="flag" /> */}
             </button>
           </div>
         </div>
