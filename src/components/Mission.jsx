@@ -18,50 +18,100 @@ function Mission() {
           </div>
         </div>
         <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
-          <h1 className="font-bold text-secondary text-5xl">01</h1>
+          <h1 className="font-bold text-secondary text-5xl">02</h1>
           <div className="title-desc flex flex-col items-start gap-2">
             <p className=" text-base font-semibold text-primary">
-              Fondasi Pendidikan dengan Nilai Ketuhanan dan Pancasila
+              Memperkuat Komitmen terhadap Humanisme
             </p>
             <p className=" text-base font-normal text-neutral-2">
-              Membangun pondasi pendidikan yang kuat berdasarkan nilai-nilai
-              Ketuhanan Yang Maha Esa dan Pancasila sebagai fondasi utama.
+              Memperkuat komitmen terhadap humanisme sesuai dengan tradisi Indonesia, 
+              dengan menekankan nilai-nilai kebersamaan, kerjasama
             </p>
           </div>
         </div>
         <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
-          <h1 className="font-bold text-secondary text-5xl">01</h1>
+          <h1 className="font-bold text-secondary text-5xl">03</h1>
           <div className="title-desc flex flex-col items-start gap-2">
             <p className=" text-base font-semibold text-primary">
-              Fondasi Pendidikan dengan Nilai Ketuhanan dan Pancasila
+              Cinta Pengetahuan dan Teknologi
             </p>
             <p className=" text-base font-normal text-neutral-2">
-              Membangun pondasi pendidikan yang kuat berdasarkan nilai-nilai
-              Ketuhanan Yang Maha Esa dan Pancasila sebagai fondasi utama.
+              Mendorong cinta akan pengetahuan dan teknologi melalui 
+              pembelajaran inovatif, kreatif, dan terintegrasi secara global.
             </p>
           </div>
         </div>
         <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
-          <h1 className="font-bold text-secondary text-5xl">01</h1>
+          <h1 className="font-bold text-secondary text-5xl">04</h1>
           <div className="title-desc flex flex-col items-start gap-2">
             <p className=" text-base font-semibold text-primary">
-              Fondasi Pendidikan dengan Nilai Ketuhanan dan Pancasila
+            Membentuk Karakter Unggul
             </p>
             <p className=" text-base font-normal text-neutral-2">
-              Membangun pondasi pendidikan yang kuat berdasarkan nilai-nilai
-              Ketuhanan Yang Maha Esa dan Pancasila sebagai fondasi utama.
+            Membentuk karakter unggul yang mencakup nilai-nilai kejujuran, 
+            tanggung jawab, disiplin, keberanian, dan kerja keras.
             </p>
           </div>
         </div>
         <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
-          <h1 className="font-bold text-secondary text-5xl">01</h1>
+          <h1 className="font-bold text-secondary text-5xl">05</h1>
           <div className="title-desc flex flex-col items-start gap-2">
             <p className=" text-base font-semibold text-primary">
-              Fondasi Pendidikan dengan Nilai Ketuhanan dan Pancasila
+              Pendidikan Anti-Korupsi untuk Generasi Berintegritas
             </p>
             <p className=" text-base font-normal text-neutral-2">
-              Membangun pondasi pendidikan yang kuat berdasarkan nilai-nilai
-              Ketuhanan Yang Maha Esa dan Pancasila sebagai fondasi utama.
+            Melaksanakan pendidikan anti-korupsi dalam setiap aspek kegiatan 
+            pendidikan, mengajarkan prinsip-prinsip transparansi, akuntabilitas, 
+            dan integritas.
+            </p>
+          </div>
+        </div>
+        <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
+          <h1 className="font-bold text-secondary text-5xl">06</h1>
+          <div className="title-desc flex flex-col items-start gap-2">
+            <p className=" text-base font-semibold text-primary">
+              Kepemimpinan Inklusif dan Visioner
+            </p>
+            <p className=" text-base font-normal text-neutral-2">
+            Membangun kualitas kepemimpinan inklusif, visioner, dan etis,
+            mempersiapkan generasi yang mampu memimpin bangsa menuju kemajuan 
+            dan kemakmuran bersama.
+            </p>
+          </div>
+        </div>
+        <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
+          <h1 className="font-bold text-secondary text-5xl">07</h1>
+          <div className="title-desc flex flex-col items-start gap-2">
+            <p className=" text-base font-semibold text-primary">
+              Keterampilan Hidup di Era Dinamis
+            </p>
+            <p className=" text-base font-normal text-neutral-2">
+            Mengembangkan keterampilan bertahan hidup dan adaptasi di tengah dinamika sosial, 
+            ekonomi, dan lingkungan, memastikan setiap individu siap menghadapi tantangan zaman.
+            </p>
+          </div>
+        </div>
+        <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
+          <h1 className="font-bold text-secondary text-5xl">08</h1>
+          <div className="title-desc flex flex-col items-start gap-2">
+            <p className=" text-base font-semibold text-primary">
+              Kreativitas dan Inovasi sebagai Jantung Pembelajaran
+            </p>
+            <p className=" text-base font-normal text-neutral-2">
+            Mendorong kreativitas dan inovasi sebagai bagian integral dari 
+            pembelajaran, memberikan ruang bagi eksplorasi ide dan solusi baru.
+            </p>
+          </div>
+        </div>
+        <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
+          <h1 className="font-bold text-secondary text-5xl">09</h1>
+          <div className="title-desc flex flex-col items-start gap-2">
+            <p className=" text-base font-semibold text-primary">
+              Etika Profesional untuk Tenaga Kerja Berintegritas
+            </p>
+            <p className=" text-base font-normal text-neutral-2">
+            Memprioritaskan pembentukan etika profesional dalam setiap jalur
+            pendidikan, menghasilkan tenaga kerja yang kompeten dan berintegritas yang berorientasi pada melayani masyarakat dan bangsa.
             </p>
           </div>
         </div>
