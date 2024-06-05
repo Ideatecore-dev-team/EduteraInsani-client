@@ -6,7 +6,7 @@ import Vision from "../components/Vision";
 import OurProgram from "../components/OurProgram";
 import Mission from "../components/Mission";
 import Social from "../components/Social";
-import Facilitiess from "../components/Fasilitas";
+import Facilities from "../components/Fasilitas";
 
 function AboutUs() {
   return (
@@ -16,8 +16,8 @@ function AboutUs() {
       <Vision />
       <Mission />
       <Social />
-      <OurProgram />
-      <Facilitiess/>
+      <OurProgram className="pt-24" />
+      <Facilities />
       <Booklet />
     </div>
   );
