@@ -1,0 +1,15 @@
+.btn-prev {
+  left: 0;
+  top: -120px;
+}
+
+.btn-next {
+  right: 0;
+  top: -120px;
+}
+
+.btn-next,
+.btn-prev {
+  border-radius: 100px;
+  background: #a88646;
+}

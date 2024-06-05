@@ -1,5 +1,6 @@
 .teacher-container {
   gap: 34px;
+  overflow-x: hidden;
 }
 
 .teacher-card {
@@ -10,4 +11,8 @@
 
 .teacher-card img {
   top: -50px;
+}
+
+.swiper {
+  overflow: visible !important;
 }

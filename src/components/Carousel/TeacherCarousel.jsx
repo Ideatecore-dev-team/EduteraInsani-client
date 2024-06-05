@@ -9,14 +9,18 @@ import "swiper/css/free-mode";
 import "../Teacher.css";
 
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import CarouselButton from "./CarouselButton";
 
 function TeacherCarousel() {
   return (
-    <div className="teacher-cards flex items-start gap-6 self-stretch flex-col">
+    <div className="teacher-cards flex items-start gap-6 self-stretch flex-col relative">
       <Swiper
         freeMode={true}
-        pagination={true}
-        navigation={true}
+        scrollbar={true}
+        pagination={{
+          clickable: true,
+        }}
+        loop={true}
         slidesPerView={4}
         spaceBetween={24}
         modules={[Pagination, FreeMode, Navigation]}
@@ -38,6 +42,7 @@ function TeacherCarousel() {
             </div>
           </SwiperSlide>
         ))}
+        <CarouselButton />
       </Swiper>
     </div>
   );
