@@ -1,6 +1,6 @@
 import React from "react";
 import "./Teacher.css";
-import teachers from "../databases/teachers.json";
+import TeacherCarousel from "./Carousel/TeacherCarousel";
 
 function Teacher() {
   return (
@@ -11,31 +11,8 @@ function Teacher() {
           <br />
           Kami
         </h2>
-        <div className="teacher-cards flex flex-wrap items-start gap-6 self-stretch">
-          {teachers.map((teacher, index) => {
-            return (
-              <div
-                key={index}
-                className="teacher-card flex flex-col justify-between items-center px-6 pb-6 bg-white rounded-2xl relative"
-              >
-                <img
-                  src={teacher.imgSrc}
-                  alt="Profile Picture Teacher"
-                  className="absolute"
-                />
-                <div className="card-t-content flex flex-col items-center gap-2 self-stretch text-center">
-                  <h4 className="text-2xl text-primary font-semibold">
-                    {teacher.name}
-                  </h4>
-                  <p className="text-base text-neutral-2">{teacher.quote}</p>
-                </div>
-                <p className="text-base text-primary font-semibold">
-                  {teacher.tutor}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+
+        <TeacherCarousel />
       </div>
     </div>
   );
