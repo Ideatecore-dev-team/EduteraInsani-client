@@ -24,8 +24,4 @@ ButtonLink.propTypes = {
   children: PropTypes.node, // Accepts any valid React node
 };
 
-ButtonLink.defaultProps = {
-  border: false,
-};
-
 export default ButtonLink;

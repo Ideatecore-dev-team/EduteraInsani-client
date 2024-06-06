@@ -6,7 +6,8 @@ export default {
       screens: {
         xs: { max: "639px" },
       },
-      colors: { //bg
+      colors: {
+        //bg
         primary: "#0B4068",
         secondary: "#A88646",
         "neutral-1": "#212121",
@@ -31,13 +32,14 @@ export default {
         "height-3.1": "290px",
         "height-4": "368px",
         "height-5": "468px",
+        "height-6": "533px",
         "height-7": "662px",
       },
-      padding : {
-        "padding5": "5px",
+      padding: {
+        padding5: "5px",
       },
-      gap :{
-        "gap10" : "10px",
+      gap: {
+        gap10: "10px",
       },
     },
   },

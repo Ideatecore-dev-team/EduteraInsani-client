@@ -12,12 +12,11 @@ import { useLocation } from "react-router-dom";
 function OurProgram() {
   const location = useLocation();
   const path = location.pathname;
-  console.log(path);
-  let className = "";
+  let padding = "";
   let additionalContent = null;
 
   if (path === "/about-us") {
-    className = "py-24";
+    padding = "py-24";
     additionalContent = (
       <div className="additional-content w-width-8 flex justify-center items-center p-6 bg-white rounded-2xl">
         <p className="text-center text-base text-neutral-2 font-normal">
@@ -29,11 +28,11 @@ function OurProgram() {
       </div>
     );
   } else {
-    className = "pb-24";
+    padding = "pb-24";
     additionalContent = <div className="additional-content hidden"></div>;
   }
   return (
-    <div className={`our-program flex items-center bg-background ${className}`}>
+    <div className={`our-program flex items-center bg-background ${padding}`}>
       <div className="program-container mx-auto w-base-content flex flex-col items-center gap-12">
         <div className="program title flex flex-col gap-6 items-center">
           <h2 className="text-primary text-3xl font-semibold ">Program Kami</h2>

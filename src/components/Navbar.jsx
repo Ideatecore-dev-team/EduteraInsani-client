@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "/images/edulogo.png";
-import Lang from "/images/lang-ind.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -30,7 +29,10 @@ function Navbar() {
           >
             <p className="text-base font-normal text-neutral-1">Tentang</p>
           </NavLink>
-          <NavLink className="flex px-4 py-3 items-center gap-2">
+          <NavLink
+            to="/curriculum"
+            className="flex px-4 py-3 items-center gap-2"
+          >
             <p className="text-base font-normal text-neutral-1">
               Kurikulum Kami
             </p>
