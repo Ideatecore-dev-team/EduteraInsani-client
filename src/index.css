@@ -6,6 +6,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+p {
+  letter-spacing: -0.32px;
+  line-height: normal !important;
+}
+
 h1 {
   letter-spacing: -0.96px;
   line-height: normal !important;

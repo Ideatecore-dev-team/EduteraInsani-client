@@ -23,10 +23,12 @@ export default {
         "width-6": "564px",
         "width-7": "662px",
         "width-8": "955px",
+        "width-9": "956px",
       },
       height: {
         "base-content": "1152px",
         "height-0.1": "60px",
+        "height-0.1": "62px",
         "height-1": "74px",
         "height-3": "270px",
         "height-3.1": "290px",
@@ -36,10 +38,12 @@ export default {
         "height-7": "662px",
       },
       padding: {
+        padding1: "1px",
         padding5: "5px",
       },
       gap: {
         gap10: "10px",
+        gap9:"9px",
       },
     },
   },
