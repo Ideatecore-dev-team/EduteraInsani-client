@@ -4,6 +4,7 @@ import LearningPatch from "../components/LearningPatch";
 import CurriculumHero from "../components/CurriculumHero";
 import CurriculumWhat from "../components/CurriculumWhat";
 import RemoteLearning from "../components/RemoteLearningSection"
+import Prinsip from "../components/PrinsipSection"
 
 function Curriculum() {
   return (
@@ -12,6 +13,7 @@ function Curriculum() {
       <CurriculumWhat />
       <RemoteLearning/>
       <LearningPatch />
+      <Prinsip/>
       <Booklet />
     </div>
   );
