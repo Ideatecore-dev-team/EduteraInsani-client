@@ -26,17 +26,9 @@ function Hero() {
             <ButtonLink
               caption="Contact Us"
               to="/contact-us"
-              backgroundColor="bg-secondary"
-              textColor="text-white"
               border={false}
             ></ButtonLink>
-            <ButtonLink
-              border={true}
-              caption="Learn More"
-              to="/contact-us"
-              backgroundColor="bg-white"
-              textColor="text-secondary"
-            >
+            <ButtonLink border={true} caption="Learn More" to="/contact-us">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

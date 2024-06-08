@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "/images/edulogo.png";
-import Lang from "/images/lang-ind.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -19,15 +18,21 @@ function Navbar() {
           </div>
           <div className="lang">
             <button className="flex items-center justify-center">
-              <img className=" w-8 h-6" src={Lang} alt="flag" />
+              {/* <img className=" w-8 h-6" src={Lang} alt="flag" /> */}
             </button>
           </div>
         </div>
         <div className="menu-item flex justify-end items-center gap-3">
-          <NavLink className="flex px-4 py-3 items-center gap-2">
+          <NavLink
+            to="/about-us "
+            className="flex px-4 py-3 items-center gap-2"
+          >
             <p className="text-base font-normal text-neutral-1">Tentang</p>
           </NavLink>
-          <NavLink className="flex px-4 py-3 items-center gap-2">
+          <NavLink
+            to="/curriculum"
+            className="flex px-4 py-3 items-center gap-2"
+          >
             <p className="text-base font-normal text-neutral-1">
               Kurikulum Kami
             </p>

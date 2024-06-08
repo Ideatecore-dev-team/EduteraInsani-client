@@ -1,0 +1,23 @@
+.map-container {
+  border-radius: 32px;
+}
+
+.content {
+  border-radius: 0 0 24px 24px;
+  right: 0px;
+  top: -97px;
+}
+.map-point-1 {
+  left: 70px;
+  top: 25px;
+}
+
+.map-point-2 {
+  left: 380px;
+  bottom: 45px;
+}
+
+.map-point-3 {
+  right: 420px;
+  top: 85px;
+}

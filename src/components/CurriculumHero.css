@@ -1,0 +1,54 @@
+.curriculum-hero {
+  padding-top: 170px;
+}
+
+.curriculum-title-CTA {
+  height: 494px;
+  border-radius: 0 0 32px 32px;
+  right: 0;
+  top: 0;
+}
+
+.curriculum-title-CTA .border-class {
+  border: 2px solid white;
+  background: linear-gradient(to right, white 50%, #0b4068 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
+  color: white;
+}
+
+.curriculum-title-CTA .border-class:hover {
+  background-position: left bottom;
+
+  color: black;
+}
+
+.curriculum-title-CTA .border-class:hover svg path {
+  fill: black;
+}
+
+.mascot {
+  left: 0;
+  bottom: 0;
+}
+
+.curriculum-logo {
+  left: 140px;
+  top: 150px;
+}
+
+.curriculum-icon-1 {
+  left: -15px;
+  top: 156px;
+}
+
+.curriculum-icon-2 {
+  left: -60px;
+  bottom: 60px;
+}
+
+.curriculum-icon-3 {
+  left: 300px;
+  bottom: 42px;
+}

@@ -7,12 +7,38 @@ import OuterMask2 from "/images/outermask-2.png";
 import OuterMask3 from "/images/outermask-3.png";
 import OuterMask4 from "/images/outermask-4.png";
 import "./OurProgram.css";
+import { useLocation } from "react-router-dom";
 
 function OurProgram() {
+  const location = useLocation();
+  const path = location.pathname;
+  let padding = "";
+  let additionalContent = null;
+
+  if (path === "/about-us") {
+    padding = "py-24";
+    additionalContent = (
+      <div className="additional-content w-width-8 flex justify-center items-center p-6 bg-white rounded-2xl">
+        <p className="text-center text-base text-neutral-2 font-normal">
+          Edu Tera Insani menawarkan jalur pembelajaran yang dipersonalisasi
+          untuk Junior Highschool dan Senior Highschool, dilengkapi dengan Short
+          Course yang menarik seperti bahasa asing, seni, menulis, dan lain-lain
+          untuk meningkatkan pengalaman pendidikan mereka.
+        </p>
+      </div>
+    );
+  } else {
+    padding = "pb-24";
+    additionalContent = <div className="additional-content hidden"></div>;
+  }
   return (
-    <div className="our-program flex items-center bg-background pb-24">
+    <div className={`our-program flex items-center bg-background ${padding}`}>
       <div className="program-container mx-auto w-base-content flex flex-col items-center gap-12">
-        <h2 className="text-primary text-3xl font-semibold">Program Kami</h2>
+        <div className="program title flex flex-col gap-6 items-center">
+          <h2 className="text-primary text-3xl font-semibold ">Program Kami</h2>
+          {additionalContent}
+        </div>
+
         <div className="program-cards flex items-start">
           <div className="program-card bg-white rounded-2xl flex w-width-3 px-6 py-4 flex-col items-center gap-4">
             <div className="card-title flex-col flex gap-1 self-stretch text-center items-center">

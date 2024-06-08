@@ -1,13 +1,18 @@
 .teacher-container {
   gap: 74px;
+  overflow-x: hidden;
 }
 
 .teacher-card {
   height: 490px;
-  width: 280px;
+  width: 270px;
   padding-top: 53px;
 }
 
 .teacher-card img {
   top: -50px;
+}
+
+.swiper {
+  overflow: visible !important;
 }

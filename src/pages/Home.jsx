@@ -10,7 +10,7 @@ import Booklet from "../components/Booklet";
 
 function Home() {
   return (
-    <>
+    <div className="home">
       <Hero />
       <WhyEdutera />
       <Digital />
@@ -19,7 +19,7 @@ function Home() {
       <LearningPatch />
       <Teacher />
       <Booklet />
-    </>
+    </div>
   );
 }
 

@@ -6,13 +6,19 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+p {
+  letter-spacing: -0.32px;
+  line-height: normal !important;
+}
+
 h1 {
   letter-spacing: -0.96px;
   line-height: normal !important;
 }
 
 h2 {
-  letter-spacing: -0.72px;
+  /* Tailwind/H2 text-4xl */
+  letter-spacing: -0.72px; 
   line-height: normal !important;
 }
 
