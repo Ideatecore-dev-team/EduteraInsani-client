@@ -25,10 +25,10 @@ function Hero() {
           <div className="cta flex items-start gap-3">
             <ButtonLink
               caption="Contact Us"
-              to="/contact-us"
+              to="/help"
               border={false}
             ></ButtonLink>
-            <ButtonLink border={true} caption="Learn More" to="/contact-us">
+            <ButtonLink border={true} caption="Learn More" to="/help">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

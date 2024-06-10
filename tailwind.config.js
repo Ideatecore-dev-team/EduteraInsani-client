@@ -17,6 +17,7 @@ export default {
       width: {
         "base-content": "1152px",
         "width-1": "74px",
+        "width-2": "172px",
         "width-3": "270px",
         "width-3.1" : "339px",
         "width-4": "368px",
@@ -25,6 +26,8 @@ export default {
         "width-6": "564px",
         "width-7": "662px",
         "width-8": "955px",
+        "width-8.1": "858px",
+        "width-8.2": "826px",
         "width-9": "956px",
       },
       height: {
@@ -48,6 +51,9 @@ export default {
         gap10: "10px",
         gap9:"9px",
       },
+      borderRadius:{
+        rounded32: "32px",
+      }
     },
   },
   plugins: [],

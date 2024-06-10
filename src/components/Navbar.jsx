@@ -38,7 +38,7 @@ function Navbar() {
             </p>
           </NavLink>
           <NavLink 
-            to ="/contactus"
+            to ="/help"
             className="flex px-4 py-3 items-center gap-2"
           >
             <p className="text-base font-normal text-neutral-1">Bantuan</p>
