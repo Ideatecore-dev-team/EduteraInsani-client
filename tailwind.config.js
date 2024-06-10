@@ -18,6 +18,7 @@ export default {
         "base-content": "1152px",
         "width-1": "74px",
         "width-3": "270px",
+        "width-3.1" : "339px",
         "width-4": "368px",
         "width-4.1":"466px",
         "width-5": "468px",
@@ -39,6 +40,7 @@ export default {
         "height-7": "662px",
       },
       padding: {
+        padding170: "170px",
         padding1: "1px",
         padding5: "5px",
       },

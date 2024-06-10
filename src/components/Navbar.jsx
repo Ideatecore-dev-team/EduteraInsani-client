@@ -37,7 +37,10 @@ function Navbar() {
               Kurikulum Kami
             </p>
           </NavLink>
-          <NavLink className="flex px-4 py-3 items-center gap-2">
+          <NavLink 
+            to ="/contactus"
+            className="flex px-4 py-3 items-center gap-2"
+          >
             <p className="text-base font-normal text-neutral-1">Bantuan</p>
           </NavLink>
         </div>
