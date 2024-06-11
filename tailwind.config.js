@@ -19,9 +19,9 @@ export default {
         "width-1": "74px",
         "width-2": "172px",
         "width-3": "270px",
-        "width-3.1" : "339px",
+        "width-3.1": "339px",
         "width-4": "368px",
-        "width-4.1":"466px",
+        "width-4.1": "466px",
         "width-5": "468px",
         "width-6": "564px",
         "width-7": "662px",
@@ -29,6 +29,7 @@ export default {
         "width-8.1": "858px",
         "width-8.2": "826px",
         "width-9": "956px",
+        "mobile-6": "342px",
       },
       height: {
         "base-content": "1152px",
@@ -51,11 +52,11 @@ export default {
       },
       gap: {
         gap10: "10px",
-        gap9:"9px",
+        gap9: "9px",
       },
-      borderRadius:{
+      borderRadius: {
         rounded32: "32px",
-      }
+      },
     },
   },
   plugins: [],
