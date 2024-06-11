@@ -1,20 +1,5 @@
-.btn-link,
-.btn-ctg {
+.btn-link{
   border-radius: 32px;
-}
-
-.btn-ctg {
-  border: 2px solid #a88646;
-  background: linear-gradient(to right, #a88646 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.3s ease-out;
-  color: #a88646;
-}
-
-.btn-ctg:hover {
-  background-position: left bottom;
-  color: white;
 }
 
 .border-class {

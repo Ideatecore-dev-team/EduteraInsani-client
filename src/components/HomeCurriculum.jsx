@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "/images/curriculum-logo.png";
-import ButtonLink from "./Buttons/Buttonlink";
+import ButtonLink from "./Buttons/ButtonLink";
 
 function HomeCurriculum() {
   return (
