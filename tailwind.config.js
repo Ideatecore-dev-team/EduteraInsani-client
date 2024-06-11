@@ -35,6 +35,8 @@ export default {
         "height-0.1": "60px",
         "height-0.2": "62px",
         "height-1": "74px",
+        "height-2": "176px",
+        "height-2.1": "224px",
         "height-3": "270px",
         "height-3.1": "290px",
         "height-4": "368px",

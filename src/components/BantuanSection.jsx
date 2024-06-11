@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import ButtonLink from "./Buttons/Buttonlink";
+import faq from "../databases/faq.json"
 
 const ButtonWithDropdown = () => {
-    const [isDropDown, setIsDropDown] = useState(false);
+    const [isDropDown, setIsDropDown] = useState({
+        0: false,
+        1: false,
+        2: false
+    });
 
-    const toggleDropdown = () => {
-        setIsDropDown(!isDropDown);
+    const toggleDropdown = (index) => {
+        setIsDropDown(prevState => ({
+            ...prevState,
+            [index]: !prevState[index]
+        }));
     };
-    
 
     return (
         <div className="bantuan-section flex flex-col pb-24 items-center gap-gap10 bg-background">
@@ -51,17 +58,21 @@ const ButtonWithDropdown = () => {
                             </div>
                         </div>
                         <div className='all-questions flex flex-col items-start gap-4'>
-                            <button onClick={toggleDropdown}>
-                                <div className={`bantuan-dropdown flex w-width-8.1 p-4 flex-col items-start gap-6 rounded-xl bg-secondary transition-all duration-300 ${isDropDown?" h-48" : " h-14"}`}>
-                                    <div className='1 flex w-width-8.2 items-center justify-between'>
-                                        <p className=' text-white font-semibold text-base'>apa itu Edu Tera Insani?</p>
-                                        <svg className={`w-6 h-6 flex-shrink-0  duration-300 ${!isDropDown?" rotate-180":" rotate-0"}`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 13.786L17.9531 7.82815C18.3938 7.38752 19.1062 7.38752 19.5422 7.82815C19.9781 8.26877 19.9781 8.98127 19.5422 9.4219L12.7969 16.1719C12.3703 16.5985 11.6859 16.6078 11.2453 16.2047L4.45312 9.42659C4.23281 9.20627 4.125 8.91565 4.125 8.62971C4.125 8.34377 4.23281 8.05315 4.45312 7.83284C4.89375 7.39221 5.60625 7.39221 6.04219 7.83284L12 13.786Z" fill="white"/>
-                                        </svg>
+                            {faq.map((q, index) => (
+                                <button key={index} onClick={() => toggleDropdown(index)}>
+                                    <div className={`bantuan-dropdown flex w-width-8.1 p-4 flex-col items-start gap-6 rounded-xl bg-secondary transition-all duration-500 ${isDropDown[index] ? "h-height-2" : "h-14"}`}>
+                                        <div className='1 flex w-width-8.2 items-center justify-between'>
+                                            <p className=' text-white font-semibold text-base'>{q.question}</p>
+                                            <svg className={`w-6 h-6 flex-shrink-0  duration-300 ${!isDropDown[index] ? "rotate-180" : "rotate-0"}`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 13.786L17.9531 7.82815C18.3938 7.38752 19.1062 7.38752 19.5422 7.82815C19.9781 8.26877 19.9781 8.98127 19.5422 9.4219L12.7969 16.1719C12.3703 16.5985 11.6859 16.6078 11.2453 16.2047L4.45312 9.42659C4.23281 9.20627 4.125 8.91565 4.125 8.62971C4.125 8.34377 4.23281 8.05315 4.45312 7.83284C4.89375 7.39221 5.60625 7.39221 6.04219 7.83284L12 13.786Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <div className={`paragraph self-stretch text-white font-normal text-base text-left duration-1000 ${!isDropDown[index] ? "hidden" : "flex"}`}>
+                                            <p>{q.answer}</p>
+                                        </div>
                                     </div>
-                                    <div className={`paragraph text-left duration-1000 ${!isDropDown?"hidden":"flex"}`}><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit iste id dolore autem aliquid laudantium, velit porro, deserunt voluptas, dignissimos ducimus! Animi nam minus velit temporibus unde, neque maxime perferendis quibusdam voluptatibus blanditiis ullam. Reiciendis dolorem, asperiores maiores modi rem aliquam impedit minima repellendus nihil optio repellat quod amet enim?</p> </div>
-                                </div>
-                            </button>
+                                </button>
+                            ))}
                         </div>
                     </div>
                 </div>
