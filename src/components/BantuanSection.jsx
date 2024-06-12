@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import faq from "../databases/faq.json";
 import ButtonCtg from "./Buttons/ButtonCtg";
-import FaQUmum from "../components/Categories/FaQumum";
-// import KurikulumComponent from "./KurikulumComponent";
-// import PendaftaranComponent from "./PendaftaranComponent";
-// import PembayaranComponent from "./PembayaranComponent";
-// import LegalitasComponent from "./LegalitasComponent";
+import FaQumum from "../components/Categories/FaQumum";
+import FaQkurikulum from "../components/Categories/FaQkurikulum";
+import FaQpendaftaran from "../components/Categories/FaQpendaftaran";
+import FaQpembayaran from "../components/Categories/FaQpembayaran";
+import FaQlegalitas from "../components/Categories/FaQlegalitas";
 
 const ButtonWithDropdown = () => {
   const [isDropDown, setIsDropDown] = useState({
     0: false,
-    // 1: false,
-    // 2: false,
-    // 3: false,
-    // 4: false,
+    1: false,
+    2: false,
+    3: false,
+    4: false,
   });
 
   const [selectedCategory, setSelectedCategory] = useState(0);
-  const [clickedButton, setClickedButton] = useState(null);
+  // const [isClickedButton, setisClickedButton] = useState(null);
 
   const toggleDropdown = (index) => {
     setIsDropDown((prevState) => ({
@@ -25,7 +25,7 @@ const ButtonWithDropdown = () => {
       [index]: !prevState[index],
     }));
     setSelectedCategory(index);
-    setClickedButton(index);
+    // setisClickedButton(index);
   };
 
   return (
@@ -46,7 +46,7 @@ const ButtonWithDropdown = () => {
                 <ButtonCtg
                   caption="Umum"
                   buttonFn={() => setSelectedCategory(0)}
-                  active={selectedCategory === 0}
+                  // active={selectedCategory === 0}
                 />
                 <ButtonCtg
                   caption="Kurikulum"
@@ -69,11 +69,11 @@ const ButtonWithDropdown = () => {
             <div className="all-questions flex flex-col items-start gap-4">
               {selectedCategory !== null && (
                 <>
-                  {selectedCategory === 0 && <FaQUmum />}
-                  {/* {selectedCategory === 1 && <KurikulumComponent />}
-                  {selectedCategory === 2 && <PendaftaranComponent />}
-                  {selectedCategory === 3 && <PembayaranComponent />}
-                  {selectedCategory === 4 && <LegalitasComponent />} */}
+                  {selectedCategory === 0 && <FaQumum />}
+                  {selectedCategory === 1 && <FaQkurikulum />}
+                  {selectedCategory === 2 && <FaQpendaftaran />}
+                  {selectedCategory === 3 && <FaQpembayaran/>}
+                  {selectedCategory === 4 && <FaQlegalitas />}
                 </>
               )}
             </div>

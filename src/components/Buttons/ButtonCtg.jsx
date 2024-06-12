@@ -13,3 +13,4 @@ function ButtonCtg({ caption, buttonFn}) {
 }
 
 export default ButtonCtg;
+
