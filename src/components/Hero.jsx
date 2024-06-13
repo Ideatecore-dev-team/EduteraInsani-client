@@ -11,9 +11,9 @@ import Plus from "/images/Plus.png";
 function Hero() {
   return (
     <>
-      <div className="hero flex py-24 flex-col justify-center items-center">
-        <div className="hero-cta w-base-content flex flex-col items-start gap-4 justify-center relative">
-          <h1 className=" text-primary text-5xl font-bold">
+      <div className="hero flex py-12 lg:py-24 flex-col lg:justify-center items-center gap-4 lg:gap-gap10 ">
+        <div className="hero-cta lg:h-height-5.1 w-width-3.2 lg:w-base-content flex flex-col items-start gap-4 justify-center relative">
+          <h1 className=" text-primary text-4xl sm lg:text-5xl font-bold sm:self-stretch sm:leading-leading45 sm:tracking-trackingMinus072">
             Nurturing Minds
             <br /> Building Future.
           </h1>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import faq from "../databases/faq.json";
 import ButtonCtg from "./Buttons/ButtonCtg";
 import FaQumum from "../components/Categories/FaQumum";
 import FaQkurikulum from "../components/Categories/FaQkurikulum";
