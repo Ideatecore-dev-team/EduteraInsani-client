@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutHero.css";
-import ButtonLink from "./Buttons/Buttonlink";
+import ButtonLink from "./Buttons/ButtonLink";
 import TitleBanner from "/images/about-title-banner.png";
 import Logo from "/images/logo-silhouette.png";
 
