@@ -75,7 +75,7 @@ function Digital() {
           <h3 className="text-primary text-3xl font-semibold">
             Digital Schooling - Remote Learning
           </h3>
-          <p className=" text-base font-normal text-neutral-2">
+          <p className=" text-base font-normal">
             Menghadirkan masa depan pendidikan dengan platform Sekolah Digital
             kami. Mengintegrasikan
             <span className=" font-semibold"> Google Classroom</span> untuk
