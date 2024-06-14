@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import ButtonLink from "./Buttons/ButtonLink";
+import ButtonLink from "./Buttons/Buttonlink";
 import Banner from "/images/Main Banner.png";
 import Teacher1 from "/images/teacher-1.png";
 import Teacher2 from "/images/teacher-2.png";
@@ -11,9 +11,9 @@ import Plus from "/images/Plus.png";
 function Hero() {
   return (
     <>
-      <div className="hero flex py-12 lg:py-24 flex-col lg:justify-center items-center gap-4 lg:gap-gap10 ">
-        <div className="hero-cta lg:h-height-5.1 w-width-3.2 lg:w-base-content flex flex-col items-start gap-4 justify-center relative">
-          <h1 className=" text-primary text-4xl sm lg:text-5xl font-bold sm:self-stretch sm:leading-leading45 sm:tracking-trackingMinus072">
+      <div className="hero flex py-24 flex-col justify-center items-center">
+        <div className="hero-cta w-base-content flex flex-col items-start gap-4 justify-center relative">
+          <h1 className=" text-primary text-5xl font-bold">
             Nurturing Minds
             <br /> Building Future.
           </h1>
@@ -25,10 +25,10 @@ function Hero() {
           <div className="cta flex items-start gap-3">
             <ButtonLink
               caption="Contact Us"
-              to="/help"
+              to="/contact-us"
               border={false}
             ></ButtonLink>
-            <ButtonLink border={true} caption="Learn More" to="/help">
+            <ButtonLink border={true} caption="Learn More" to="/contact-us">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
