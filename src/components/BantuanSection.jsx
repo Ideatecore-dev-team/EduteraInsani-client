@@ -71,7 +71,7 @@ const ButtonWithDropdown = () => {
                   {selectedCategory === 0 && <FaQumum />}
                   {selectedCategory === 1 && <FaQkurikulum />}
                   {selectedCategory === 2 && <FaQpendaftaran />}
-                  {selectedCategory === 3 && <FaQpembayaran/>}
+                  {selectedCategory === 3 && <FaQpembayaran />}
                   {selectedCategory === 4 && <FaQlegalitas />}
                 </>
               )}
