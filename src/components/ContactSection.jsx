@@ -6,7 +6,7 @@ function ContactSection() {
         <div className="contact-section flex flex-col gap-gap10 pt-padding170 pb-24 items-center bg-background">
             <div className="contact-container flex flex-col items-center gap-6 w-base-content">
                 <h2 className=" w-width-4 font-semibold text-center text-primary text-4xl">Punya Pertanyaan Lebih Lanjut?</h2>
-                <p className=" w-width-4 font-normal text-center text-neutral-2 text-base">Layanan kami tersedia Senin-Minggu,<br /> jam <span className=" font-semibold">08.00-20.00</span></p> 
+                <p className=" w-width-4 font-normal text-center text-neutral-2 text-base">Layanan kami tersedia Senin-Minggu, jam <span className=" font-semibold">08.00-20.00</span></p> 
                 <div className="frame113 flex items-start content-start gap-6 flex-wrap">
                     <div className="whatsapp flex flex-col items-center gap-2 w-width-3.1 py-4 px-6 bg-white rounded-2xl">
                         <div className="whatsapp-and-logo flex items-center gap-4">
