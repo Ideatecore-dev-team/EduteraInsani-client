@@ -227,7 +227,7 @@ function Hero({ onCardHeroClick }) {
             className="card-hero flex p-4 gap-2 flex-col items-start bg-background absolute mx-auto left-0 right-0"
             onClick={onCardHeroClick}
           >
-            <p className="text-base font-semibold ">
+            <p className="text-base font-semibold text-primary">
               Expertise Pengajar <br /> International
             </p>
             <div className="teacher-avatar flex items-start">
