@@ -3,7 +3,7 @@ import React from "react";
 function Mission() {
   return (
     <div className="mission-section flex flex-col pb-24 items-center justify-center self-stretch bg-background gap-14">
-      <h2 className=" text-primary text-4xl  font-bold">Misi Kami</h2>
+      <h2 className=" text-primary text-4xl  font-semibold">Misi Kami</h2>
       <div className="all-missions w-base-content flex justify-center items-start content-start gap-6 flex-wrap">
         <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
           <h1 className="font-bold text-secondary text-5xl">01</h1>
