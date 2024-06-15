@@ -12,8 +12,8 @@ function ContactSection() {
           Layanan kami tersedia Senin-Minggu,
           {/* add break line */}
           <br />
-          jam
-          <span className=" font-semibold">08.00-20.00</span>
+          jam 
+          <span className=" font-semibold"> 08.00-20.00</span>
         </p>
         <div className="frame113 flex items-start content-start gap-6 flex-wrap">
           <div className="whatsapp flex flex-col items-center gap-2 w-width-3.1 py-4 px-6 bg-white rounded-2xl">
