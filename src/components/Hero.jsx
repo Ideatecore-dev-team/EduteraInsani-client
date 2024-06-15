@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import ButtonLink from "./Buttons/ButtonLink";
+import ButtonLink from "./Buttons/Buttonlink";
 import Banner from "/images/Main Banner.png";
 import Teacher1 from "/images/teacher-1.png";
 import Teacher2 from "/images/teacher-2.png";
