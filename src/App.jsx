@@ -6,7 +6,7 @@ import AboutUs from "./pages/AboutUs";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Curriculum from "./pages/Curriculum";
-import Bantuan from "./pages/BantuanUs";
+import BantuanUs from "./pages/BantuanUs";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/curriculum" element={<Curriculum />} />
-          <Route path="/help" element={<Bantuan />} />
+          <Route path="/help" element={<BantuanUs />} />
         </Routes>
         <Footer />
       </Router>
