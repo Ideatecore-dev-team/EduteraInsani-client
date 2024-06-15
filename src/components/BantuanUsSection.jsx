@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ButtonCtg from "./Buttons/ButtonCtg";
-import FaQumum from "../components/Categories/FaQumum";
-import FaQkurikulum from "../components/Categories/FaQkurikulum";
-import FaQpendaftaran from "../components/Categories/FaQpendaftaran";
-import FaQpembayaran from "../components/Categories/FaQpembayaran";
-import FaQlegalitas from "../components/Categories/FaQlegalitas";
+import FaQumum from "./Categories/FaQumum";
+import FaQkurikulum from "./Categories/FaQkurikulum";
+import FaQpendaftaran from "./Categories/FaQpendaftaran";
+import FaQpembayaran from "./Categories/FaQpembayaran";
+import FaQlegalitas from "./Categories/FaQlegalitas";
 
 const ButtonWithDropdown = () => {
   const [isDropDown, setIsDropDown] = useState({

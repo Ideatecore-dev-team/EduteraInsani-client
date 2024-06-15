@@ -1,6 +1,6 @@
 import React from "react";
-import ContactSection from "../components/ContactSection";
-import BantuanSection from "../components/BantuanSection";
+import ContactSection from "../components/ContactUsSection";
+import BantuanSection from "../components/BantuanUsSection";
 
 function Bantuan() {
     return (

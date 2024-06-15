@@ -6,7 +6,7 @@ import AboutUs from "./pages/AboutUs";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Curriculum from "./pages/Curriculum";
-import Bantuan from "./pages/Bantuan";
+import Bantuan from "./pages/BantuanUs";
 
 function App() {
   return (
