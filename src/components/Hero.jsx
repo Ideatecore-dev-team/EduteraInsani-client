@@ -8,7 +8,7 @@ import Teacher3 from "/images/teacher-3.png";
 import Teacher4 from "/images/teacher-4.png";
 import Plus from "/images/Plus.png";
 
-function Hero() {
+function Hero({ onCardHeroClick }) {
   return (
     <>
       <div className="hero flex py-12 lg:py-24 flex-col lg:justify-center items-center gap-4 lg:gap-gap10 ">
@@ -223,7 +223,10 @@ function Hero() {
               </defs>
             </svg>
           </div>
-          <div className="card-hero flex p-4 gap-2 flex-col items-start bg-background absolute mx-auto left-0 right-0 ">
+          <div
+            className="card-hero flex p-4 gap-2 flex-col items-start bg-background absolute mx-auto left-0 right-0"
+            onClick={onCardHeroClick}
+          >
             <p className="text-base font-semibold ">
               Expertise Pengajar <br /> International
             </p>
