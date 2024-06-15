@@ -155,7 +155,7 @@ function CurriculumHero() {
         <h2 className="text-4xl text-white font-semibold">
           Pelajari Lebih Lanjut terkait Edu Tera Insani
         </h2>
-        <p className=" text-background text-base font-normal">
+        <p className=" text-background text-base font-normal text-background">
           Kurikulum Merdeka Plus mempromosikan pendekatan yang fleksibel dan
           berpusat pada siswa, mendorong pembelajaran mandiri dan berpikir
           kritis.
