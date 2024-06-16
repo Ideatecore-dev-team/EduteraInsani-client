@@ -16,7 +16,7 @@ function ContactSection() {
             <span className=" font-semibold"> 08.00-20.00</span>
             </p>
             <div className="frame113 flex items-start content-start gap-6 flex-wrap">
-            <div className="whatsapp flex flex-col items-center gap-2 w-width-3.1 py-4 px-6 bg-white rounded-2xl">
+            <a href="https://wa.me/6289690697474" className="whatsapp flex flex-col items-center gap-2 w-width-3.1 py-4 px-6 bg-white rounded-2xl">
                 <div className="whatsapp-and-logo flex items-center gap-4">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +37,8 @@ function ContactSection() {
                 <p className=" text-center text-neutral-2 font-normal">
                 +62 896-9069-7474 (DINA)
                 </p>
-            </div>
-            <div className="email flex flex-col items-center gap-2 py-4 px-6 bg-white rounded-2xl">
+            </a>
+            <button className="email flex flex-col items-center gap-2 py-4 px-6 bg-white rounded-2xl" onClick={() => window.open("mailto:eduterainsanifoundation@gmail.com", "_blank")}>
                 <div className="email-and-logo flex items-center gap-4">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ function ContactSection() {
                 <p className=" text-center text-neutral-2 font-normal">
                 eduterainsanifoundation@gmail.com
                 </p>
-            </div>
+            </button>
             </div>
         </div>
         <div className="magistrate-021 absolute ">
