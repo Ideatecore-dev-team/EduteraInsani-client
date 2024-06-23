@@ -22,6 +22,7 @@ export default {
         "width-3.1": "339px",
         "width-3.2": "342px",
         "width-4": "368px",
+        "width-sm": "380px",
         "width-4.1": "466px",
         "width-5": "468px",
         "width-6": "564px",
@@ -59,12 +60,12 @@ export default {
       borderRadius: {
         rounded32: "32px",
       },
-      lineHeight:{
-        leading45:"45px",
+      lineHeight: {
+        leading45: "45px",
       },
-      letterSpacing:{
-        trackingMinus072:"-0.72px",
-      }
+      letterSpacing: {
+        trackingMinus072: "-0.72px",
+      },
     },
   },
   plugins: [],
