@@ -28,18 +28,20 @@ function OurProgram() {
       </div>
     );
   } else {
-    padding = "pb-24";
+    padding = "lg:pb-24 pb-12";
     additionalContent = <div className="additional-content hidden"></div>;
   }
   return (
     <div className={`our-program flex items-center bg-background ${padding}`}>
       <div className="program-container mx-auto w-base-content flex flex-col items-center gap-12">
         <div className="program title flex flex-col gap-6 items-center">
-          <h2 className="text-primary text-3xl font-semibold ">Program Kami</h2>
+          <h2 className="text-primary lg:text-3xl text-2xl font-semibold ">
+            Program Kami
+          </h2>
           {additionalContent}
         </div>
 
-        <div className="program-cards flex items-start">
+        <div className="program-cards flex lg:flex-row flex-col items-start">
           <div className="program-card bg-white rounded-2xl flex w-width-3 px-6 py-4 flex-col items-center gap-4">
             <div className="card-title flex-col flex gap-1 self-stretch text-center items-center">
               <div className="mascot-mask relative">
