@@ -63,9 +63,11 @@ export default {
       },
       lineHeight: {
         leading45: "45px",
+        leading31koma2: "31.2px",
       },
       letterSpacing: {
         trackingMinus072: "-0.72px",
+        trackingMinus048: "-0.48px",
       },
     },
   },
