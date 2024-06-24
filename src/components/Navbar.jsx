@@ -18,7 +18,7 @@ function Navbar() {
           <div className="logo">
             <NavLink to="/" className="flex items-center gap-2">
               <img src={Logo} className="size-7" alt="logo" />
-              <h3 className="text-3xl text-black font-semibold">
+              <h3 className="text-xl lg:text-3xl text-black font-semibold">
                 Edu Tera Insani
               </h3>
             </NavLink>
