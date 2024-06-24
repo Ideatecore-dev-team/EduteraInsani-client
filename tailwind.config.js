@@ -43,7 +43,7 @@ export default {
         "height-3": "270px",
         "height-3.1": "290px",
         "height-4": "368px",
-        "height-5": "468px",
+        "height-5": "466px",
         "height-5.1": "500px",
         "height-6": "533px",
         "height-7": "662px",
