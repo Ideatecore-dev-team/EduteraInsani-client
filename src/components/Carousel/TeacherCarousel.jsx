@@ -20,7 +20,7 @@ function TeacherCarousel() {
         pagination={{
           clickable: true,
         }}
-        loop={true}
+        loop={false}
         modules={[Pagination, FreeMode, Navigation]}
         breakpoints={{
           1024: {
