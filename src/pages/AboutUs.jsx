@@ -1,4 +1,3 @@
-import React from "react";
 import AboutHero from "../components/AboutHero";
 import Booklet from "../components/Booklet";
 import WhatIs from "../components/WhatIs";
