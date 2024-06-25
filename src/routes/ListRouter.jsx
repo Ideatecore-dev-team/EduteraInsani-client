@@ -28,6 +28,11 @@ const ListRouter = createBrowserRouter([
       },
     ],
   },
+  //   add errors elements
+  //   {
+  //     path: "*",
+  //     element: <div>404 Not Found</div>,
+  //   },
 ]);
 
 export { ListRouter };

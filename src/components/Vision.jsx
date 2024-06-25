@@ -1,5 +1,3 @@
-import React from "react";
-
 function Vision() {
   return (
     <div className="vision-section flex pb-24 items-center justify-center self-stretch bg-background">

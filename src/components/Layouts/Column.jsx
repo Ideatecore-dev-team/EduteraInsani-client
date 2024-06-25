@@ -1,19 +1,20 @@
 const Column = ({ xl, lg, md, sm, children }) => {
-  let columnClasses = "";
+  let columnClasses = "px-4"; // Default to full width
 
   if (xl) {
-    columnClasses = `w-${xl}/12`;
-  } else if (lg) {
-    columnClasses = `w-${lg}/12 lg:w-${lg}/12`;
-  } else if (md) {
-    columnClasses = `w-${md}/12 md:w-${md}/12`;
-  } else if (sm) {
-    columnClasses = `w-${sm}/12 sm:w-${sm}/12`;
-  } else {
-    columnClasses = "w-full";
+    columnClasses += ` xl:w-${xl}/12`;
+  }
+  if (lg) {
+    columnClasses += ` lg:w-${lg}/12`;
+  }
+  if (md) {
+    columnClasses += ` md:w-${md}/12`;
+  }
+  if (sm) {
+    columnClasses += ` sm:w-${sm}/12`;
   }
 
-  return <div className={`px-4 ${columnClasses}`}>{children}</div>;
+  return <div className={`${columnClasses}`}>{children}</div>;
 };
 
 export default Column;
