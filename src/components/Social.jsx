@@ -1,4 +1,3 @@
-import React from "react";
 import "./Social.css";
 import Map from "/images/map.png";
 import MapPoint1 from "/images/map-point-1.png";

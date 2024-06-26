@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import "./Hero.css";
 import ButtonLink from "./Buttons/Buttonlink";
 import Banner from "/images/Main Banner.png";
+import MobileBanner from "/images/banner-mobile.png";
 import Teacher1 from "/images/teacher-1.png";
 import Teacher2 from "/images/teacher-2.png";
 import Teacher3 from "/images/teacher-3.png";
@@ -11,16 +13,16 @@ import Plus from "/images/Plus.png";
 function Hero({ onCardHeroClick }) {
   return (
     <>
-      <div className="hero flex py-12 lg:py-24 flex-col lg:justify-center items-center gap-4 lg:gap-gap10 ">
+      <div className="hero flex py-12 lg:py-24 flex-col lg:justify-center items-center gap-4 lg:gap-gap10 -z-20">
         <div className="hero-cta lg:h-height-5.1 w-width-3.2 lg:w-base-content flex flex-col items-start gap-4 justify-center relative">
+          <img src={MobileBanner} alt="banner" className="lg:hidden" />
           <h1 className=" text-primary text-4xl sm lg:text-5xl font-bold sm:self-stretch sm:leading-leading45 sm:tracking-trackingMinus072">
             Nurturing Minds
             <br /> Building Future.
           </h1>
-          <p className=" text-neutral-2 text-base font-normal">
-            Join us in nurturing minds and building futures at Digi-
-            <br />
-            Camp Edu Tera Insani.
+          <p className=" text-neutral-2 text-base font-normal lg:w-width-5">
+            Bergabunglah dengan kami dalam membina pikiran dan membangun masa
+            depan di Digital Schooling Edu Tera Insani.
           </p>
           <div className="cta flex items-start gap-3">
             <ButtonLink
@@ -57,10 +59,10 @@ function Hero({ onCardHeroClick }) {
               </svg>
             </ButtonLink>
           </div>
-          <div className="main-banner absolute">
+          <div className="main-banner absolute xs:hidden">
             <img src={Banner} alt="Banner" />
           </div>
-          <div className="secondary-banner absolute bg-primary flex flex-col justify-end items-start gap-1 p-4">
+          <div className="secondary-banner absolute xs:hidden bg-primary flex flex-col justify-end items-start gap-1 p-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -81,7 +83,7 @@ function Hero({ onCardHeroClick }) {
               with Edu Tera Insani
             </p>
           </div>
-          <div className="icon-1 absolute">
+          <div className="icon-1 absolute xs:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="66"
@@ -111,7 +113,7 @@ function Hero({ onCardHeroClick }) {
               </defs>
             </svg>
           </div>
-          <div className="icon-2 absolute">
+          <div className="icon-2 absolute xs:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="60"
@@ -161,7 +163,7 @@ function Hero({ onCardHeroClick }) {
               </defs>
             </svg>
           </div>
-          <div className="icon-3 absolute">
+          <div className="icon-3 absolute xs:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="59"
@@ -224,7 +226,7 @@ function Hero({ onCardHeroClick }) {
             </svg>
           </div>
           <div
-            className="card-hero flex p-4 gap-2 flex-col items-start bg-background absolute mx-auto left-0 right-0"
+            className="card-hero flex p-4 gap-2 flex-col items-start bg-background absolute mx-auto left-0 right-0 xs:hidden"
             onClick={onCardHeroClick}
           >
             <p className="text-base font-semibold text-primary">
@@ -237,6 +239,23 @@ function Hero({ onCardHeroClick }) {
               <img src={Teacher4} className="size-10 -ml-2" alt="teach-pic" />
               <img src={Plus} className="size-10 -ml-2" alt="teach-pic" />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="card-containersm pt-6 px-3 w-full bg-background">
+        <div
+          className="card-hero flex p-4 gap-2 flex-col items-start bg-white mx-auto left-0 right-0 lg:hidden"
+          onClick={onCardHeroClick}
+        >
+          <p className="text-base font-semibold text-primary">
+            Expertise Pengajar <br /> International
+          </p>
+          <div className="teacher-avatar flex items-start">
+            <img src={Teacher1} className="size-10" alt="teach-pic" />
+            <img src={Teacher2} className="size-10 -ml-2" alt="teach-pic" />
+            <img src={Teacher3} className="size-10 -ml-2" alt="teach-pic" />
+            <img src={Teacher4} className="size-10 -ml-2" alt="teach-pic" />
+            <img src={Plus} className="size-10 -ml-2" alt="teach-pic" />
           </div>
         </div>
       </div>

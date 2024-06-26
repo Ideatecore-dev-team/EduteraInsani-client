@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Hero from "../components/Hero";
 import WhyEdutera from "../components/WhyEdutera";
 import Digital from "../components/Digital";
 import OurProgram from "../components/OurProgram";
 import HomeCurriculum from "../components/HomeCurriculum";
-import LearningPatch from "../components/LearningPatch";
+import LearningPath from "../components/LearningPath";
 import Teacher from "../components/Teacher";
 import Booklet from "../components/Booklet";
 
@@ -24,7 +24,7 @@ function Home() {
       <Digital />
       <OurProgram />
       <HomeCurriculum />
-      <LearningPatch />
+      <LearningPath />
       <div ref={teacherRef}>
         <Teacher />
       </div>

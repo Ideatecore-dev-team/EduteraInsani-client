@@ -1,4 +1,3 @@
-import React from "react";
 import Vidio from "/images/vidio.png";
 
 function WhatIs() {

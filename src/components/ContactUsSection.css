@@ -21,3 +21,44 @@
     opacity: 0.4;
     top: 251.732px;
 }
+@media (max-width: 639px) {
+    .magistrate-021{
+        width: 28.8px;
+        height: 28.8px;
+        transform: rotate(-5deg);
+        position: absolute;
+        left: 50.636px;
+        top: 108.8px;
+        opacity: 0.4;
+    }
+    
+    .tv-monitor-041{
+        width: 28.8px;
+        height: 28.8px;
+        transform: rotate(0deg);
+        position: absolute;
+        right: 23.891px;
+        top: 178.4px;
+        opacity: 0.4;
+    }
+    
+    .video-043{
+        width: 28.8px;
+        height: 28.8px;
+        transform: rotate(0deg);
+        position: absolute;
+        right: 40.223px;
+        top: 107px;
+        opacity: 0.4;
+    }
+    
+    .write-017{
+        width: 28.8px;
+        height: 28.8px;
+        transform: rotate(0deg);
+        position: absolute;
+        left: 31.07px;
+        top: 177.039px;
+        opacity: 0.4;
+    } 
+}

@@ -5,20 +5,20 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="footer bg-white flex items-center py-24 px-3">
-      <div className="footer-container flex w-base-content mx-auto items-start flex-col gap-7">
+    <footer className="footer bg-white flex items-center py-24 px-4 lg:px-3">
+      <div className="footer-container flex w-width-4 lg:w-base-content mx-auto items-start flex-col gap-7">
         <div className="logo-slogan flex flex-col items-start gap-2">
           <Link to="/" className="flex items-center gap-2">
-            <img src={Logo} className=" size-7" alt="logo" />
-            <h3 className="text-3xl text-black font-semibold">
+            <img src={Logo} className=" size-8 lg:size-10" alt="logo" />
+            <h3 className="lg:text-3xl text-xl text-black font-semibold">
               Edu Tera Insani
             </h3>
           </Link>
-          <h4 className="text-2xl font-semibold text-primary">
+          <h4 className="lg:text-2xl text-lg font-semibold text-primary">
             Nurturing Minds Building Future.
           </h4>
         </div>
-        <div className="all-details flex justify-between items-start self-stretch">
+        <div className="all-details flex justify-between items-start self-stretch lg:flex-row flex-col row-gap lg:gap-0 gap-12">
           <div className="information flex flex-col items-start gap-4">
             <div className="phone flex items-start gap-2 w-width-4">
               <div className="size-6">
@@ -107,7 +107,7 @@ function Footer() {
         </div>
         <div className="bottom-section flex flex-col gap-6 self-stretch">
           <hr />
-          <div className="bottom-content flex justify-between items-start self-stretch">
+          <div className="bottom-content flex lg:flex-row flex-col lg:gap-0 gap-5 justify-between items-start self-stretch">
             <p className="text-primary text-base font-semibold">
               Copyright 2024 SMM. All rights reserved.
             </p>
