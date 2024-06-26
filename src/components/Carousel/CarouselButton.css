@@ -41,6 +41,11 @@
     right: 0;
   }
 
+  .navigation-remote .btn-next {
+    position: static;
+    left: 0;
+  }
+
   .navigation-why .btn-prev {
     position: static;
     left: 0;
