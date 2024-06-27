@@ -83,7 +83,7 @@ function OurProgram() {
 
   const renderCards = () =>
   cardContent.map((card, index) => (
-    <div className="program-card bg-white rounded-2xl flex w-width-3 px-6 py-4 flex-col items-center gap-4">
+    <div className="program-card bg-white rounded-2xl flex lg:w-width-3 w-width-3.2 px-6 py-4 flex-col items-center gap-4 lg:mt-6 xs:mt-4">
       <div key={index} className="card-title flex-col flex gap-1 self-stretch text-center items-center">
           <div className="mascot-mask relative">
             <img src={card.mask} alt="" />
@@ -107,7 +107,7 @@ function OurProgram() {
 
   return (
     <div className={`our-program flex items-center bg-background ${padding}`}>
-      <div className="program-container mx-auto w-base-content flex flex-col items-center gap-12">
+      <div className="program-container mx-auto w-base-content flex flex-col items-center gap-4">
         <div className="program title flex flex-col gap-6 items-center">
           <h2 className="text-primary lg:text-3xl text-2xl font-semibold ">
             Program Kami
@@ -115,9 +115,9 @@ function OurProgram() {
           {additionalContent}
         </div>
         
-        <div className="program-cards flex lg:flex-row flex-col lg:items-start xs:items-center xs:gap-gap10 xs:w-mobile-6">
+        <div className="program-cards flex lg:flex-row flex-col xs:w-mobile-6 lg:items-start xs:items-center xs:gap-gap10 overflow-x-hidden">
           {isMobile ? (
-            <Swiper
+            <Swiper 
               freeMode={true}
               pagination={{
                 clickable: true,
