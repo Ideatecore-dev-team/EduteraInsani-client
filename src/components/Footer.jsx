@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "/images/edulogo.png";
 import "./Footer.css";
 
 function Footer() {
+
+  useEffect(() => {
+    const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const links = document.querySelectorAll(".footer-link a");
+    links.forEach((link) => {
+      link.addEventListener("click", handleScrollToTop);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleScrollToTop);
+      });
+    };
+  }, []);
+
   return (
     <footer className="footer bg-white flex items-center py-24 px-4 lg:px-3">
       <div className="footer-container flex w-width-4 lg:w-base-content mx-auto items-start flex-col gap-7">
         <div className="logo-slogan flex flex-col items-start gap-2">
-          <Link to="/" className="flex items-center gap-2">
+          <Link className="flex items-center gap-2" to="/">
             <img src={Logo} className=" size-8 lg:size-10" alt="logo" />
             <h3 className="lg:text-3xl text-xl text-black font-semibold">
               Edu Tera Insani
@@ -94,14 +112,14 @@ function Footer() {
           </div>
           <div className="footer-link flex flex-col items-start gap-6">
             <p className="text-primary text-base font-semibold">About School</p>
-            <Link className=" text-base text-neutral-2">
-              <p>About Edu Tera Insani</p>
+            <Link className=" text-base text-neutral-2" to="/about-us">
+              <p>Tentang Sekolah</p>
             </Link>
-            <Link className=" text-base text-neutral-2">
-              <p>Our Curriculum</p>
+            <Link className=" text-base text-neutral-2" to="/curriculum">
+              <p>Kurikulum Kami</p>
             </Link>
-            <Link className=" text-base text-neutral-2">
-              <p>Our Contact</p>
+            <Link className=" text-base text-neutral-2" to="/help">
+              <p>Kontak Kami</p>
             </Link>
           </div>
         </div>

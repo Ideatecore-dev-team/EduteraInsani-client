@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Mask1 from "/images/mask-1.png";
 import Mask2 from "/images/mask-2.png";
 import Mask3 from "/images/mask-3.png";
@@ -8,6 +8,13 @@ import OuterMask3 from "/images/outermask-3.png";
 import OuterMask4 from "/images/outermask-4.png";
 import "./OurProgram.css";
 import { useLocation } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import CarouselButton from "./Carousel/CarouselButton";
 
 function OurProgram() {
   const location = useLocation();
@@ -31,6 +38,58 @@ function OurProgram() {
     padding = "lg:pb-24 pb-12";
     additionalContent = <div className="additional-content hidden"></div>;
   }
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    handleResize(); // Check on initial render
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  
+  const cardContent = [
+    {
+      mask : Mask1,
+      Outermask : [OuterMask1],
+      title: "Short Course",
+      desc: "Kelas tambahan untuk bahasa asing dan lainnya.",
+    },
+    {
+      mask : Mask2,
+      Outermask : [OuterMask2],
+      title: "Short Course",
+      desc: "Kelas tambahan untuk bahasa asing dan lainnya.",
+    },
+    {
+      mask : Mask3,
+      Outermask : [OuterMask3, OuterMask4],
+      title: "Short Course",
+      desc: "Kelas tambahan untuk bahasa asing dan lainnya.",
+    },
+  ];
+
+  const renderCards = () =>
+  cardContent.map((card, index) => (
+    <div
+      key={index}
+      className="card-why flex bg-white rounded-2xl w-mobile-6 lg:w-width-4 lg:p-6 p-4 flex-col items-start gap-4"
+    >
+      <img src={card.img} className="size-20" alt="icon" />
+      <h4 className="text-primary lg:text-2xl text-lg font-semibold">
+        {card.title}
+      </h4>
+      <p className="text-neutral-2 text-base font-normal">{card.desc}</p>
+    </div>
+  ));
+
   return (
     <div className={`our-program flex items-center bg-background ${padding}`}>
       <div className="program-container mx-auto w-base-content flex flex-col items-center gap-12">
