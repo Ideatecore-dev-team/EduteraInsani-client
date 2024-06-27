@@ -33,6 +33,7 @@ export default {
         "width-8.2": "826px",
         "width-9": "956px",
         "mobile-6": "342px",
+        "width310": "310px",
       },
       height: {
         "base-content": "1152px",
