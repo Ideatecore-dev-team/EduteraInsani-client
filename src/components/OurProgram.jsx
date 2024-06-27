@@ -115,7 +115,7 @@ function OurProgram() {
           {additionalContent}
         </div>
         
-        <div  className="program-cards flex lg:flex-row flex-col items-start">
+        <div className="program-cards flex lg:flex-row flex-col lg:items-start xs:items-center xs:gap-gap10 xs:w-mobile-6">
           {isMobile ? (
             <Swiper
               freeMode={true}
