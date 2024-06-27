@@ -10,7 +10,7 @@ function Footer() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    const links = document.querySelectorAll(".footer-link a");
+    const links = document.querySelectorAll([".footer-link a",".logo-slogan"]);
     links.forEach((link) => {
       link.addEventListener("click", handleScrollToTop);
     });
@@ -111,9 +111,9 @@ function Footer() {
             </div>
           </div>
           <div className="footer-link flex flex-col items-start gap-6">
-            <p className="text-primary text-base font-semibold">About School</p>
+            <p className="text-primary text-base font-semibold">Tentang Sekolah</p>
             <Link className=" text-base text-neutral-2" to="/about-us">
-              <p>Tentang Sekolah</p>
+              <p>Tentang Kami</p>
             </Link>
             <Link className=" text-base text-neutral-2" to="/curriculum">
               <p>Kurikulum Kami</p>
