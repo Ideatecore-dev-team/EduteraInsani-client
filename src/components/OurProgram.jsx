@@ -59,18 +59,23 @@ function OurProgram() {
     {
       mask : Mask1,
       Outermask : [OuterMask1],
-      title: "Short Course",
-      desc: "Kelas tambahan untuk bahasa asing dan lainnya.",
+      omask: ["omask-1 absolute"],
+      title: "Junior Highschool",
+      desc: "Digital Schooling untuk kelas.",
+      class: "7-9",
     },
     {
       mask : Mask2,
       Outermask : [OuterMask2],
-      title: "Short Course",
-      desc: "Kelas tambahan untuk bahasa asing dan lainnya.",
+      omask: ["omask-2 absolute"],
+      title: "Senior Highschool",
+      desc: "Digital Schooling untuk kelas.",
+      class: "10-12",
     },
     {
       mask : Mask3,
       Outermask : [OuterMask3, OuterMask4],
+      omask: ["omask-3 absolute", "omask-4 absolute"],
       title: "Short Course",
       desc: "Kelas tambahan untuk bahasa asing dan lainnya.",
     },
@@ -78,15 +83,25 @@ function OurProgram() {
 
   const renderCards = () =>
   cardContent.map((card, index) => (
-    <div
-      key={index}
-      className="card-why flex bg-white rounded-2xl w-mobile-6 lg:w-width-4 lg:p-6 p-4 flex-col items-start gap-4"
-    >
-      <img src={card.img} className="size-20" alt="icon" />
-      <h4 className="text-primary lg:text-2xl text-lg font-semibold">
-        {card.title}
-      </h4>
-      <p className="text-neutral-2 text-base font-normal">{card.desc}</p>
+    <div className="program-card bg-white rounded-2xl flex w-width-3 px-6 py-4 flex-col items-center gap-4">
+      <div key={index} className="card-title flex-col flex gap-1 self-stretch text-center items-center">
+          <div className="mascot-mask relative">
+            <img src={card.mask} alt="" />
+            <img src={card.Outermask[0]} className={card.omask[0]} alt="" />
+            <img src={card.Outermask[1]} className={card.omask[1]} alt="" />
+          </div>
+          <h4 className=" text-primary text-2xl font-semibold">
+            {card.title}
+          </h4>
+          <p className=" text-neutral-2 text-base font-normal">
+            {card.desc}
+          </p>
+          </div>
+          {index !== 2 && (
+            <div className="class flex py-1 px-4 justify-center items-center">
+              <p className="text-secondary text-base font-normal">{card.class}</p>
+            </div>
+          )}
     </div>
   ));
 
@@ -99,57 +114,29 @@ function OurProgram() {
           </h2>
           {additionalContent}
         </div>
-
-        <div className="program-cards flex lg:flex-row flex-col items-start">
-          <div className="program-card bg-white rounded-2xl flex w-width-3 px-6 py-4 flex-col items-center gap-4">
-            <div className="card-title flex-col flex gap-1 self-stretch text-center items-center">
-              <div className="mascot-mask relative">
-                <img src={Mask1} alt="" />
-                <img src={OuterMask1} className="omask-1 absolute" alt="" />
+        
+        <div  className="program-cards flex lg:flex-row flex-col items-start">
+          {isMobile ? (
+            <Swiper
+              freeMode={true}
+              pagination={{
+                clickable: true,
+              }}
+              loop={false}
+              modules={[Pagination, FreeMode, Navigation]}
+              slidesPerView={1}
+              className="w-width-sm relative"
+            >
+              {cardContent.map((card, index) => (
+                <SwiperSlide key={index}>{renderCards()[index]}</SwiperSlide>
+              ))}
+              <div className="navigation-why flex justify-between w-width-3.2 mt-4 relative">
+                <CarouselButton />
               </div>
-              <h4 className=" text-primary text-2xl font-semibold">
-                Junior Highschool
-              </h4>
-              <p className=" text-neutral-2 text-base font-normal">
-                Digital Schooling untuk kelas
-              </p>
-            </div>
-            <div className="class flex py-1 px-4 justify-center items-center">
-              <p className=" text-secondary text-base font-normal">7 - 9</p>
-            </div>
-          </div>
-          <div className="program-card bg-white rounded-2xl flex w-width-3 px-6 py-4 flex-col items-center gap-4">
-            <div className="card-title flex-col flex gap-1 self-stretch text-center items-center">
-              <div className="mascot-mask relative">
-                <img src={Mask2} alt="" />
-                <img src={OuterMask2} className="omask-2 absolute" alt="" />
-              </div>
-              <h4 className=" text-primary text-2xl font-semibold">
-                Senior Highschool
-              </h4>
-              <p className=" text-neutral-2 text-base font-normal">
-                Digital Schooling untuk kelas
-              </p>
-            </div>
-            <div className="class flex py-1 px-4 justify-center items-center">
-              <p className=" text-secondary text-base font-normal">10 - 12</p>
-            </div>
-          </div>
-          <div className="program-card bg-white rounded-2xl flex w-width-3 px-6 py-4 flex-col items-center gap-4">
-            <div className="card-title flex-col flex gap-1 self-stretch text-center items-center">
-              <div className="mascot-mask relative">
-                <img src={Mask3} alt="" />
-                <img src={OuterMask3} className="omask-3 absolute" alt="" />
-                <img src={OuterMask4} className="omask-4 absolute" alt="" />
-              </div>
-              <h4 className=" text-primary text-2xl font-semibold">
-                Short Course
-              </h4>
-              <p className=" text-neutral-2 text-base font-normal">
-                Kelas tambahan untuk bahasa asing dan lainnya.
-              </p>
-            </div>
-          </div>
+            </Swiper>
+          ) : (
+            renderCards()
+          )}
         </div>
       </div>
     </div>
