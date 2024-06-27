@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "/images/edulogo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -6,6 +6,24 @@ import "./Navbar.css";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const links = document.querySelectorAll([".menu-item", ".logo"]);
+    links.forEach((link) => {
+      link.addEventListener("click", handleScrollToTop);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleScrollToTop);
+      });
+    };
+  }, []);
+
 
   const handleToggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -37,7 +55,9 @@ function Navbar() {
               : "scale-y-0 lg:scale-y-100 lg:flex"
           }`}
         >
-          <NavLink to="/about-us" className="flex px-4 py-3 items-center gap-2">
+          <NavLink 
+            to="/about-us" 
+            className="flex px-4 py-3 items-center gap-2">
             <p className="text-base font-normal text-neutral-1">Tentang</p>
           </NavLink>
           <NavLink
@@ -48,7 +68,9 @@ function Navbar() {
               Kurikulum Kami
             </p>
           </NavLink>
-          <NavLink to="/help" className="flex px-4 py-3 items-center gap-2">
+          <NavLink 
+            to="/help" 
+            className="flex px-4 py-3 items-center gap-2">
             <p className="text-base font-normal text-neutral-1">Bantuan</p>
           </NavLink>
         </div>
