@@ -25,11 +25,11 @@ function OurProgram() {
   if (path === "/about-us") {
     padding = "py-24";
     additionalContent = (
-      <div className="additional-content w-width-8 flex justify-center items-center p-6 bg-white rounded-2xl">
+      <div className="additional-content flex lg:w-width-8 w-[310px] lg:p-6 p-4 justify-center items-center xs:self-stretch bg-white rounded-2xl">
         <p className="text-center text-base text-neutral-2 font-normal">
           Edu Tera Insani menawarkan jalur pembelajaran yang dipersonalisasi
-          untuk Junior Highschool dan Senior Highschool, dilengkapi dengan Short
-          Course yang menarik seperti bahasa asing, seni, menulis, dan lain-lain
+          untuk <span className=" font-semibold">Junior Highschool </span>dan <span className=" font-semibold">Senior Highschool </span>, dilengkapi dengan 
+          <span className=" font-semibold"> Short Course  </span>yang menarik seperti bahasa asing, seni, menulis, dan lain-lain
           untuk meningkatkan pengalaman pendidikan mereka.
         </p>
       </div>
@@ -97,11 +97,11 @@ function OurProgram() {
             {card.desc}
           </p>
           </div>
-          {index !== 2 && (
+          {card.class && 
             <div className="class flex py-1 px-4 justify-center items-center">
               <p className="text-secondary text-base font-normal">{card.class}</p>
             </div>
-          )}
+          }
     </div>
   ));
 
@@ -125,7 +125,7 @@ function OurProgram() {
               loop={false}
               modules={[Pagination, FreeMode, Navigation]}
               slidesPerView={1}
-              className="w-width-sm relative"
+              className=" w-width-sm relative"
             >
               {cardContent.map((card, index) => (
                 <SwiperSlide key={index}>{renderCards()[index]}</SwiperSlide>
