@@ -26,11 +26,11 @@ function Hero({ onCardHeroClick }) {
           </p>
           <div className="cta flex items-start gap-3">
             <ButtonLink
-              caption="Contact Us"
+              caption="Hubungi Kami"
               to="/help"
               border={false}
             ></ButtonLink>
-            <ButtonLink border={true} caption="Learn More" to="/about-us">
+            <ButtonLink border={true} caption="Pelajari Lebih Lanjut" to="/about-us">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
