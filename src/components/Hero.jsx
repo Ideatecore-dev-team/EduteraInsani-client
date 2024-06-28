@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Hero.css";
-import ButtonLink from "./Buttons/Buttonlink";
+import ButtonLink from "./Buttons/ButtonLink";
 import Banner from "/images/Main Banner.png";
 import MobileBanner from "/images/banner-mobile.png";
 import Teacher1 from "/images/teacher-1.png";
@@ -30,7 +30,11 @@ function Hero({ onCardHeroClick }) {
               to="/help"
               border={false}
             ></ButtonLink>
-            <ButtonLink border={true} caption="Pelajari Lebih Lanjut" to="/about-us">
+            <ButtonLink
+              border={true}
+              caption="Pelajari Lebih Lanjut"
+              to="/about-us"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
