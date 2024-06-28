@@ -23,7 +23,7 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="footer bg-white flex items-center py-24 px-4 lg:px-3">
+    <footer className="footer bg-white flex items-center py-24 px-6 lg:px-3">
       <div className="footer-container flex w-width-4 lg:w-base-content mx-auto items-start flex-col gap-7">
         <div className="logo-slogan flex flex-col items-start gap-2">
           <Link className="flex items-center gap-2" to="/">
