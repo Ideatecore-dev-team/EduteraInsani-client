@@ -30,7 +30,7 @@ function Hero({ onCardHeroClick }) {
               to="/help"
               border={false}
             ></ButtonLink>
-            <ButtonLink border={true} caption="Learn More" to="/help">
+            <ButtonLink border={true} caption="Learn More" to="/about-us">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
