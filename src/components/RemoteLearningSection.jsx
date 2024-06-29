@@ -63,7 +63,7 @@ function RemoteLearning() {
     ));
 
   return (
-    <div className="remote flex items-center lg:py-24 py-12 lg:flex-col lg:block bg-background">
+    <div className="remote flex items-center lg:pb-24 pb-12 lg:flex-col lg:block bg-background">
       <div className="remote-container w-base-content flex flex-col gap-6 lg:gap-7 items-center justify-center mx-auto">
         <h2 className=" text-primary text-2xl lg:text-4xl font-semibold text-center">
           Pembelajaran Remote <br /> Learning
