@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import ButtonLink from "./Buttons/ButtonLink";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Mission() {
+  const [isDropDown, setIsDropdown] = useState("");
+  function handleDropDown() {
+    setIsDropdown((prev) => !prev);
+  }
   return (
     <div className="mission-section flex flex-col pb-24 items-center justify-center self-stretch bg-background gap-14">
-      <h2 className=" text-primary text-4xl  font-semibold">Misi Kami</h2>
-      <div className="all-missions w-base-content flex justify-center items-start content-start gap-6 flex-wrap">
+      <h2 className=" text-primary text-2xl lg:text-4xl  font-semibold">
+        Misi Kami
+      </h2>
+      <button
+        onClick={handleDropDown}
+        className="flex lg:hidden bg-secondary px-3 py-3 rounded-full gap-2"
+      >
+        <p className="text-base text-white">Lihat misi Edu tera Insani</p>
+        <IoIosArrowDown
+          className={`size-6 text-white ${
+            isDropDown ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </button>
+      <div
+        className={`all-missions ${
+          isDropDown ? "flex" : "hidden"
+        } w-mobile-6 lg:w-base-content lg:flex justify-center items-start content-start gap-6 flex-wrap`}
+      >
         <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
           <h1 className="font-bold text-secondary text-5xl">01</h1>
           <div className="title-desc flex flex-col items-start gap-2">

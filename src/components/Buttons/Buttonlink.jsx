@@ -9,7 +9,7 @@ function ButtonLink({ children, to, caption, border }) {
   return (
     <Link
       to={to}
-      className={`btn-link flex py-3 px-4 items-center gap-2 text-base ${borderClass}`}
+      className={`btn-link flex lg:py-3 lg:px-4 items-center gap-2 text-[1rem] lg:text-base px-2 py-3 ${borderClass}`}
     >
       <p>{caption}</p>
       {children}

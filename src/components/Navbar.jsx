@@ -24,7 +24,6 @@ function Navbar() {
     };
   }, []);
 
-
   const handleToggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -36,7 +35,7 @@ function Navbar() {
           <div className="logo">
             <NavLink to="/" className="flex items-center gap-2">
               <img src={Logo} className="size-7" alt="logo" />
-              <h3 className="text-xl lg:text-3xl text-black font-semibold">
+              <h3 className="text-lg  lg:text-3xl text-black font-semibold">
                 Edu Tera Insani
               </h3>
             </NavLink>
@@ -55,9 +54,7 @@ function Navbar() {
               : "scale-y-0 lg:scale-y-100 lg:flex"
           }`}
         >
-          <NavLink 
-            to="/about-us" 
-            className="flex px-4 py-3 items-center gap-2">
+          <NavLink to="/about-us" className="flex px-4 py-3 items-center gap-2">
             <p className="text-base font-normal text-neutral-1">Tentang</p>
           </NavLink>
           <NavLink
@@ -68,9 +65,7 @@ function Navbar() {
               Kurikulum Kami
             </p>
           </NavLink>
-          <NavLink 
-            to="/help" 
-            className="flex px-4 py-3 items-center gap-2">
+          <NavLink to="/help" className="flex px-4 py-3 items-center gap-2">
             <p className="text-base font-normal text-neutral-1">Bantuan</p>
           </NavLink>
         </div>

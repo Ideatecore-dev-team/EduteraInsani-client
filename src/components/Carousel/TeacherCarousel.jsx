@@ -35,12 +35,12 @@ function TeacherCarousel() {
             centeredSlides: true,
           },
         }}
-        className=" w-base-content -ml-10"
+        className=" w-base-content -ml-9 lg:ml-3"
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {teachers.map((teacher, index) => (
           <SwiperSlide key={index}>
-            <div className="teacher-card flex flex-col justify-between ml-10 lg:ml-0 items-center px-6 pb-6 bg-white rounded-2xl relative text-center my-10">
+            <div className="teacher-card flex flex-col justify-between lg:-ml-[13px] ml-10 items-center px-6 pb-6 bg-white rounded-2xl relative text-center my-10">
               <img src={teacher.imgSrc} alt="" className="absolute" />
               <div className="card-t-content flex flex-col items-center gap-2 self-stretch">
                 <h4 className=" text-lg lg:text-2xl text-primary font-semibold">
@@ -54,7 +54,7 @@ function TeacherCarousel() {
             </div>
           </SwiperSlide>
         ))}
-        <div className="navigation-teacher-carousel ml-3 lg:ml-10 flex justify-between w-width-3.2 absolute top-1/2 transform -translate-y-1/2 bg-red-500 -mt-52 lg:w-full">
+        <div className="navigation-teacher-carousel ml-4 lg:-ml-3 flex justify-between w-width-3.2 absolute top-1/2 transform -translate-y-1/2 bg-red-500 -mt-52 lg:w-full">
           <CarouselButtonLg direction="prev" isVisible={activeIndex > 0} />
           <CarouselButtonLg
             direction="next"

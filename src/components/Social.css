@@ -21,3 +21,35 @@
   right: 420px;
   top: 85px;
 }
+
+@media (max-width: 639px) {
+  .map-container {
+    border-radius: 0px;
+  }
+  .content {
+    border-radius: 0 0 0.7rem 0.7rem;
+    left: 14.1rem;
+    top: -64px;
+  }
+  .map-point-1 {
+    left: 27px;
+    top: 24px;
+    width: 5.00975rem;
+    height: 3.88719rem;
+    flex-shrink: 0;
+  }
+  .map-point-2 {
+    left: 124px;
+    bottom: 16px;
+    width: 1.37306rem;
+    height: 1.66994rem;
+    flex-shrink: 0;
+  }
+  .map-point-3 {
+  right: 130px;
+  top: 34px;
+  width: 1.37306rem;
+  height: 1.66994rem;
+  flex-shrink: 0;
+}
+}
