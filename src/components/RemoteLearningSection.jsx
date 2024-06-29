@@ -48,7 +48,7 @@ function RemoteLearning() {
     cardContent.map((card, index) => (
       <div
         key={index}
-        className="card-why flex lg:flex-row flex-col bg-white rounded-2xl w-mobile-6 lg:w-width-9 lg:p-6 p-4 items-start gap-4"
+        className="card-why flex lg:flex-row flex-col bg-white rounded-2xl w-mobile-6 xs:h-[399px] lg:w-width-9 lg:p-6 p-4 items-start gap-4"
       >
         <img src={card.img} className="size-20" alt="icon" />
         <div className="flex-col gap-6 ">
