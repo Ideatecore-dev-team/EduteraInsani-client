@@ -17,6 +17,7 @@ import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import CarouselButton from "./Carousel/CarouselButton";
 
 function OurProgram() {
+  const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation();
   const path = location.pathname;
   let padding = "";
@@ -28,9 +29,12 @@ function OurProgram() {
       <div className="additional-content flex lg:w-width-8 w-[310px] lg:p-6 p-4 justify-center items-center xs:self-stretch bg-white rounded-2xl">
         <p className="text-center text-base text-neutral-2 font-normal">
           Edu Tera Insani menawarkan jalur pembelajaran yang dipersonalisasi
-          untuk <span className=" font-semibold">Junior Highschool </span>dan <span className=" font-semibold">Senior Highschool </span>, dilengkapi dengan 
-          <span className=" font-semibold"> Short Course  </span>yang menarik seperti bahasa asing, seni, menulis, dan lain-lain
-          untuk meningkatkan pengalaman pendidikan mereka.
+          untuk <span className=" font-semibold">Junior Highschool </span>dan{" "}
+          <span className=" font-semibold">Senior Highschool </span>, dilengkapi
+          dengan
+          <span className=" font-semibold"> Short Course </span>yang menarik
+          seperti bahasa asing, seni, menulis, dan lain-lain untuk meningkatkan
+          pengalaman pendidikan mereka.
         </p>
       </div>
     );
@@ -54,27 +58,26 @@ function OurProgram() {
     };
   }, []);
 
-  
   const cardContent = [
     {
-      mask : Mask1,
-      Outermask : [OuterMask1],
+      mask: Mask1,
+      Outermask: [OuterMask1],
       omask: ["omask-1 absolute"],
       title: "Junior Highschool",
       desc: "Digital Schooling untuk kelas.",
       class: "7-9",
     },
     {
-      mask : Mask2,
-      Outermask : [OuterMask2],
+      mask: Mask2,
+      Outermask: [OuterMask2],
       omask: ["omask-2 absolute"],
       title: "Senior Highschool",
       desc: "Digital Schooling untuk kelas.",
       class: "10-12",
     },
     {
-      mask : Mask3,
-      Outermask : [OuterMask3, OuterMask4],
+      mask: Mask3,
+      Outermask: [OuterMask3, OuterMask4],
       omask: ["omask-3 absolute", "omask-4 absolute"],
       title: "Short Course",
       desc: "Kelas tambahan untuk bahasa asing dan lainnya.",
@@ -82,28 +85,27 @@ function OurProgram() {
   ];
 
   const renderCards = () =>
-  cardContent.map((card, index) => (
-    <div className="program-card bg-white rounded-2xl flex lg:w-width-3 w-width-3.2 px-6 py-4 flex-col items-center gap-4 lg:mt-6 xs:mt-4">
-      <div key={index} className="card-title flex-col flex gap-1 self-stretch text-center items-center">
+    cardContent.map((card, index) => (
+      <div className="program-card bg-white rounded-2xl flex lg:w-width-3 w-width-3.2 px-6 py-4 flex-col items-center gap-4 lg:mt-6 xs:mt-4">
+        <div
+          key={index}
+          className="card-title flex-col flex gap-1 self-stretch text-center items-center"
+        >
           <div className="mascot-mask relative">
             <img src={card.mask} alt="" />
             <img src={card.Outermask[0]} className={card.omask[0]} alt="" />
             <img src={card.Outermask[1]} className={card.omask[1]} alt="" />
           </div>
-          <h4 className=" text-primary text-2xl font-semibold">
-            {card.title}
-          </h4>
-          <p className=" text-neutral-2 text-base font-normal">
-            {card.desc}
-          </p>
+          <h4 className=" text-primary text-2xl font-semibold">{card.title}</h4>
+          <p className=" text-neutral-2 text-base font-normal">{card.desc}</p>
+        </div>
+        {card.class && (
+          <div className="class flex py-1 px-4 justify-center items-center">
+            <p className="text-secondary text-base font-normal">{card.class}</p>
           </div>
-          {card.class && 
-            <div className="class flex py-1 px-4 justify-center items-center">
-              <p className="text-secondary text-base font-normal">{card.class}</p>
-            </div>
-          }
-    </div>
-  ));
+        )}
+      </div>
+    ));
 
   return (
     <div className={`our-program flex items-center bg-background ${padding}`}>
@@ -114,10 +116,10 @@ function OurProgram() {
           </h2>
           {additionalContent}
         </div>
-        
-        <div className="program-cards flex lg:flex-row flex-col xs:w-mobile-6 lg:items-start xs:items-center xs:gap-gap10 overflow-x-hidden">
+
+        <div className="cards-why flex lg:flex-row xs:w-mobile-6 items-center lg:items-start gap-6 overflow-hidden">
           {isMobile ? (
-            <Swiper 
+            <Swiper
               freeMode={true}
               pagination={{
                 clickable: true,
@@ -125,13 +127,18 @@ function OurProgram() {
               loop={false}
               modules={[Pagination, FreeMode, Navigation]}
               slidesPerView={1}
-              className=" w-width-sm relative"
+              className="w-width-sm relative"
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             >
               {cardContent.map((card, index) => (
                 <SwiperSlide key={index}>{renderCards()[index]}</SwiperSlide>
               ))}
               <div className="navigation-why flex justify-between w-width-3.2 mt-4 relative">
-                <CarouselButton />
+                <CarouselButton direction="prev" isVisible={activeIndex > 0} />
+                <CarouselButton
+                  direction="next"
+                  isVisible={activeIndex < cardContent.length - 1}
+                />
               </div>
             </Swiper>
           ) : (
