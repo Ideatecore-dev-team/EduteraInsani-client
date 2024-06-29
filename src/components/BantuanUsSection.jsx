@@ -14,20 +14,20 @@ const ButtonWithDropdown = () => {
   };
 
   return (
-    <div className="bantuan-section flex flex-col pb-24 items-center gap-gap10 bg-background">
-      <div className="bantuan-container flex flex-col items-center gap-12">
-        <h2 className="text-4xl text-primary font-semibold w-width-2">
+    <div className="bantuan-section flex lg:flex-col lg:pb-24 pb-12 xs:justify-center xs:items-start xs:w-width-sm items-center gap-gap10 bg-background">
+      <div className="bantuan-container flex flex-col items-center lg:gap-12 gap-6">
+        <h2 className="lg:text-4xl text-2xl text-primary font-semibold w-width-2">
           Bantuan
         </h2>
-        <div className="categories flex flex-col items-start gap-4">
+        <div className="categories flex flex-col xs:w-mobile-6 items-start gap-4">
           <div className="categories-and-question flex flex-col items-start gap-4">
-            <h4 className="text-2xl text-primary font-semibold">
+            <h4 className="lg:text-2xl text-lg text-primary font-semibold">
               Kategori Bantuan:
             </h4>
           </div>
           <div className="list-of-question flex items-start gap-6">
             <div className="frame-112 flex flex-col items-start gap-4">
-              <div className="button-categories flex flex-col items-start gap-4">
+              <div className="button-categories flex flex-col items-center lg:items-start gap-4">
                 <ButtonCtg
                   caption="Umum"
                   buttonFn={() => handleButtonClick(0)}
