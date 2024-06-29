@@ -8,10 +8,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
-import CarouselButtonNext from "./Carousel/CarouselButtonNext";
+import CarouselButton from "./Carousel/CarouselButton";
 
 function RemoteLearning() {
   const [isMobile, setIsMobile] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -78,23 +79,28 @@ function RemoteLearning() {
             belajar yang fleksibel dan komprehensif.
           </p>
         </div>
-        <div className="cards-remote flex lg:flex-col xs:w-mobile-6 items-center lg:items-start gap-6 overflow-hidden">
+        <div className="cards-why flex lg:flex-row xs:w-mobile-6 items-center lg:items-start gap-6 overflow-hidden">
           {isMobile ? (
             <Swiper
               freeMode={true}
               pagination={{
                 clickable: true,
               }}
-              loop={true}
+              loop={false}
               modules={[Pagination, FreeMode, Navigation]}
               slidesPerView={1}
               className="w-width-sm relative"
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             >
               {cardContent.map((card, index) => (
                 <SwiperSlide key={index}>{renderCards()[index]}</SwiperSlide>
               ))}
-              <div className="navigation-remote flex justify-end w-width-3.2 mt-4 relative">
-                <CarouselButtonNext />
+              <div className="navigation-why flex justify-between w-width-3.2 mt-4 relative">
+                <CarouselButton direction="prev" isVisible={activeIndex > 0} />
+                <CarouselButton
+                  direction="next"
+                  isVisible={activeIndex < cardContent.length - 1}
+                />
               </div>
             </Swiper>
           ) : (
