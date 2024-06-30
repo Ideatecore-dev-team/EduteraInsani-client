@@ -14,6 +14,7 @@ import CarouselButtonLg from "./CarouselButtonLg";
 
 function TeacherCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   return (
     <div className="teacher-cards flex items-center justify-center lg:items-start gap-6 lg:self-stretch flex-col relative">
@@ -58,7 +59,11 @@ function TeacherCarousel() {
           <CarouselButtonLg direction="prev" isVisible={activeIndex > 0} />
           <CarouselButtonLg
             direction="next"
-            isVisible={activeIndex < teachers.length - 1}
+            isVisible={
+              isMobile
+                ? activeIndex < teachers.length - 1
+                : activeIndex < teachers.length - 4
+            }
           />
         </div>
       </Swiper>

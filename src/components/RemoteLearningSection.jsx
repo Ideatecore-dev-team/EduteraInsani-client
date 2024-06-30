@@ -79,7 +79,7 @@ function RemoteLearning() {
             belajar yang fleksibel dan komprehensif.
           </p>
         </div>
-        <div className="cards-why flex lg:flex-row xs:w-mobile-6 items-center lg:items-start gap-6 overflow-hidden">
+        <div className="cards-why flex lg:flex-col xs:w-mobile-6 items-center lg:items-start gap-6 overflow-hidden">
           {isMobile ? (
             <Swiper
               freeMode={true}
