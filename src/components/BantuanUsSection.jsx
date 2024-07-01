@@ -1,17 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ButtonCtg from "./Buttons/ButtonCtg";
 import FaQumum from "./Categories/FaQumum";
 import FaQkurikulum from "./Categories/FaQkurikulum";
 import FaQpendaftaran from "./Categories/FaQpendaftaran";
 import FaQpembayaran from "./Categories/FaQpembayaran";
 import FaQlegalitas from "./Categories/FaQlegalitas";
+import CategoryMobile from "./Categories/CategoryMobile";
 
 const ButtonWithDropdown = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   const handleButtonClick = (index) => {
     setSelectedCategory(index);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="bantuan-section flex lg:flex-col lg:pb-24 pb-12 xs:justify-center xs:items-start xs:w-width-sm items-center gap-gap10 bg-background">
@@ -25,7 +39,12 @@ const ButtonWithDropdown = () => {
               Kategori Bantuan:
             </h4>
           </div>
-          <div className="list-of-question flex items-start gap-6">
+          {isMobile && <CategoryMobile />}
+          <div
+            className={`${
+              isMobile ? "hidden" : "flex"
+            } list-of-question lg:flex-row flex-col items-start gap-6`}
+          >
             <div className="frame-112 flex flex-col items-start gap-4">
               <div className="button-categories flex flex-col items-center lg:items-start gap-4">
                 <ButtonCtg

@@ -18,7 +18,7 @@ function Mission() {
       >
         <p className="text-base text-white">Lihat misi Edu tera Insani</p>
         <IoIosArrowDown
-          className={`size-6 text-white ${
+          className={`size-6 text-white duration-500 ${
             isDropDown ? "rotate-180" : "rotate-0"
           }`}
         />
