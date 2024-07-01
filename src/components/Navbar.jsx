@@ -48,7 +48,7 @@ function Navbar() {
           <RxHamburgerMenu />
         </button>
         <div
-          className={`menu-item flex flex-col lg:flex-row xs:rounded-rounded32 lg:static absolute xs:px-2 xs:pb-3 xs:pt-20 top-2 left-4 right-4 bg-white lg:bg-transparent lg:shadow-none shadow-lg lg:gap-3 transition-all duration-500 ease-in-out transform origin-top ${
+          className={`menu-item flex flex-col lg:flex-row xs:rounded-rounded32 lg:static absolute xs:px-2 xs:pb-3 xs:pt-20 top-2 left-4 right-4 bg-white lg:bg-transparent lg:shadow-none shadow-lg lg:gap-3 transition-all duration-500 ease-in-out transform origin-top -z-10 lg:-z-0 ${
             isDropdownOpen
               ? "scale-y-100 -z-10"
               : "scale-y-0 lg:scale-y-100 lg:flex"
