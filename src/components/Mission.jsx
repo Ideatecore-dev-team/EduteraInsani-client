@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ButtonLink from "./Buttons/ButtonLink";
+import ButtonLink from "./Buttons/LinkButton";
 import { IoIosArrowDown } from "react-icons/io";
 
 function Mission() {

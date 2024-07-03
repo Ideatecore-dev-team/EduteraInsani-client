@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Hero.css";
-import ButtonLink from "./Buttons/ButtonLink";
+import ButtonLink from "./Buttons/LinkButton";
 import Banner from "/images/Main Banner.png";
 import MobileBanner from "/images/banner-mobile.png";
 import Teacher1 from "/images/teacher-1.png";
