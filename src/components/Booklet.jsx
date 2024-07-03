@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonLink from "./Buttons/ButtonLink";
+import ButtonLink from "./Buttons/LinkButton";
 import Book from "/images/booklet.png";
 import "./Booket.css";
 

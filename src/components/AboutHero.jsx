@@ -1,5 +1,5 @@
 import "./AboutHero.css";
-import ButtonLink from "./Buttons/ButtonLink";
+import ButtonLink from "./Buttons/LinkButton";
 import Column from "./Layouts/Column";
 import Container from "./Layouts/Container";
 import Row from "./Layouts/Row";
