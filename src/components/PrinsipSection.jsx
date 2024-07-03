@@ -2,7 +2,7 @@ import React from "react";
 
 function Prinsip() {
   return (
-    <div className="prinsip-section flex flex-col py-24 items-center bg-background gap-gap10">
+    <div className="prinsip-section flex flex-col py-12 lg:py-24 items-center bg-background gap-gap10">
       <div className="prinsip-container lg:w-base-content w-mobile-6 flex flex-col items-center gap-12">
         <h2 className=" text-primary w-56 lg:w-base-content text-2xl lg:text-4xl text-center font-semibold">
           Prinsip Pendidikan Edu Tera Insani

@@ -12,6 +12,7 @@ import CarouselButton from "./Carousel/CarouselButton";
 
 function WhyEdutera() {
   const [isMobile, setIsMobile] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -77,12 +78,17 @@ function WhyEdutera() {
               modules={[Pagination, FreeMode, Navigation]}
               slidesPerView={1}
               className="w-width-sm relative"
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             >
               {cardContent.map((card, index) => (
                 <SwiperSlide key={index}>{renderCards()[index]}</SwiperSlide>
               ))}
               <div className="navigation-why flex justify-between w-width-3.2 mt-4 relative">
-                <CarouselButton />
+                <CarouselButton direction="prev" isVisible={activeIndex > 0} />
+                <CarouselButton
+                  direction="next"
+                  isVisible={activeIndex < cardContent.length - 1}
+                />
               </div>
             </Swiper>
           ) : (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./CurriculumHero.css";
-import ButtonLink from "./Buttons/Buttonlink";
+import ButtonLink from "./Buttons/LinkButton";
 import Logo from "/images/logo-silhouette.png";
 import Mascot from "/images/curriculum-mascot.png";
 

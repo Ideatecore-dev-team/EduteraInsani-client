@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Hero.css";
-import ButtonLink from "./Buttons/Buttonlink";
+import ButtonLink from "./Buttons/LinkButton";
 import Banner from "/images/Main Banner.png";
 import MobileBanner from "/images/banner-mobile.png";
 import Teacher1 from "/images/teacher-1.png";
@@ -26,11 +26,15 @@ function Hero({ onCardHeroClick }) {
           </p>
           <div className="cta flex items-start gap-3">
             <ButtonLink
-              caption="Contact Us"
+              caption="Hubungi Kami"
               to="/help"
               border={false}
             ></ButtonLink>
-            <ButtonLink border={true} caption="Learn More" to="/help">
+            <ButtonLink
+              border={true}
+              caption="Pelajari Lebih Lanjut"
+              to="/about-us"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "/images/edulogo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -6,6 +6,23 @@ import "./Navbar.css";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const links = document.querySelectorAll([".menu-item", ".logo"]);
+    links.forEach((link) => {
+      link.addEventListener("click", handleScrollToTop);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleScrollToTop);
+      });
+    };
+  }, []);
 
   const handleToggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -18,7 +35,7 @@ function Navbar() {
           <div className="logo">
             <NavLink to="/" className="flex items-center gap-2">
               <img src={Logo} className="size-7" alt="logo" />
-              <h3 className="text-xl lg:text-3xl text-black font-semibold">
+              <h3 className="text-lg  lg:text-3xl text-black font-semibold">
                 Edu Tera Insani
               </h3>
             </NavLink>
@@ -31,7 +48,7 @@ function Navbar() {
           <RxHamburgerMenu />
         </button>
         <div
-          className={`menu-item flex flex-col lg:flex-row xs:rounded-rounded32 lg:static absolute xs:px-2 xs:pb-3 xs:pt-20 top-2 left-4 right-4 bg-white lg:bg-transparent lg:shadow-none shadow-lg lg:gap-3 transition-all duration-500 ease-in-out transform origin-top ${
+          className={`menu-item flex flex-col lg:flex-row xs:rounded-rounded32 lg:static absolute xs:px-2 xs:pb-3 xs:pt-20 top-2 left-4 right-4 bg-white lg:bg-transparent lg:shadow-none shadow-lg lg:gap-3 transition-all duration-500 ease-in-out transform origin-top -z-10 lg:-z-0 ${
             isDropdownOpen
               ? "scale-y-100 -z-10"
               : "scale-y-0 lg:scale-y-100 lg:flex"
