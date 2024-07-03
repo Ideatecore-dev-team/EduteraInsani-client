@@ -21,7 +21,7 @@ function ButtonCtg({ caption, buttonFn, isActive }) {
 
   return (
     <button
-      className={`btn-ctg py-3 px-4 items-center gap-2 text-base w-width-3`}
+      className={`btn-ctg py-3 px-4 items-center gap-2 text-base w-width-3 xs:w-full`}
       onClick={buttonFn}
       style={isSlideBackground}
     >

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const ButtonWithDropdown = () => {
   const [isDropDown, setIsDropDown] = useState({
-    // 0: false,
+    0: false,
     1: false,
     2: false,
   });
@@ -17,24 +17,28 @@ const ButtonWithDropdown = () => {
   };
 
   return (
-    <div className="list-of-question flex items-start gap-6">
-      <div className="all-questions flex flex-col items-start gap-4">
+    <div className="list-of-question lg:w-width-8.1 flex items-start gap-6">
+      <div className="all-questions w-mobile-6 lg:w-base-content  flex flex-col items-start gap-4">
         {Object.keys(isDropDown).map((index) => (
           <button key={index} onClick={() => toggleDropdown(parseInt(index))}>
             <div
-              className={`bantuan-dropdown flex w-width-8.1 p-4 flex-col items-start gap-6 rounded-xl bg-secondary transition-all duration-500 ${
-                isDropDown[index] ? "max-h-56 min-h-56" : "max-h-14 min-h-14"
+              className={`bantuan-dropdown w-mobile-6 flex lg:w-width-8.1 p-4 flex-col items-start gap-6 rounded-xl bg-secondary transition-all duration-500 ${
+                isDropDown[index]
+                  ? "lg:max-h-56 lg:min-h-56 max-h-[30rem] min-h-[30rem]"
+                  : "lg:max-h-14 lg:min-h-14 max-h-20 min-h-0"
               }`}
             >
-              <div className="1 flex w-width-8.2 items-center justify-between">
-                <p className="text-white font-semibold text-base">
-                  {/* {index === '0' && "lorem ipsum dolor sit ammet?"} */}
-                  {index === "1" && "lorem ipsum dolor sit jamet?"}
-                  {index === "2" && "lorem dimsum dolor sit ammet?"}
+              <div className="1 flex lg:w-width-8.2  items-center justify-between">
+                <p className="text-white w-80 lg:w-full text-left font-semibold text-base">
+                  {index === "0" &&
+                    `alias id est at! Id, recusandaeesse. Vero placeat amet`}
+                  {index === "1" && "Lorem ipsum, dolor sit amet?"}
+                  {index === "2" &&
+                    "consectetur necessitatibus. Quidem, libero?"}
                 </p>
                 <svg
                   className={`w-6 h-6 flex-shrink-0 duration-300 ${
-                    isDropDown[index] ? "rotate-180" : "rotate-0"
+                    !isDropDown[index] ? "rotate-0" : "rotate-180"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -54,24 +58,33 @@ const ButtonWithDropdown = () => {
                     isDropDown[index] ? "flex" : "hidden"
                   }`}
                 >
-                  {/* {index === '0' && (
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio excepturi rem sint et a modi vel provident illo assumenda necessitatibus.</p>
-                                    )} */}
+                  {index === "0" && (
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Laboriosam nisi eligendi, alias id est at! Id, recusandae
+                      esse. Vero placeat amet nostrum minus aliquam quisquam
+                      tenetur, consectetur necessitatibus. Quidem, libero.
+                    </p>
+                  )}
                   {index === "1" && (
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Modi, ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Illum aliquam ab iusto consequuntur est harum alias porro
+                      repellat exercitationem! Cumque qui maxime natus impedit.
+                      Eaque maiores id nisi similique voluptatum, excepturi
+                      recusandae impedit nulla et minus quam, eius officia
+                      aliquam? Sint similique ratione esse recusandae vel harum
+                      beatae maxime officiis voluptatum. Quisquam placeat
+                      repudiandae soluta praesentium, optio distinctio. Rem
+                      omnis necessitati
                     </p>
                   )}
                   {index === "2" && (
                     <p>
-                      Lorem ipsum dolor sit amet consectetur. Integer semper
-                      nibh in massa nisl sit. Nisl sollicitudin dictum fringilla
-                      proin. Volutpat sit ornare non nisl aliquam commodo.Lorem
-                      ipsum dolor sit amet consectetur. Integer semper nibh in
-                      massa nisl sit.Lorem ipsum dolor sit amet consectetur.
-                      Integer semper nibh in massa nisl sit. Nisl sollicitudin
-                      dictum fringilla proin.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Autem voluptatem in ipsum suscipit soluta est molestiae,
+                      vitae necessitatibus odit enim qui eligendi aliquid
+                      doloribus dicta accusantium culpa, ab totam possimus?
                     </p>
                   )}
                 </div>
