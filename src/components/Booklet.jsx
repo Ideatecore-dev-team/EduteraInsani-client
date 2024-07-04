@@ -6,7 +6,7 @@ import "./Booket.css";
 function Booklet() {
   return (
     <div className="booklet-section bg-background flex items-center lg:py-24 pb-12 relative">
-      <div className="booklet-container lg:w-base-content w-width-4 mx-auto flex flex-col p-6 items-start xs:justify-end gap-4 rounded-3xl relative">
+      <div className="booklet-container lg:w-base-content w-mobile-6 mx-auto flex flex-col p-6 items-start xs:justify-end gap-4 rounded-3xl relative">
         <h2 className=" text-primary lg:text-4xl text-xl font-semibold lg:w-width-7 ">
           Pelajari lebih lanjut Edu Tera Insani pada booklet kami
         </h2>

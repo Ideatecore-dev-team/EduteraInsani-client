@@ -4,10 +4,10 @@ import "./Digital.css";
 
 function Digital() {
   return (
-    <div className="digital-section flex pb-12 lg:pb-24 lg:items-center justify-center items-start bg-background gap-gap10">
-      <div className="digital-container flex lg:flex-row flex-col lg:w-base-content w-width-sm mx-auto lg:items-center items-start gap-6">
+    <div className="digital-section xs:w-width-sm flex pb-12 lg:pb-24 lg:items-center justify-center items-start bg-background gap-gap10">
+      <div className="digital-container xs:w-mobile-6 flex lg:flex-row flex-col lg:w-base-content mx-auto lg:items-center items-start gap-6">
         <img src={Vidio} alt="vidio" className=" px-4 lg:px-0" />
-        <div className="vidio-content flex lg:p-6 p-4 flex-col items-start gap-2 self-stretch bg-white rounded-2xl">
+        <div className="vidio-content flex xs:w-mobile-6 lg:p-6 p-2 flex-col items-start gap-2 lg:self-stretch bg-white rounded-2xl">
           <div className="vid-icons flex items-start gap-4">
             <div className="classroom bg-background rounded-lg flex size-12 p-2 justify-center items-center">
               <svg

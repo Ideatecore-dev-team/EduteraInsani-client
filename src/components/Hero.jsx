@@ -24,7 +24,7 @@ function Hero({ onCardHeroClick }) {
             Bergabunglah dengan kami dalam membina pikiran dan membangun masa
             depan di Digital Schooling Edu Tera Insani.
           </p>
-          <div className="cta flex items-start gap-3">
+          <div className="cta flex items-start gap-2 lg:gap-3">
             <ButtonLink
               caption="Hubungi Kami"
               to="/help"
