@@ -158,7 +158,7 @@ function CurriculumHero() {
         </div>
       </div>
       <div className="curriculum-title-CTA lg:w-width-7 w-mobile-6 flex flex-col p-6 justify-end items-start gap-4 bg-primary absolute">
-        <h2 className="text-4xl text-white font-semibold">
+        <h2 className=" text-2xl lg:text-4xl text-white font-semibold">
           Pelajari Lebih Lanjut terkait Edu Tera Insani
         </h2>
         <p className=" text-background text-base font-normal">

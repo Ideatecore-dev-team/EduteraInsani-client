@@ -57,6 +57,18 @@
   .curriculum-logo {
     margin-top: 1px;
   }
+
+  .curriculum-title-CTA {
+    display: flex;
+    width: var(--mobile-6, 342px);
+    height: 395px;
+    padding: 104px 24px 24px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
   .mascot{
     width: 11.83006rem;
     height: 15.8125rem;
