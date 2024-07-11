@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import AboutUs from "../pages/AboutUs";
 import Curriculum from "../pages/Curriculum";
 import Bantuan from "../pages/BantuanUs";
+import DetailClass from "../pages/DetailCalss";
 
 const ListRouter = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const ListRouter = createBrowserRouter([
       {
         path: "/help",
         element: <Bantuan />,
+      },
+      {
+        path: "/detail-class",
+        element: <DetailClass />,
       },
     ],
   },
