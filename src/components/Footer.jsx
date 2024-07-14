@@ -1,24 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "/images/edulogo.png";
 import "./Footer.css";
 
 function Footer() {
+
+  useEffect(() => {
+    const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const links = document.querySelectorAll([".footer-link a",".logo-slogan"]);
+    links.forEach((link) => {
+      link.addEventListener("click", handleScrollToTop);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleScrollToTop);
+      });
+    };
+  }, []);
+
   return (
-    <footer className="footer bg-white flex items-center py-24 px-3">
-      <div className="footer-container flex w-base-content mx-auto items-start flex-col gap-7">
+    <footer className="footer bg-white flex items-center py-24 px-6 lg:px-3">
+      <div className="footer-container flex w-width-4 lg:w-base-content mx-auto items-start flex-col gap-7">
         <div className="logo-slogan flex flex-col items-start gap-2">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={Logo} className=" size-7" alt="logo" />
-            <h3 className="text-3xl text-black font-semibold">
+          <Link className="flex items-center gap-2" to="/">
+            <img src={Logo} className=" size-8 lg:size-10" alt="logo" />
+            <h3 className="lg:text-3xl text-xl text-black font-semibold">
               Edu Tera Insani
             </h3>
           </Link>
-          <h4 className="text-2xl font-semibold text-primary">
+          <h4 className="lg:text-2xl text-lg font-semibold text-primary">
             Nurturing Minds Building Future.
           </h4>
         </div>
-        <div className="all-details flex justify-between items-start self-stretch">
+        <div className="all-details flex justify-between items-start self-stretch lg:flex-row flex-col row-gap lg:gap-0 gap-12">
           <div className="information flex flex-col items-start gap-4">
             <div className="phone flex items-start gap-2 w-width-4">
               <div className="size-6">
@@ -93,21 +111,21 @@ function Footer() {
             </div>
           </div>
           <div className="footer-link flex flex-col items-start gap-6">
-            <p className="text-primary text-base font-semibold">About School</p>
-            <Link className=" text-base text-neutral-2">
-              <p>About Edu Tera Insani</p>
+            <p className="text-primary text-base font-semibold">Tentang Sekolah</p>
+            <Link className=" text-base text-neutral-2" to="/about-us">
+              <p>Tentang Kami</p>
             </Link>
-            <Link className=" text-base text-neutral-2">
-              <p>Our Curriculum</p>
+            <Link className=" text-base text-neutral-2" to="/curriculum">
+              <p>Kurikulum Kami</p>
             </Link>
-            <Link className=" text-base text-neutral-2">
-              <p>Our Contact</p>
+            <Link className=" text-base text-neutral-2" to="/help">
+              <p>Kontak Kami</p>
             </Link>
           </div>
         </div>
         <div className="bottom-section flex flex-col gap-6 self-stretch">
           <hr />
-          <div className="bottom-content flex justify-between items-start self-stretch">
+          <div className="bottom-content flex lg:flex-row flex-col lg:gap-0 gap-5 justify-between items-start self-stretch">
             <p className="text-primary text-base font-semibold">
               Copyright 2024 SMM. All rights reserved.
             </p>

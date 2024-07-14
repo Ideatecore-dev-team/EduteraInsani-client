@@ -55,3 +55,38 @@
   right: -80px;
   bottom: -30px;
 }
+
+@media (max-width: 639px) {
+  .banner {
+    width: 24.375rem;
+    top: 0;
+    left: 0;
+  }
+  .logo {
+    top: 0px;
+    left: 5.5rem;
+    width: 10.44288rem;
+  }
+  .about-icon-1 {
+    right: -1px;
+    top: 40px;
+    width: 1.84288rem;
+    height: 1.84288rem;
+    transform: rotate(30deg);
+  }
+
+  .about-icon-2 {
+    right: 289px;
+    top: 80px;
+    width: 1.84288rem;
+    height: 1.84288rem;
+    transform: rotate(-15deg);
+  }
+  .about-icon-3 {
+    right: -1.316rem;
+    bottom: 1.10056rem;
+    width: 1.84288rem;
+    height: 1.84288rem;
+    transform: rotate(15deg);
+  }
+}

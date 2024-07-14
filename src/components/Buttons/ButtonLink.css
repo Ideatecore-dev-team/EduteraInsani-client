@@ -1,5 +1,13 @@
-.btn-link {
+.btn-link{
   border-radius: 32px;
+  justify-content: center;
+}
+.btn-width-full{
+  width: 100%;
+}
+
+.btn-width-normal{
+  width: 14.0628rem;
 }
 
 .border-class {

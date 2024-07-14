@@ -1,19 +1,20 @@
 // App.js
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
+import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+<<<<<<< HEAD
 import Curriculum from "./pages/Curriculum";
 <<<<<<< HEAD
 import BantuanUs from "./pages/BantuanUs";
 =======
 >>>>>>> 8abcb63ee97a2fa2c7cd13cc46750dd841f84f77
+=======
+>>>>>>> 809e607b03b189f3581de02165c027d15af1b46c
 
 function App() {
   return (
     <>
+<<<<<<< HEAD
       <Router>
         <Navbar />
         <Routes>
@@ -27,6 +28,11 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+=======
+      <Navbar />
+      <Outlet />
+      <Footer />
+>>>>>>> 809e607b03b189f3581de02165c027d15af1b46c
     </>
   );
 }

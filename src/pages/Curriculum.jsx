@@ -1,19 +1,19 @@
 import React from "react";
 import Booklet from "../components/Booklet";
-import LearningPatch from "../components/LearningPatch";
+import LearningPath from "../components/LearningPath";
 import CurriculumHero from "../components/CurriculumHero";
 import CurriculumWhat from "../components/CurriculumWhat";
-import RemoteLearning from "../components/RemoteLearningSection"
-import Prinsip from "../components/PrinsipSection"
+import RemoteLearning from "../components/RemoteLearningSection";
+import Prinsip from "../components/PrinsipSection";
 
 function Curriculum() {
   return (
     <div className="curriculum">
       <CurriculumHero />
       <CurriculumWhat />
-      <RemoteLearning/>
-      <LearningPatch />
-      <Prinsip/>
+      <RemoteLearning />
+      <LearningPath />
+      <Prinsip />
       <Booklet />
     </div>
   );

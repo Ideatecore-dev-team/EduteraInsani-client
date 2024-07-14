@@ -52,3 +52,60 @@
   left: 300px;
   bottom: 42px;
 }
+
+@media (max-width: 639px) {
+  .curriculum-logo {
+    margin-top: 1px;
+  }
+
+  .curriculum-title-CTA {
+    display: flex;
+    width: var(--mobile-6, 342px);
+    height: 395px;
+    padding: 104px 24px 24px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .mascot{
+    width: 11.83006rem;
+    height: 15.8125rem;
+    flex-shrink: 0;
+  }
+  .content-hero{
+    margin-top: 21.5rem;
+  }
+  .curriculum-logo{
+    width: 10.61975rem;
+    height: 10.61975rem;
+    flex-shrink: 0;
+    margin-top: -14.9rem;
+    margin-left: 9rem;
+  }
+  .curriculum-icon-1{
+    width: 1.87406rem;
+    height: 1.87406rem;
+    transform: rotate(-15deg);
+    flex-shrink: 0;
+    margin-top: 23rem;
+    margin-left: 5rem;
+  }
+  .curriculum-icon-2{
+    width: 1.87406rem;
+    height: 1.87406rem;
+    transform: rotate(-30deg);
+    flex-shrink: 0;
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+    
+  }
+  .curriculum-icon-3{
+    width: 1.87406rem;
+    height: 1.87406rem;
+    transform: rotate(-30deg);
+    flex-shrink: 0;
+    margin-left: 13rem;
+  }
+}

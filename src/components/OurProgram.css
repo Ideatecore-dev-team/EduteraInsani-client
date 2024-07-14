@@ -37,3 +37,9 @@
   border-radius: 32px;
   border: 2px solid #a88646;
 }
+
+@media (max-width:639px){
+  .swiper-pagination{
+    width: 342px !important;
+  }
+}

@@ -13,3 +13,45 @@
   border-radius: 100px;
   background: #a88646;
 }
+
+.swiper-pagination-bullet {
+  background: #b99e6b;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 24px;
+  background: #a88646;
+  border-radius: 32px;
+}
+
+@media (max-width: 639px) {
+  .btn-prev {
+    top: -137px;
+    left: -59px;
+  }
+
+  .btn-next {
+    left: 274px;
+    top: -137px;
+  }
+
+  .navigation-why .btn-next {
+    position: static;
+    right: 0;
+  }
+
+  .navigation-remote .btn-next {
+    position: static;
+    left: 0;
+  }
+
+  .navigation-why .btn-prev {
+    position: static;
+    left: 0;
+  }
+
+  .cards-why .swiper-pagination {
+    width: 342px !important;
+  }
+}

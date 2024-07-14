@@ -16,3 +16,9 @@
 .swiper {
   overflow: visible !important;
 }
+
+@media (max-width: 639px) {
+  .teacher-cards {
+    width: 270px;
+  }
+}

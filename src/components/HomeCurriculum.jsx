@@ -1,14 +1,14 @@
 import React from "react";
 import Logo from "/images/curriculum-logo.png";
-import ButtonLink from "./Buttons/Buttonlink";
+import ButtonLink from "./Buttons/LinkButton";
 
 function HomeCurriculum() {
   return (
-    <div className="curriculum bg-white flex py-24 items-center">
-      <div className="curriculum-container w-base-content flex justify-center items-center gap-6 mx-auto">
-        <img src={Logo} alt="curriculum" />
-        <div className="curriculum-content flex flex-col w-width-7 items-start gap-4">
-          <h2 className="text-primary text-4xl font-semibold">
+    <div className="curriculum bg-white flex lg:py-24 py-12 items-center">
+      <div className="curriculum-container lg:w-base-content w-width-3.2 flex lg:flex-row flex-col justify-center items-center gap-6 mx-auto">
+        <img src={Logo} alt="curriculum" className="size-44 lg:size-auto" />
+        <div className="curriculum-content flex flex-col lg:w-width-7 w-full lg:items-start items-center gap-4 xs:text-center">
+          <h2 className="text-primary text-2xl lg:text-4xl font-semibold">
             Kurikulum Merdeka Plus: Mendorong Kemandirian Belajar
           </h2>
           <p className="text-base text-neutral-2">

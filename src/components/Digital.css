@@ -10,3 +10,10 @@
 .vidio-content {
   width: 661px;
 }
+
+@media (max-width: 639px) {
+  .digital-container img {
+    width: 100%;
+    height: 198.154px;
+  }
+}

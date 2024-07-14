@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import ButtonLink from "./Buttons/LinkButton";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Mission() {
+  const [isDropDown, setIsDropdown] = useState("");
+  function handleDropDown() {
+    setIsDropdown((prev) => !prev);
+  }
   return (
     <div className="mission-section flex flex-col pb-24 items-center justify-center self-stretch bg-background gap-14">
-      <h2 className=" text-primary text-4xl  font-bold">Misi Kami</h2>
-      <div className="all-missions w-base-content flex justify-center items-start content-start gap-6 flex-wrap">
+      <h2 className=" text-primary text-2xl lg:text-4xl  font-semibold">
+        Misi Kami
+      </h2>
+      <button
+        onClick={handleDropDown}
+        className="flex lg:hidden bg-secondary px-3 py-3 rounded-full gap-2"
+      >
+        <p className="text-base text-white">Lihat misi Edu tera Insani</p>
+        <IoIosArrowDown
+          className={`size-6 text-white duration-500 ${
+            isDropDown ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </button>
+      <div
+        className={`all-missions ${
+          isDropDown ? "flex" : "hidden"
+        } w-mobile-6 lg:w-base-content lg:flex justify-center items-start content-start gap-6 flex-wrap`}
+      >
         <div className="mission-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
           <h1 className="font-bold text-secondary text-5xl">01</h1>
           <div className="title-desc flex flex-col items-start gap-2">
@@ -24,8 +47,8 @@ function Mission() {
               Memperkuat Komitmen terhadap Humanisme
             </p>
             <p className=" text-base font-normal text-neutral-2">
-              Memperkuat komitmen terhadap humanisme sesuai dengan tradisi Indonesia, 
-              dengan menekankan nilai-nilai kebersamaan, kerjasama
+              Memperkuat komitmen terhadap humanisme sesuai dengan tradisi
+              Indonesia, dengan menekankan nilai-nilai kebersamaan, kerjasama
             </p>
           </div>
         </div>
@@ -36,7 +59,7 @@ function Mission() {
               Cinta Pengetahuan dan Teknologi
             </p>
             <p className=" text-base font-normal text-neutral-2">
-              Mendorong cinta akan pengetahuan dan teknologi melalui 
+              Mendorong cinta akan pengetahuan dan teknologi melalui
               pembelajaran inovatif, kreatif, dan terintegrasi secara global.
             </p>
           </div>
@@ -45,11 +68,11 @@ function Mission() {
           <h1 className="font-bold text-secondary text-5xl">04</h1>
           <div className="title-desc flex flex-col items-start gap-2">
             <p className=" text-base font-semibold text-primary">
-            Membentuk Karakter Unggul
+              Membentuk Karakter Unggul
             </p>
             <p className=" text-base font-normal text-neutral-2">
-            Membentuk karakter unggul yang mencakup nilai-nilai kejujuran, 
-            tanggung jawab, disiplin, keberanian, dan kerja keras.
+              Membentuk karakter unggul yang mencakup nilai-nilai kejujuran,
+              tanggung jawab, disiplin, keberanian, dan kerja keras.
             </p>
           </div>
         </div>
@@ -60,9 +83,9 @@ function Mission() {
               Pendidikan Anti-Korupsi untuk Generasi Berintegritas
             </p>
             <p className=" text-base font-normal text-neutral-2">
-            Melaksanakan pendidikan anti-korupsi dalam setiap aspek kegiatan 
-            pendidikan, mengajarkan prinsip-prinsip transparansi, akuntabilitas, 
-            dan integritas.
+              Melaksanakan pendidikan anti-korupsi dalam setiap aspek kegiatan
+              pendidikan, mengajarkan prinsip-prinsip transparansi,
+              akuntabilitas, dan integritas.
             </p>
           </div>
         </div>
@@ -73,9 +96,9 @@ function Mission() {
               Kepemimpinan Inklusif dan Visioner
             </p>
             <p className=" text-base font-normal text-neutral-2">
-            Membangun kualitas kepemimpinan inklusif, visioner, dan etis,
-            mempersiapkan generasi yang mampu memimpin bangsa menuju kemajuan 
-            dan kemakmuran bersama.
+              Membangun kualitas kepemimpinan inklusif, visioner, dan etis,
+              mempersiapkan generasi yang mampu memimpin bangsa menuju kemajuan
+              dan kemakmuran bersama.
             </p>
           </div>
         </div>
@@ -86,8 +109,9 @@ function Mission() {
               Keterampilan Hidup di Era Dinamis
             </p>
             <p className=" text-base font-normal text-neutral-2">
-            Mengembangkan keterampilan bertahan hidup dan adaptasi di tengah dinamika sosial, 
-            ekonomi, dan lingkungan, memastikan setiap individu siap menghadapi tantangan zaman.
+              Mengembangkan keterampilan bertahan hidup dan adaptasi di tengah
+              dinamika sosial, ekonomi, dan lingkungan, memastikan setiap
+              individu siap menghadapi tantangan zaman.
             </p>
           </div>
         </div>
@@ -98,8 +122,9 @@ function Mission() {
               Kreativitas dan Inovasi sebagai Jantung Pembelajaran
             </p>
             <p className=" text-base font-normal text-neutral-2">
-            Mendorong kreativitas dan inovasi sebagai bagian integral dari 
-            pembelajaran, memberikan ruang bagi eksplorasi ide dan solusi baru.
+              Mendorong kreativitas dan inovasi sebagai bagian integral dari
+              pembelajaran, memberikan ruang bagi eksplorasi ide dan solusi
+              baru.
             </p>
           </div>
         </div>
@@ -110,8 +135,10 @@ function Mission() {
               Etika Profesional untuk Tenaga Kerja Berintegritas
             </p>
             <p className=" text-base font-normal text-neutral-2">
-            Memprioritaskan pembentukan etika profesional dalam setiap jalur
-            pendidikan, menghasilkan tenaga kerja yang kompeten dan berintegritas yang berorientasi pada melayani masyarakat dan bangsa.
+              Memprioritaskan pembentukan etika profesional dalam setiap jalur
+              pendidikan, menghasilkan tenaga kerja yang kompeten dan
+              berintegritas yang berorientasi pada melayani masyarakat dan
+              bangsa.
             </p>
           </div>
         </div>

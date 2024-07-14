@@ -1,3 +1,7 @@
+svg {
+  max-width: 100%;
+}
+
 .booklet-container {
   background: linear-gradient(
       92deg,
@@ -30,4 +34,33 @@
 .booklet-container .icon-7 {
   right: 82.431px;
   bottom: 6.084px;
+}
+
+@media (max-width: 639px) {
+  .booklet-section {
+    padding-top: 74px;
+  }
+
+  .booklet-container {
+    height: 260px;
+  }
+
+  .book {
+    width: 71%;
+    top: -115px;
+    right: 45px;
+  }
+
+  .booklet-container .icon-4 {
+    left: 25px;
+    top: 12px;
+    width: 50px;
+  }
+
+  .booklet-container .icon-7 {
+    right: 59.41px;
+
+    top: 23.536px;
+    width: 55px;
+  }
 }

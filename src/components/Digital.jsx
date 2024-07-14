@@ -4,12 +4,12 @@ import "./Digital.css";
 
 function Digital() {
   return (
-    <div className="digital-section flex pb-24 items-center bg-background">
-      <div className="digital-container flex w-base-content mx-auto items-center gap-7">
-        <img src={Vidio} alt="vidio" />
-        <div className="vidio-content flex p-6 flex-col items-start gap-2 self-stretch bg-white rounded-2xl">
+    <div className="digital-section xs:w-width-sm flex pb-12 lg:pb-24 lg:items-center justify-center items-start bg-background gap-gap10">
+      <div className="digital-container xs:w-mobile-6 flex lg:flex-row flex-col lg:w-base-content mx-auto lg:items-center items-start gap-6">
+        <img src={Vidio} alt="vidio" className=" px-4 lg:px-0" />
+        <div className="vidio-content flex xs:w-mobile-6 lg:p-6 p-2 flex-col items-start gap-2 lg:self-stretch bg-white rounded-2xl">
           <div className="vid-icons flex items-start gap-4">
-            <div className="clasroom bg-background rounded-lg flex size-12 p-2 justify-center items-center">
+            <div className="classroom bg-background rounded-lg flex size-12 p-2 justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="33"
@@ -72,10 +72,10 @@ function Digital() {
               </div>
             </div>
           </div>
-          <h3 className="text-primary text-3xl font-semibold">
+          <h3 className="text-primary text-xl lg:text-3xl font-semibold">
             Digital Schooling - Remote Learning
           </h3>
-          <p className=" text-base font-normal">
+          <p className=" text-base font-normal text-neutral-2">
             Menghadirkan masa depan pendidikan dengan platform Sekolah Digital
             kami. Mengintegrasikan
             <span className=" font-semibold"> Google Classroom</span> untuk

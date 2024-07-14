@@ -1,20 +1,13 @@
-import React from "react";
 import "./Social.css";
-import Map from "/images/map.png";
-import MapPoint1 from "/images/map-point-1.png";
-import MapPoint2 from "/images/map-point-2.png";
-import MapPoint3 from "/images/map-point-3.png";
+import Map from "/images/Map-Container.png";
 
 function Social() {
   return (
-    <div className="flex py-24 items-center justify-center self-stretch bg-white">
+    <div className="flex py-16 lg:py-24 px-6 w-mobile-8 lg:w-auto items-center justify-center self-stretch  lg:bg-white">
       <div className="map-container flex flex-col items-center gap-10 bg-background relative">
-        <img src={Map} alt="map" />
-        <img src={MapPoint1} alt="map-point" className="absolute map-point-1" />
-        <img src={MapPoint2} alt="map-point" className="absolute map-point-2" />
-        <img src={MapPoint3} alt="map-point" className="absolute map-point-3" />
-        <div className="content bg-primary flex p-6 h-width-3 flex-col justify-end items-start gap-4 absolute h-height-3">
-          <h4 className="text-2xl font-bold text-background">
+        <img src={Map} alt="map w-mobile-6" />
+        <div className="content w-[7.25rem] h-[10.4375rem] lg:w-auto bg-primary flex p-2 lg:p-6 h-width-3 flex-col justify-end items-start gap-4 absolute lg:h-height-3">
+          <h4 className="lg:text-2xl text-base font-bold text-background">
             Digital Schooling
             <br />
             untuk Pelajar
