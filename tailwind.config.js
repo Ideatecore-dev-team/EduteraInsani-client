@@ -29,6 +29,7 @@ export default {
         "width-6": "564px",
         "width-7": "662px",
         "width-8": "955px",
+        "width760": "760px",
         "width-8.1": "858px",
         "width-8.2": "826px",
         "width-9": "956px",

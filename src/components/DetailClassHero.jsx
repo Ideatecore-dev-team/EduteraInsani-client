@@ -1,197 +1,263 @@
 import React from "react";
-import ClassBanner from "../../public/images/Class Banner.png";
 import ButtonLink from "./Buttons/LinkButton";
 import Book from "../../public/images/IoIosBook.png";
 import StudentIcon from "../../public/images/Murid Icon.png";
-import CopyIcon from "../../public/images/IoIosCopy.png";
+import { GoDotFill } from "react-icons/go";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import Logo from "/images/edulogo.png";
+import DetailClassRight from "./DetailClassRight"
 
 const DetailClassHero = function () {
   const mataPelajaran = [
-    {
+      {
       mata_pelajaran: "Bahasa inggris",
-    },
-    {
+      },
+      {
       mata_pelajaran: "IPA",
-    },
-    {
+      },
+      {
       mata_pelajaran: "IPS",
-    },
-    {
+      },
+      {
       mata_pelajaran: "MTK",
-    },
-    {
+      },
+      {
       mata_pelajaran: "Bahasa Indonesia",
-    },
-    {
+      },
+      {
       mata_pelajaran: "Seni",
-    },
-    {
+      },
+      {
       mata_pelajaran: "Agama",
-    },
-    {
+      },
+      {
       mata_pelajaran: "Olahraga",
-    },
-    {
+      },
+      {
       mata_pelajaran: "Informatika",
-    },
-    {
+      },
+      {
       mata_pelajaran: "Projek",
-    },
+      },
   ];
   return (
-    <>
+      <>
       <div className=" detail-class-hero bg-background flex justify-center">
         <div className=" program-kelas  mt-40 w-base-content flex justify-center items-start gap-6">
           <div className=" container-l w-width-8 ">
-            <h2 className="text-4xl font-semibold text-primary">
+              <h2 className="text-4xl font-semibold text-primary">
               Program Kelas 7 SMP | T.A 2024/2025
-            </h2>
-            <div className="flex mt-6 gap-4 justify-center ">
-              <ButtonLink
-                caption="Detail Kelas"
-                to="/help"
-                border={false}
-                width={true}
-              ></ButtonLink>
-              <ButtonLink
-                border={true}
-                caption="Metode Pembayaran"
-                to="/about-us"
-                width={true}
-              ></ButtonLink>
-            </div>
-            <div className=" mt-12 ">
-              <h4 className="text-2xl font-semibold text-primary">
-                Tentang Pembelajaran
-              </h4>
-              <p className=" text-base mb-4 text-neutral-2">
-                Program pembelajaran Kelas 7 SMP untuk tahun ajaran 2024/2025.
-              </p>
-              <p className=" text-base mb-12 text-neutral-2">
-                SPP per Bulan <span className="font-semibold">Rp 450.000</span>{" "}
-                - Uang Pangkal{" "}
-                <span className="font-semibold">Rp 1.500.000</span> - Uang
-                Pengembangan <span className="font-semibold">Rp 500.000.</span>
-              </p>
-              <h4 className="text-2xl font-semibold text-primary">
-                Mata Pelajaran Wajib
-              </h4>
-              <p className=" text-base mb-4 text-neutral-2">
-                Merupakan mata pelajaran yang harus diikuti keseluruhan murid
-                Edu Tera Insani.
-              </p>
-              <div className="flex flex-wrap mb-12 gap-3">
-                {mataPelajaran.map((pelajaran) => {
-                  return (
-                    <div className="bg-[#C4FFBA] px-4 py-2 rounded-lg flex justify-center items-center gap-2">
-                      <img className="w-4 h-4" src={Book} alt="" />
-                      <p className="text-base text-primary">
-                        {pelajaran.mata_pelajaran}
-                      </p>
-                    </div>
-                  );
-                })}
+              </h2>
+              <div className="button flex mt-6 gap-4 justify-center ">
+                <ButtonLink
+                    caption="Detail Kelas"
+                    to="/help"
+                    border={false}
+                    width={true}
+                ></ButtonLink>
+                <ButtonLink
+                    border={true}
+                    caption="Metode Pembayaran"
+                    to="/about-us"
+                    width={true}
+                ></ButtonLink>
               </div>
-              <h4 className="text-2xl font-semibold text-primary">
-                Mata Pelajaran Pilihan
-              </h4>
-              <p className=" text-base text-neutral-2 mb-6">
-                Berikut adalah mata pelajaran pilihan yang dapat diambil oleh
-                murid sebagai mata pelajaran tambahan (Murid dapat memilih 2).
-              </p>
-              <div className="flex flex-wrap mb-12 gap-3">
-                <div className="bg-[#FFBABA] px-4 py-2 rounded-lg flex justify-center items-center gap-2">
-                  <img className="w-4 h-4" src={Book} alt="" />
-                  <p className="text-base text-primary">Mata Pelajaran 1</p>
-                </div>
-                <div className="bg-[#FFBABA] px-4 py-2 rounded-lg flex justify-center items-center gap-2">
-                  <img className="w-4 h-4" src={Book} alt="" />
-                  <p className="text-base text-primary">Mata Pelajaran 2</p>
-                </div>
-              </div>
-              <h4 className="text-2xl font-semibold text-primary">
-                Kelas ini ditujukan oleh
-              </h4>
-              <div className="flex gap-4">
-                <img className="w-16 h-16" src={StudentIcon} alt="" />
-                <div className="">
-                  <p className="text-base text-primary font-semibold">Umur:</p>
-                  <p className="text-base text-primary">
-                    Kelas ditujukan untuk anak berusia 12 - 13 tahun.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container-r">
-            <div className=" bg-white shadow-xl rounded-2xl w-width-4">
-              <img src={ClassBanner} alt="" />
-              <div className=" p-6">
-                <div className=" w-full">
-                  <h3 className="text-3xl font-semibold text-primary">
-                    Kelas 7 SMP
-                  </h3>
-                  <h3 className="text-xl w-full mb-6 font-semibold text-primary">
-                    T.A Angkatan 2024/2025
-                  </h3>
-                  <p className="text-base font-normal text-neutral-2">
-                    Bayaran/Semester
-                  </p>
-                  <h2 className="text-4xl mb-6 font-semibold text-primary">
-                    Rp 700.000
-                  </h2>
-                  <p className="text-base font-normal text-neutral-2">
-                    Pembayaran Pertama:
-                  </p>
-                  <h4 className="text-2xl font-semibold mb-6 text-secondary">
-                    Rp 3.500.000
-                  </h4>
-                  <div className=" flex-col gap-3 flex">
-                    <ButtonLink
-                      caption="Konsultasi dulu"
-                      to="/help"
-                      border={true}
-                    ></ButtonLink>
-                    <ButtonLink
-                      border={false}
-                      caption="Daftar Sekarang"
-                      to="/about-us"
-                    ></ButtonLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white mt-6 p-6 shadow-xl rounded-2xl w-width-4">
-              <div className="">
+              <div className="tentang-pembelajaran mt-12 ">
                 <h4 className="text-2xl font-semibold text-primary">
-                  Kode Promo
+                    Tentang Pembelajaran
                 </h4>
-                <div className="flex border-2 justify-between items-center border-secondary p-3 rounded-md">
-                  <p className="text-base text-neutral-2 font-semibold ">
-                    DIGICAMP24
-                  </p>
-                  <button className="flex gap-2">
-                    <img className="w-6 h-6" src={CopyIcon} alt="" />
-                    <p className="text-base text-secondary font-semibold">
-                      Salin
-                    </p>
-                  </button>
-                </div>
-                <div className="bg-[#C4FFBA] w-[13.778rem] px-4 py-2 rounded-full mt-2">
-                  <p className="text-base text-primary">
-                    Lebih Hemat{" "}
-                    <span className="font-semibold">Rp 600.000</span>
-                  </p>
-                </div>
-                <p className=" text-base text-neutral-2 mt-2">
-                  Berlaku untuk transaksi pertama*
+                <p className=" text-base mb-4 text-neutral-2">
+                    Program pembelajaran Kelas 7 SMP untuk tahun ajaran 2024/2025.
+                </p>
+                <p className=" text-base mb-12 text-neutral-2">
+                    SPP per Bulan <span className="font-semibold">Rp 450.000</span>{" "}
+                    - Uang Pangkal{" "}
+                    <span className="font-semibold">Rp 1.500.000</span> - Uang
+                    Pengembangan <span className="font-semibold">Rp 500.000.</span>
                 </p>
               </div>
-            </div>
+              <div className="mapel-wajib flex flex-wrap mb-12 gap-3">
+                <h4 className="text-2xl font-semibold text-primary">
+                    Mata Pelajaran Wajib
+                </h4>
+                <p className=" text-base mb-4 text-neutral-2">
+                    Merupakan mata pelajaran yang harus diikuti keseluruhan murid
+                    Edu Tera Insani.
+                </p>
+                  {mataPelajaran.map((pelajaran) => {
+                  return (
+                      <div className="bg-[#C4FFBA] px-4 py-2 rounded-lg flex justify-center items-center gap-2">
+                      <img className="w-4 h-4" src={Book} alt="" />
+                      <p className="text-base text-primary">
+                          {pelajaran.mata_pelajaran}
+                      </p>
+                      </div>
+                  );
+                  })}
+              </div>
+              <div className="mapel-pilihan flex flex-wrap mb-12 gap-3">
+                  <h4 className="text-2xl font-semibold text-primary">
+                      Mata Pelajaran Pilihan
+                  </h4>
+                  <p className=" text-base text-neutral-2 mb-6">
+                      Berikut adalah mata pelajaran pilihan yang dapat diambil oleh
+                      murid sebagai mata pelajaran tambahan (Murid dapat memilih 2).
+                  </p>
+                  <div className="bg-[#FFBABA] px-4 py-2 rounded-lg flex justify-center items-center gap-2">
+                  <img className="w-4 h-4" src={Book} alt="" />
+                  <p className="text-base text-primary">Mata Pelajaran 1</p>
+                  </div>
+                  <div className="bg-[#FFBABA] px-4 py-2 rounded-lg flex justify-center items-center gap-2">
+                  <img className="w-4 h-4" src={Book} alt="" />
+                  <p className="text-base text-primary">Mata Pelajaran 2</p>
+                  </div>
+              </div>
+              <div className="ditujukan-container flex w-width760 pb-12 flex-col items-start gap-gap10">
+                <div className="ditujukan flex flex-col items-start gap-2">
+                  <h4 className="text-2xl font-semibold text-primary">
+                      Kelas ini ditujukan oleh
+                  </h4>
+                  <div className="umur-1 flex items-center gap-4">
+                    <img className="w-16 h-16" src={StudentIcon} alt="" />
+                    <div className="umur-2 flex flex-col items-start">
+                    <p className="text-base text-primary font-semibold">
+                      Umur:
+                    </p>
+                    <p className="text-base text-primary">
+                        Kelas ditujukan untuk anak berusia 12 - 13 tahun.
+                    </p>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div className="prasyarat-container flex w-width760 pb-12 flex-col items-start gap-gap10">
+                <div className="prasyarat flex flex-col items-start gap-2 self-stretch">
+                  <h4 className="text-2xl font-semibold text-primary">
+                    Prasyarat Pembelajaran
+                  </h4>
+                  <div className="poin flex flex-col items-start gap-3 self-stretch">
+                    <ul className="list-none">
+                      <li className=" flex gap-2 mb-3">
+                        <GoDotFill className="  text-secondary text-lg" />
+                        <p className=" text-base text-neutral-2 ">
+                          Melengkapi data murid
+                        </p>
+                      </li>
+                      <li className=" flex gap-2 mb-3">
+                        <GoDotFill className=" text-secondary text-lg" />
+                        <p className=" text-base text-neutral-2">
+                          Untuk murid pindahan wajib menyelesaikan administrasi pindah
+                          sekolah.
+                        </p>
+                      </li>
+                      <li className=" flex gap-2">
+                        <GoDotFill className="  text-secondary text-lg" />
+                        <p className=" text-base text-neutral-2">
+                          Menyelesaikan syarat administrasi lainnya
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <div className="Kurikulum-container flex w-width760 pb-12 flex-col items-start gap-gap10">
+                <div className="kurikulum flex flex-col items-start gap-4">
+                  <div className="kurikulum-details">
+                    <h4 className="text-2xl font-semibold text-primary">
+                      Kurikulum
+                    </h4>
+                    <p className=" text-base text-neutral-2">
+                      Kurikulum Merdeka Plus adalah pendekatan pendidikan yang fleksibel
+                      dan berpusat pada siswa, dirancang untuk mendorong kemandirian
+                      belajar dan pemikiran kritis.
+                    </p>
+                  </div>
+                  <ButtonLink
+                    // border={true}
+                    caption="Pelajari Lebih Lanjut"
+                    to="/about-us"
+                    width={false}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M20.749 12.75L3.24926 12.75L3.24926 11.25L20.749 11.25L20.749 12.75Z"
+                        fill="#FFF"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M19.9994 11.25C16.4718 11.25 13.5894 14.3521 13.5894 17.66L13.5894 18.41L15.0894 18.41L15.0894 17.66C15.0894 15.1485 17.332 12.75 19.9994 12.75L20.7494 12.75L20.7494 11.25L19.9994 11.25Z"
+                        fill="#FFF"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M19.9994 12.75C16.4718 12.75 13.5894 9.64786 13.5894 6.33995L13.5894 5.58995L15.0894 5.58995L15.0894 6.33995C15.0894 8.85153 17.332 11.25 19.9994 11.25L20.7494 11.25L20.7494 12.75L19.9994 12.75Z"
+                        fill="#FFF"
+                      />
+                    </svg>
+                  </ButtonLink>
+                </div>
+              </div>
+              <div className="produk-container flex w-width760 pb-12 flex-col items-start gap-gap10">
+                <h4 className="text-2xl font-semibold text-primary">
+                  Produk yang kamu dapatkan
+                </h4>
+                <ul className="list-none">
+                  <li className=" flex gap-2 mb-3">
+                    <IoMdCheckmarkCircleOutline className="  text-secondary text-lg" />
+                    <p className=" text-base text-neutral-2 ">
+                      SPP Bulan Pertama <span className="mx-4">-</span> Senilai{" "}
+                      <span className="font-semibold text-primary">Gratis</span>
+                    </p>
+                  </li>
+                  <li className=" flex gap-2 mb-3">
+                    <IoMdCheckmarkCircleOutline className=" text-secondary text-lg" />
+                    <p className=" text-base text-neutral-2">
+                      Learning Kit untuk 1 Tahun Ajaran{" "}
+                      <span className="mx-4">-</span> Senilai{" "}
+                      <span className="font-semibold text-primary">Rp 380.000</span>
+                    </p>
+                  </li>
+                  <li className=" flex gap-2 mb-3">
+                    <IoMdCheckmarkCircleOutline className=" text-secondary text-lg" />
+                    <p className=" text-base text-neutral-2">
+                      Administrasi <span className="mx-4">-</span> Senilai{" "}
+                      <span className="font-semibold text-primary">Rp 3.120.000</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="lembaga-container flex w-width760 flex-col items-start gap-gap10">
+                <h4 className="text-2xl font-semibold text-primary">
+                  Lembaga Pengajar
+                </h4>
+                <div className="flex gap-2">
+                  <img className="w-10 h-10" src={Logo} alt="" />
+                  <h3 className="text-3xl font-semibold text-primary">
+                    Edu Tera Insani
+                  </h3>
+                </div>
+                <p className=" text-base text-neutral-2 mb-24">
+                  <span className="font-semibold">Edu Tera Insani</span> adalah
+                  platform sekolah digital yang dirancang untuk siswa SMP dan SMA,
+                  menawarkan jalur pembelajaran yang dipersonalisasi dan akses ke
+                  guru-guru ahli dari seluruh dunia.
+                </p>
+              </div>       
           </div>
+          <DetailClassRight/>
         </div>
       </div>
-    </>
+      </>
   );
 };
 export default DetailClassHero;

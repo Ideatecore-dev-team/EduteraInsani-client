@@ -1,12 +1,12 @@
 import React from "react";
 import DetailClassHero from "../components/DetailClassHero";
-import DetailClassHeroPersyaratanSection from "../components/DetailClassPersyaratanSection";
+import DetailClassRight from "../components/DetailClassRight";
 
 const DetailClass = function () {
   return (
     <>
       <DetailClassHero />
-      <DetailClassHeroPersyaratanSection />
+      {/* <DetailClassRight /> */}
     </>
   );
 };
