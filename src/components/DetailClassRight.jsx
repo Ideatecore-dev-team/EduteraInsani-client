@@ -5,7 +5,7 @@ import ButtonLink from "./Buttons/LinkButton";
 
 const DetailClassHeroPersyaratanSection = function () {
   return (
-    <div className="right-container flex flex-col items-start gap-6">
+    <div className="right-container flex flex-col items-start gap-6 mb-24">
       <div className="program-card flex flex-col items-start rounded-2xl bg-white shadow-xl">
         <img src={ClassBanner} alt="" />
         <div className="card-content flex p-6 flex-col items-start gap-12 self-stretch rounded-2xl bg-white shadow-xl">
