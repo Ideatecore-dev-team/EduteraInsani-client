@@ -4,6 +4,13 @@ import CopyIcon from "../../public/images/IoIosCopy.png";
 import ButtonLink from "./Buttons/LinkButton";
 
 const DetailClassHeroPersyaratanSection = function () {
+  const promoCode = "DIGICAMP24"
+  const copyPromoCode = () => {
+    navigator.clipboard.writeText(promoCode)
+      .then(() => alert(`Kode promo "${promoCode}" berhasil disalin!`))
+      .catch((error) => console.error("Gagal menyalin kode promo:", error));
+  };
+
   return (
     <div className="right-container flex flex-col items-start gap-6 mb-24">
       <div className="program-card flex flex-col items-start rounded-2xl bg-white shadow-xl">
@@ -36,16 +43,17 @@ const DetailClassHeroPersyaratanSection = function () {
             </div>
           </div>
           <div className="buttons flex flex-col items-start gap-3 self-stretch">
-              <ButtonLink className="flex py-3 px-4 content-center items-center gap-2 self-stretch w-[288px]"
-              caption="Konsultasi dulu"
-              to="/help"
-              border={true}
-              ></ButtonLink>
               <ButtonLink
-              border={false}
-              caption="Daftar Sekarang"
-              to="/about-us"
-              ></ButtonLink>
+                className="flex py-3 px-4 content-center items-center gap-2 self-stretch w-[288px]"
+                caption="Konsultasi dulu"
+                to="/help"
+                border={true}
+              />
+              <ButtonLink
+                border={false}
+                caption="Daftar Sekarang"
+                to="/about-us"
+              />
           </div>
         </div>
       </div>
@@ -56,10 +64,10 @@ const DetailClassHeroPersyaratanSection = function () {
           </h4>
           <div className="code flex flex-col items-start gap-2 self-stretch">
             <div className="code-promo flex py-3 px-4 justify-between items-center self-stretch border-secondary p-3 border-2 rounded-lg">
-              <p className="text-base text-neutral-2 font-semibold ">
-                  DIGICAMP24
+              <p className="text-base text-neutral-2 font-semibold">
+                {promoCode}
               </p>
-              <button className="flex items-center gap-2">
+              <button className="flex items-center gap-2" onClick={copyPromoCode}>
                   <img className="w-6 h-6" src={CopyIcon} alt="" />
                   <p className="text-base text-secondary font-semibold">
                   Salin
@@ -79,7 +87,7 @@ const DetailClassHeroPersyaratanSection = function () {
         </div>
       </div>
     </div>
-
   );
 };
+
 export default DetailClassHeroPersyaratanSection;
