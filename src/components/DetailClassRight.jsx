@@ -49,7 +49,7 @@ const DetailClassHeroPersyaratanSection = function () {
           </div>
         </div>
       </div>
-      <div className="code-container flex w-width-4 p-6 flex-col items-start gap-12 rounded-2xl bg-white shadow-xl mt-[390px]">
+      <div className="code-container flex w-width-4 p-6 flex-col items-start gap-12 rounded-2xl bg-white shadow-xl mt-[380px]">
         <div className="all-content flex flex-col items-start gap-6 self-stretch ">
           <h4 className="text-2xl font-semibold text-primary">
           Kode Promo
