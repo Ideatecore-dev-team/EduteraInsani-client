@@ -5,6 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosGlobe } from "react-icons/io";
 import { IoChevronDown } from "react-icons/io5";
 import ButtonLink from "./Buttons/LinkButton";
+import "./Navbar.css"
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
