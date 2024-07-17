@@ -6,7 +6,7 @@ import OuterMask1 from "/images/outermask-1.png";
 import OuterMask2 from "/images/outermask-2.png";
 import OuterMask3 from "/images/outermask-3.png";
 import OuterMask4 from "/images/outermask-4.png";
-import "./OurProgram.css";
+import "./OurProgramComponents.css";
 import { useLocation } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
