@@ -52,6 +52,6 @@
   }
 
   .cards-why .swiper-pagination {
-    width: 342px !important;
+    width: 100% !important;
   }
 }

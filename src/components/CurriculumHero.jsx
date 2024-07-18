@@ -6,8 +6,8 @@ import Mascot from "/images/curriculum-mascot.png";
 
 function CurriculumHero() {
   return (
-    <div className="curriculum-hero w-mobile-6 flex flex-wrap gap-5 lg:h-height-6 h-auto  lg:pb-24  mx-auto items-center lg:justify-center self-center lg:w-base-content relative ">
-      <div className=" content-hero pb-10 flex-col flex items-center w-mobile-6">
+    <div className="curriculum-hero w-full flex flex-wrap gap-5 lg:h-height-6 h-auto xs:px-4 lg:pb-24  mx-auto items-center lg:justify-center self-center lg:w-base-content relative ">
+      <div className=" content-hero pb-10 flex-col flex items-center w-full">
         <img src={Mascot} alt="Mascot" className="mascot lg:absolute z-10" />
         <img
           src={Logo}
@@ -157,7 +157,7 @@ function CurriculumHero() {
           </svg>
         </div>
       </div>
-      <div className="curriculum-title-CTA lg:w-width-7 w-mobile-6 flex flex-col p-6 justify-end items-start gap-4 bg-primary absolute">
+      <div className="curriculum-title-CTA lg:w-width-7 flex flex-col p-6 justify-end items-start gap-4 bg-primary absolute overflow-hidden">
         <h2 className=" text-2xl lg:text-4xl text-white font-semibold">
           Pelajari Lebih Lanjut terkait Edu Tera Insani
         </h2>
