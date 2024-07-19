@@ -36,8 +36,8 @@ function Footer() {
           </h4>
         </div>
         <div className="all-details flex justify-between items-start self-stretch lg:flex-row flex-col row-gap lg:gap-0 gap-12">
-          <div className="information flex flex-col items-start gap-4">
-            <div className="phone flex items-start gap-2 w-width-4">
+          <div className="information flex flex-col items-start gap-4 xs:w-[342px]">
+            <div className="phone flex items-start gap-2 xs:w-[342px]">
               <div className="size-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ function Footer() {
                 +62 896-9069-7474 (DINA)
               </p>
             </div>
-            <div className="mail flex items-start gap-2 w-width-4">
+            <div className="mail flex items-start gap-2 xs:w-[342px]">
               <div className="size-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +78,8 @@ function Footer() {
                 eduterainsanifoundation@gmail.com
               </p>
             </div>
-            <div className="address flex items-start gap-2 w-width-6">
-              <div className="size-6">
+            <div className="address flex items-start gap-2 xs:w-[342px]">
+              <div className="size-6 flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
