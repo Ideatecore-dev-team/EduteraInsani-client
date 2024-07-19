@@ -5,6 +5,7 @@ import StudentIcon from "../../public/images/Murid Icon.png";
 import { GoDotFill } from "react-icons/go";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Logo from "/images/edulogo.png";
+import DetailClassRight from "./DetailClassRight";
 
 const DetailClassHero = function () {
   const mataPelajaran = [
@@ -41,8 +42,11 @@ const DetailClassHero = function () {
   ];
   return (
     <>
-      <div>
-        <div className="tentang-pembelajaran lg:mt-12 -mt-20 ">
+      <div className="mt-20">
+        <div className="lg:hidden">
+          <DetailClassRight />
+        </div>
+        <div className="tentang-pembelajaran lg:mt-12 ">
           <h4 className="lg:text-2xl text-xl font-semibold text-primary">
             Tentang Pembelajaran
           </h4>

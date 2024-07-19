@@ -4,15 +4,10 @@ import ClassBanner from "../../public/images/Class Banner.png";
 import CopyIcon from "../../public/images/IoIosCopy.png";
 import ButtonDetailClass from "./Buttons/ButtonDetailClass";
 import ButtonLink from "./Buttons/LinkButton";
+import DetailClassComponents from "./DetailClassComponents";
+import MetodePembayaran from "./MetodePembayaran";
 
 const DetailClassHeroPersyaratanSection = function () {
-  const [selectedCategory, setSelectedCategory] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  const handleButtonClick = (index) => {
-    setSelectedCategory(index);
-  };
-
   const promoCode = "DIGICAMP24";
   const copyPromoCode = () => {
     navigator.clipboard
@@ -23,28 +18,6 @@ const DetailClassHeroPersyaratanSection = function () {
 
   return (
     <div className="right-container -mt-14 lg:-mt-0 w-mobile-6 lg:w-auto flex flex-col items-start gap-6 mb-24">
-      <div className=" container-l lg:w-width-8 lg:hidden ">
-        <h2 className="text-2xl lg:text-4xl font-semibold text-primary">
-          Program Kelas 7 SMP | T.A 2024/2025
-        </h2>
-        <div className="button flex mt-6 gap-4 justify-center ">
-          <ButtonDetailClass
-            caption="Detail Kelas"
-            buttonFn={() => handleButtonClick(0)}
-            isActive={selectedCategory === 0}
-            border={false}
-            width={true}
-          ></ButtonDetailClass>
-          <ButtonDetailClass
-            border={true}
-            caption={isMobile ? "Pembayaran" : "Metode Pembayaran"}
-            buttonFn={() => handleButtonClick(1)}
-            isActive={selectedCategory === 1}
-            width={true}
-          ></ButtonDetailClass>
-        </div>
-        {/* {renderCategoryContent()} */}
-      </div>
       <div className="program-card flex flex-col items-start rounded-2xl lg:bg-white lg:shadow-xl">
         <img src={ClassBanner} alt="" />
         <div className="card-content flex p-6 flex-col items-start gap-12 self-stretch rounded-2xl lg:bg-white lg:shadow-xl">
@@ -78,14 +51,10 @@ const DetailClassHeroPersyaratanSection = function () {
             <ButtonLink
               className="flex py-3 px-4 content-center items-center gap-2 self-stretch w-[288px]"
               caption="Konsultasi dulu"
-              to="/help"
+              to="#"
               border={true}
             />
-            <ButtonLink
-              border={false}
-              caption="Daftar Sekarang"
-              to="/about-us"
-            />
+            <ButtonLink border={false} caption="Daftar Sekarang" to="#" />
           </div>
         </div>
       </div>
