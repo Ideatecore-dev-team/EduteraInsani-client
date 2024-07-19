@@ -189,7 +189,7 @@ function Navbar() {
           handleChevronLeave(1);
           handleAboutDropDownClose();
         }}
-        className={` absolute w-40 top-14 rounded-xl shadow-b-md bg-white  right-[32.5rem] ${
+        className={` absolute lg:flex hidden w-40 top-14 rounded-xl shadow-b-md bg-white  right-[32.5rem] ${
           isAboutDropDown === 1 ? "h-28 duration-500" : "h-0 duration-300"
         }`}
       >
@@ -224,7 +224,7 @@ function Navbar() {
           handleChevronLeave();
           handleAboutDropDownClose();
         }}
-        className={`bg-white absolute w-42 shadow-lg top-14 rounded-xl right-[22.6rem] ${
+        className={`bg-white absolute w-42 shadow-lg lg:flex hidden top-14 rounded-xl right-[22.6rem] ${
           isAboutDropDown === 2 ? "h-28 duration-500" : "h-0 duration-300"
         }`}
       >
