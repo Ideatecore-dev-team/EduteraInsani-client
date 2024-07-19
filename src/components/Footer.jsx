@@ -4,13 +4,12 @@ import Logo from "/images/edulogo.png";
 import "./Footer.css";
 
 function Footer() {
-
   useEffect(() => {
     const handleScrollToTop = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    const links = document.querySelectorAll([".footer-link a",".logo-slogan"]);
+    const links = document.querySelectorAll([".footer-link a", ".logo-slogan"]);
     links.forEach((link) => {
       link.addEventListener("click", handleScrollToTop);
     });
@@ -79,7 +78,7 @@ function Footer() {
                 eduterainsanifoundation@gmail.com
               </p>
             </div>
-            <div className="address flex items-start gap-2 w-width-4">
+            <div className="address flex items-start gap-2 w-width-6">
               <div className="size-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,17 +109,49 @@ function Footer() {
               </p>
             </div>
           </div>
-          <div className="footer-link flex flex-col items-start gap-6">
-            <p className="text-primary text-base font-semibold">Tentang Sekolah</p>
-            <Link className=" text-base text-neutral-2" to="/about-us">
-              <p>Tentang Kami</p>
-            </Link>
-            <Link className=" text-base text-neutral-2" to="/curriculum">
-              <p>Kurikulum Kami</p>
-            </Link>
-            <Link className=" text-base text-neutral-2" to="/help">
-              <p>Kontak Kami</p>
-            </Link>
+          <div className=" flex gap-9">
+            <div className="footer-link flex flex-col items-start gap-6 ">
+              <p className="text-primary text-base font-semibold">
+                Tentang Sekolah
+              </p>
+              <Link className=" text-base text-neutral-2" to="/about-us">
+                <p>Tentang Edu Tera Insani</p>
+              </Link>
+              <Link className=" text-base text-neutral-2" to="/curriculum">
+                <p>Kurikulum Kami</p>
+              </Link>
+              <Link className=" text-base text-neutral-2" to="/help">
+                <p>Kontak Kami</p>
+              </Link>
+            </div>
+            <div className="footer-link flex flex-col items-start gap-6">
+              <p className="text-primary text-base font-semibold">
+                Program Kami
+              </p>
+              <Link className=" text-base text-neutral-2" to="/about-us">
+                <p>Senior Highschool</p>
+              </Link>
+              <Link className=" text-base text-neutral-2" to="/curriculum">
+                <p>Junior Highschool</p>
+              </Link>
+              <Link className=" text-base text-neutral-2" to="/help">
+                <p>Short Course</p>
+              </Link>
+            </div>
+            <div className="footer-link flex flex-col items-start gap-6">
+              <p className="text-primary text-base font-semibold">
+                Bantuan dan Panduan
+              </p>
+              <Link className=" text-base text-neutral-2" to="/about-us">
+                <p>Bantuan</p>
+              </Link>
+              <Link className=" text-base text-neutral-2" to="/curriculum">
+                <p>Kebijakan Privasi</p>
+              </Link>
+              <Link className=" text-base text-neutral-2" to="/help">
+                <p>Syarat dan Ketentuan</p>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="bottom-section flex flex-col gap-6 self-stretch">

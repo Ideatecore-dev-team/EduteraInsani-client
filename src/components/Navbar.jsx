@@ -5,7 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosGlobe } from "react-icons/io";
 import { IoChevronDown } from "react-icons/io5";
 import ButtonLink from "./Buttons/LinkButton";
-import "./Navbar.css"
+import "./Navbar.css";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -61,7 +61,7 @@ function Navbar() {
               </h3>
             </NavLink>
           </div>
-          <div className="globe flex gap-2">
+          <div className="globe hidden lg:flex gap-2">
             <IoIosGlobe className="text-2xl" />
             <IoChevronDown className="text-2xl" />
           </div>
@@ -81,6 +81,14 @@ function Navbar() {
         >
           <div className="flex items-center relative">
             <NavLink
+              onMouseEnter={() => {
+                handleChevronHover(1);
+                handleAboutDropDown(1);
+              }}
+              onMouseLeave={() => {
+                handleChevronLeave(1);
+                handleAboutDropDownClose();
+              }}
               to="/about-us"
               className="flex px-4 py-3 items-center gap-2"
             >
@@ -102,25 +110,22 @@ function Navbar() {
               <IoChevronDown className="text-2xl" />
             </button>
           </div>
-          <div
-            className={`bg-red-400 absolute w-40 top-9 -left-4 ${
-              isAboutDropDown === 1 ? "h-40 duration-500" : "h-0 duration-300"
-            }`}
-          >
-            <div className={`${isAboutDropDown === 1 ? "flex-col" : "hidden"}`}>
-              <h1>nhdkdldl</h1>
-              <h1>nhdkdldl</h1>
-              <h1>nhdkdldl</h1>
-              <h1>nhdkdldl</h1>
-            </div>
-          </div>
+
           <div className="flex items-center">
             <NavLink
-              to="/curriculum"
+              onMouseEnter={() => {
+                handleChevronHover(2);
+                handleAboutDropDown(2);
+              }}
+              onMouseLeave={() => {
+                handleChevronLeave();
+                handleAboutDropDownClose();
+              }}
+              to="/ourprogram"
               className="flex px-4 py-3 items-center gap-2"
             >
               <p className="text-base font-normal text-neutral-1">
-                Kurikulum Kami
+                Program Kami
               </p>
             </NavLink>
             <button
@@ -138,20 +143,6 @@ function Navbar() {
             >
               <IoChevronDown className="text-2xl" />
             </button>
-            <div
-              className={`bg-green-400 absolute w-40  top-9 right-28 ${
-                isAboutDropDown === 2 ? "h-40 duration-500" : "h-0 duration-300"
-              }`}
-            >
-              <div
-                className={`${isAboutDropDown === 2 ? "flex-col" : "hidden"}`}
-              >
-                <h1>nhdkdldl</h1>
-                <h1>nhdkdldl</h1>
-                <h1>nhdkdldl</h1>
-                <h1>nhdkdldl</h1>
-              </div>
-            </div>
           </div>
           <NavLink to="/help" className="flex px-4 py-3 items-center gap-2">
             <p className="text-base font-normal text-neutral-1">Bantuan</p>
@@ -189,6 +180,75 @@ function Navbar() {
           </ButtonLink>
         </div>
       </nav>
+      <div
+        onMouseEnter={() => {
+          handleChevronHover(1);
+          handleAboutDropDown(1);
+        }}
+        onMouseLeave={() => {
+          handleChevronLeave(1);
+          handleAboutDropDownClose();
+        }}
+        className={` absolute w-40 top-14 rounded-xl shadow-b-md bg-white  right-[32.5rem] ${
+          isAboutDropDown === 1 ? "h-28 duration-500" : "h-0 duration-300"
+        }`}
+      >
+        <div
+          className={` ${
+            isAboutDropDown === 1
+              ? " opacity-1 duration-500 ease-in-out transition-opacity "
+              : "opacity-0"
+          }`}
+        >
+          <div className="py-4 h-5 -mt-3 border-b border-gray-400">
+            <NavLink to="#" className="flex px-4 py-3 mt-4 items-center gap-2">
+              <p className="text-base font-normal text-neutral-1">Sekolah</p>
+            </NavLink>
+            <NavLink
+              to="/curriculum"
+              className="flex px-4  pt-3 items-center gap-2"
+            >
+              <p className="text-base font-normal text-neutral-1">
+                Kurikulum Kami
+              </p>
+            </NavLink>
+          </div>
+        </div>
+      </div>
+      <div
+        onMouseEnter={() => {
+          handleChevronHover(2);
+          handleAboutDropDown(2);
+        }}
+        onMouseLeave={() => {
+          handleChevronLeave();
+          handleAboutDropDownClose();
+        }}
+        className={`bg-white absolute w-42 shadow-lg top-14 rounded-xl right-[22.6rem] ${
+          isAboutDropDown === 2 ? "h-28 duration-500" : "h-0 duration-300"
+        }`}
+      >
+        <div
+          className={` ${
+            isAboutDropDown === 2
+              ? " opacity-1 duration-500 ease-in-out transition-opacity "
+              : "opacity-0"
+          }`}
+        >
+          <div className="py-4 h-5 -mt-3 border-b border-gray-400 ">
+            <NavLink to="#" className="flex px-4 py-3 mt-4 items-center gap-2">
+              <p className="text-base font-normal text-neutral-1">
+                Digital Schooling
+              </p>
+            </NavLink>
+            <NavLink to="#" className="flex px-4  pt-3 items-center gap-2">
+              <p className="text-base font-normal text-neutral-1">
+                Short Course
+              </p>
+            </NavLink>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
