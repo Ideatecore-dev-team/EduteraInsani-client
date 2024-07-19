@@ -23,7 +23,7 @@ function Footer() {
 
   return (
     <footer className="footer bg-white flex items-center py-24 px-6 lg:px-3">
-      <div className="footer-container flex w-width-4 lg:w-base-content mx-auto items-start flex-col gap-7">
+      <div className="footer-container  flex w-mobile-6 lg:w-base-content mx-auto items-start flex-col gap-7">
         <div className="logo-slogan flex flex-col items-start gap-2">
           <Link className="flex items-center gap-2" to="/">
             <img src={Logo} className=" size-8 lg:size-10" alt="logo" />
@@ -36,8 +36,8 @@ function Footer() {
           </h4>
         </div>
         <div className="all-details flex justify-between items-start self-stretch lg:flex-row flex-col row-gap lg:gap-0 gap-12">
-          <div className="information flex flex-col items-start gap-4 xs:w-[342px]">
-            <div className="phone flex items-start gap-2 xs:w-[342px]">
+          <div className="information flex flex-col items-start gap-4">
+            <div className="phone flex items-start gap-2 w-width-4">
               <div className="size-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ function Footer() {
                 +62 896-9069-7474 (DINA)
               </p>
             </div>
-            <div className="mail flex items-start gap-2 xs:w-[342px]">
+            <div className="mail flex items-start gap-2 w-width-4">
               <div className="size-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +78,8 @@ function Footer() {
                 eduterainsanifoundation@gmail.com
               </p>
             </div>
-            <div className="address flex items-start gap-2 xs:w-[342px]">
-              <div className="size-6 flex-shrink-0">
+            <div className="address flex items-start gap-2 lg:w-width-6">
+              <div className="lg:size-6 size-9">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -109,7 +109,7 @@ function Footer() {
               </p>
             </div>
           </div>
-          <div className=" flex gap-9">
+          <div className=" flex flex-wrap gap-9">
             <div className="footer-link flex flex-col items-start gap-6 ">
               <p className="text-primary text-base font-semibold">
                 Tentang Sekolah
