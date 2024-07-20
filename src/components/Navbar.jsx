@@ -200,7 +200,7 @@ function Navbar() {
               : "opacity-0"
           }`}
         >
-          <div className="py-4 h-5 -mt-3 border-b border-gray-400">
+          <div className="py-4 h-5 -mt-3 border-b w-40  border-gray-400">
             <NavLink to="#" className="flex px-4 py-3 mt-4 items-center gap-2">
               <p className="text-base font-normal text-neutral-1">Sekolah</p>
             </NavLink>
