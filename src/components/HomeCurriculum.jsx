@@ -6,7 +6,7 @@ function HomeCurriculum() {
   return (
     <div className="curriculum bg-white flex lg:py-24 py-12 items-center">
       <div className="curriculum-container lg:w-base-content w-width-3.2 flex lg:flex-row flex-col justify-center items-center gap-6 mx-auto">
-        <img src={Logo} alt="curriculum" className="size-44 lg:size-auto" />
+        <img src={Logo} alt="curriculum" className="size-[226px] lg:size-[270px]" />  
         <div className="curriculum-content flex flex-col lg:w-width-7 w-full lg:items-start items-center gap-4 xs:text-center">
           <h2 className="text-primary text-2xl lg:text-4xl font-semibold">
             Kurikulum Merdeka Plus: Mendorong Kemandirian Belajar

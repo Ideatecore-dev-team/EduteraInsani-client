@@ -13,7 +13,7 @@ import { AboutIcon3 } from "../assets/svg/aboutUs/AboutIcon3";
 function AboutHero() {
   return (
     <>
-      <div className="about-hero lg:pb-24 h-[45.3rem] lg:h-[33.625rem] flex flex-wrap lg:w-base-content w-mobile-6  items-center self-stretch bg-white  mx-auto">
+      <div className="about-hero lg:pb-24 h-[51.2rem] lg:h-[33.625rem] flex flex-wrap lg:w-base-content w-mobile-6  items-center self-stretch  mx-auto">
         <div className="about-content bg-primary lg:w-width-7 w-mobile-6 -mt-16 lg:-mt-0 pt-24 px-6 pb-6 flex flex-col justify-end items-start gap-4 absolute">
           <h2 className="text-white text-2xl  lg:text-4xl font-semibold">
             Memperkenalkan Digital Schooling dengan Kurikulum Merdeka Plus!

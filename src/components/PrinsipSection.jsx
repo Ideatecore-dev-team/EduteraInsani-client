@@ -2,12 +2,12 @@ import React from "react";
 
 function Prinsip() {
   return (
-    <div className="prinsip-section flex flex-col py-12 lg:py-24 items-center bg-background gap-gap10">
-      <div className="prinsip-container lg:w-base-content w-mobile-6 flex flex-col items-center gap-12">
+    <div className="prinsip-section flex flex-col py-12 px-4 lg:py-24 items-center bg-background gap-gap10">
+      <div className="prinsip-container lg:w-base-content w-full flex flex-col items-center gap-12">
         <h2 className=" text-primary w-56 lg:w-base-content text-2xl lg:text-4xl text-center font-semibold">
           Prinsip Pendidikan Edu Tera Insani
         </h2>
-        <div className="all-prinsips lg:w-base-content w-mobile-6 flex justify-center items-start content-start gap-6 flex-wrap">
+        <div className="all-prinsips lg:w-base-content w-full flex justify-center items-start content-start gap-6 flex-wrap">
           <div className="prinsip-card flex bg-white rounded-2xl w-width-6 p-6 items-start gap-6">
             <h1 className="font-bold text-secondary text-5xl">01</h1>
             <div className="title-desc flex flex-col items-start gap-2">
