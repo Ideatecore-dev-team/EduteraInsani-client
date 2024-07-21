@@ -29,7 +29,7 @@ const DigitalSchooling = function () {
 
   return (
     <div className="digital-schooling-section flex py-12 lg:py-24 xs:px-4 flex-col items-center justify-center bg-background">
-      <div className="digital-schooling-container flex w-full lg:w-base-content justify-center flex-col items-center">
+      <div className="digital-schooling-container flex w-full lg:w-base-content justify-center flex-col items-center gap-[44px] lg:gap-12">
         <div className="title-filter flex w-full flex-col items-center gap-4 lg:gap-6">
           <h2 className="lg:text-4xl text-2xl text-primary font-semibold text-center">
             Digital Schooling

@@ -6,7 +6,7 @@ import "./ButtonLink.css";
 function ButtonLink({ children, to, caption, border, width, shadow }) {
   const borderClass = border ? "border-class" : "no-border";
   const widthFull = width ? "btn-width-full" : "btn-width-normal";
-  const shadowButton = shadow ? "shadow-xl shadow-zinc-500" : "shadow-none";
+  const shadowButton = shadow ? "shadow-lg shadow-zinc-500" : "shadow-none";
 
   return (
     <Link
