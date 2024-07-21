@@ -1,8 +1,5 @@
 import "./AboutHero.css";
 import ButtonLink from "./Buttons/LinkButton";
-import Column from "./Layouts/Column";
-import Container from "./Layouts/Container";
-import Row from "./Layouts/Row";
 import TitleBanner from "/images/about-title-banner.png";
 import Logo from "/images/logo-silhouette.png";
 import { ArrowRightIcon } from "../assets/svg/aboutUs/ArrowRightIcon";
