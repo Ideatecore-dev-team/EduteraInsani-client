@@ -9,9 +9,21 @@ import "./Navbar.css";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isAboutDropDown, setIsAboutDropDown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredChevron, setHoveredChevron] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScrollToTop = () => {
@@ -34,12 +46,20 @@ function Navbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleAboutDropDown = (index) => {
-    setIsAboutDropDown(index);
+  const handleDropdownClick = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
   };
 
-  const handleAboutDropDownClose = () => {
-    setIsAboutDropDown(null);
+  const handleDropdownHover = (index) => {
+    if (!isMobile) {
+      setActiveDropdown(index);
+    }
+  };
+
+  const handleDropdownLeave = () => {
+    if (!isMobile) {
+      setActiveDropdown(null);
+    }
   };
 
   const handleChevronHover = (index) => {
@@ -52,7 +72,7 @@ function Navbar() {
 
   return (
     <div className="navbar-container lg:absolute fixed xs:py-2 xs:px-4 lg:w-base-content w-full z-50 mx-auto lg:left-0 lg:right-0 lg:top-3">
-      <nav className="navbar flex bg-white z-50 lg:w-base-content w-full p-3 justify-between items-center xs:mx overflow-hidden">
+      <nav className="navbar flex bg-white z-50 lg:w-base-content w-full p-3 justify-between items-center xs:mx">
         <div className="logo-lang flex items-center justify-center gap-4">
           <div className="logo">
             <NavLink to="/" className="flex items-center gap-2">
@@ -80,76 +100,144 @@ function Navbar() {
               : "scale-y-0 lg:scale-y-100 lg:flex"
           }`}
         >
-          <div className="flex items-center relative">
+          <div
+            className="flex items-start lg:items-center relative flex-col lg:flex-row"
+            onMouseEnter={() => handleDropdownHover(1)}
+            onMouseLeave={handleDropdownLeave}
+          >
             <NavLink
-              onMouseEnter={() => {
-                handleChevronHover(1);
-                handleAboutDropDown(1);
-              }}
-              onMouseLeave={() => {
-                handleChevronLeave(1);
-                handleAboutDropDownClose();
-              }}
-              to={isMobile ? "/about-us" : "#"}
+              onClick={() => isMobile && handleDropdownClick(1)}
+              to="#"
               className="flex px-4 py-3 items-center gap-2"
             >
               <p className="text-base font-normal text-neutral-1">Tentang</p>
+              <IoChevronDown
+                className={`chevron-down-1 duration-500 ${
+                  activeDropdown === 1 ? "rotate-180" : "rotate-0"
+                }`}
+              />
             </NavLink>
-            <button
-              onMouseEnter={() => {
-                handleChevronHover(1);
-                handleAboutDropDown(1);
-              }}
-              onMouseLeave={() => {
-                handleChevronLeave(1);
-                handleAboutDropDownClose();
-              }}
-              className={`chevron-down-1 lg:flex hidden duration-500 ${
-                hoveredChevron === 1 ? "rotate-180" : "rotate-0"
-              }`}
-            >
-              <IoChevronDown className="text-2xl" />
-            </button>
+            {activeDropdown === 1 && (
+              <div
+                className={`${
+                  isMobile
+                    ? "flex flex-col items-start"
+                    : "absolute dropdown-hover w-[152px] bottom-[-110px] shadow-b-md bg-white"
+                }`}
+              >
+                <NavLink
+                  to="/about-us"
+                  className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
+                >
+                  <p className="text-base font-normal text-neutral-1">
+                    Sekolah
+                  </p>
+                </NavLink>
+                <NavLink
+                  to="/curriculum"
+                  className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
+                >
+                  <p className="text-base font-normal text-neutral-1">
+                    Kurikulum Kami
+                  </p>
+                </NavLink>
+              </div>
+            )}
           </div>
 
-          <div className="flex items-center">
+          <div
+            className="flex items-start lg:items-center relative flex-col lg:flex-row"
+            onMouseEnter={() => handleDropdownHover(2)}
+            onMouseLeave={handleDropdownLeave}
+          >
             <NavLink
-              onMouseEnter={() => {
-                handleChevronHover(2);
-                handleAboutDropDown(2);
-              }}
-              onMouseLeave={() => {
-                handleChevronLeave();
-                handleAboutDropDownClose();
-              }}
-              to={isMobile ? "/ourprogram" : "#"}
-              className="flex px-4 py-3 items-center gap-2"
+              onClick={() => isMobile && handleDropdownClick(2)}
+              to="#"
+              className="flex px-4 py-3 items-center xs:justify-between gap-2"
             >
               <p className="text-base font-normal text-neutral-1">
                 Program Kami
               </p>
+              <IoChevronDown
+                className={`chevron-down-2 duration-500 ${
+                  activeDropdown === 2 ? "rotate-180" : "rotate-0"
+                }`}
+              />
             </NavLink>
-            <button
-              onMouseEnter={() => {
-                handleChevronHover(2);
-                handleAboutDropDown(2);
-              }}
-              onMouseLeave={() => {
-                handleChevronLeave();
-                handleAboutDropDownClose();
-              }}
-              className={`chevron-down-2 lg:flex hidden duration-500 ${
-                hoveredChevron === 2 ? "rotate-180" : "rotate-0"
-              }`}
-            >
-              <IoChevronDown className="text-2xl" />
-            </button>
+            {activeDropdown === 2 && (
+              <div
+                className={`${
+                  isMobile
+                    ? "flex flex-col items-start"
+                    : "absolute dropdown-hover w-[161px] bottom-[-110px] shadow-b-md bg-white"
+                }`}
+              >
+                <NavLink
+                  to="/ourprogram"
+                  className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
+                >
+                  <p className="text-base font-normal text-neutral-1">
+                    Digital Schooling
+                  </p>
+                </NavLink>
+                <NavLink
+                  to="/shortcourse"
+                  className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
+                >
+                  <p className="text-base font-normal text-neutral-1">
+                    Short Course
+                  </p>
+                </NavLink>
+              </div>
+            )}
           </div>
-          <NavLink to="/help" className="flex px-4 py-3 items-center gap-2">
+
+          <NavLink
+            to="/help"
+            className="flex px-4 py-3 items-start lg:items-center gap-2"
+          >
             <p className="text-base font-normal text-neutral-1">Bantuan</p>
           </NavLink>
+
+          <div className="flex lg:hidden flex-row gap-2 mt-3">
+            <ButtonLink
+              caption="Login"
+              width={true}
+              to=""
+              border={true}
+            ></ButtonLink>
+            <ButtonLink border={false} width={true} caption="Daftar" to="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M20.749 12.75L3.24926 12.75L3.24926 11.25L20.749 11.25L20.749 12.75Z"
+                  fill="#FFF"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M19.9994 11.25C16.4718 11.25 13.5894 14.3521 13.5894 17.66L13.5894 18.41L15.0894 18.41L15.0894 17.66C15.0894 15.1485 17.332 12.75 19.9994 12.75L20.7494 12.75L20.7494 11.25L19.9994 11.25Z"
+                  fill="#FFF"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M19.9994 12.75C16.4718 12.75 13.5894 9.64786 13.5894 6.33995L13.5894 5.58995L15.0894 5.58995L15.0894 6.33995C15.0894 8.85153 17.332 11.25 19.9994 11.25L20.7494 11.25L20.7494 12.75L19.9994 12.75Z"
+                  fill="#FFF"
+                />
+              </svg>
+            </ButtonLink>
+          </div>
         </div>
-        <div className="cta hidden lg:flex items-start gap-2 -ml-28 lg:gap-3">
+
+        <div className="cta hidden lg:flex items-center gap-3">
           <ButtonLink caption="Login" to="" border={true}></ButtonLink>
           <ButtonLink border={false} caption="Daftar" to="">
             <svg
@@ -181,81 +269,6 @@ function Navbar() {
           </ButtonLink>
         </div>
       </nav>
-      <div
-        onMouseEnter={() => {
-          handleChevronHover(1);
-          handleAboutDropDown(1);
-        }}
-        onMouseLeave={() => {
-          handleChevronLeave(1);
-          handleAboutDropDownClose();
-        }}
-        className={` absolute lg:flex hidden w-40 top-14 rounded-xl shadow-b-md bg-white  right-[32.5rem] ${
-          isAboutDropDown === 1 ? "h-28 duration-500" : "h-0 duration-300"
-        }`}
-      >
-        <div
-          className={` ${
-            isAboutDropDown === 1
-              ? " opacity-1 duration-500 ease-in-out transition-opacity "
-              : "opacity-0"
-          }`}
-        >
-          <div className="py-4 h-5 -mt-3 border-b w-40  border-gray-400">
-            <NavLink
-              to="/about-us"
-              className="flex px-4 py-3 mt-4 items-center gap-2"
-            >
-              <p className="text-base font-normal text-neutral-1">Sekolah</p>
-            </NavLink>
-            <NavLink
-              to="/curriculum"
-              className="flex px-4  pt-3 items-center gap-2"
-            >
-              <p className="text-base font-normal text-neutral-1">
-                Kurikulum Kami
-              </p>
-            </NavLink>
-          </div>
-        </div>
-      </div>
-      <div
-        onMouseEnter={() => {
-          handleChevronHover(2);
-          handleAboutDropDown(2);
-        }}
-        onMouseLeave={() => {
-          handleChevronLeave();
-          handleAboutDropDownClose();
-        }}
-        className={`bg-white absolute w-42 shadow-lg lg:flex hidden top-14 rounded-xl right-[22.6rem] ${
-          isAboutDropDown === 2 ? "h-28 duration-500" : "h-0 duration-300"
-        }`}
-      >
-        <div
-          className={` ${
-            isAboutDropDown === 2
-              ? " opacity-1 duration-500 ease-in-out transition-opacity "
-              : "opacity-0"
-          }`}
-        >
-          <div className="py-4 h-5 -mt-3 border-b border-gray-400 ">
-            <NavLink
-              to="/ourprogram"
-              className="flex px-4 py-3 mt-4 items-center gap-2"
-            >
-              <p className="text-base font-normal text-neutral-1">
-                Digital Schooling
-              </p>
-            </NavLink>
-            <NavLink to="" className="flex px-4  pt-3 items-center gap-2">
-              <p className="text-base font-normal text-neutral-1">
-                Short Course
-              </p>
-            </NavLink>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
