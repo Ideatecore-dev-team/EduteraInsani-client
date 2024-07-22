@@ -60,9 +60,11 @@ const DigitalSchooling = function () {
             />
           </div>
         </div>
-        {selectedCategory === 0 && <AllClassComponent category={0} />}
-        {selectedCategory === 1 && <AllClassComponent category={1} />}
-        {selectedCategory === 2 && <AllClassComponent category={2} />}
+        <div className="lg:w-auto flex justify-center w-[24.5rem] overflow-hidden">
+          {selectedCategory === 0 && <AllClassComponent category={0} />}
+          {selectedCategory === 1 && <AllClassComponent category={1} />}
+          {selectedCategory === 2 && <AllClassComponent category={2} />}
+        </div>
       </div>
     </div>
   );

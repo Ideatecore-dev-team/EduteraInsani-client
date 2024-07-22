@@ -11,6 +11,7 @@ function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAboutDropDown, setIsAboutDropDown] = useState(null);
   const [hoveredChevron, setHoveredChevron] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const handleScrollToTop = () => {
@@ -89,7 +90,7 @@ function Navbar() {
                 handleChevronLeave(1);
                 handleAboutDropDownClose();
               }}
-              to="/about-us"
+              to={isMobile ? "/about-us" : "#"}
               className="flex px-4 py-3 items-center gap-2"
             >
               <p className="text-base font-normal text-neutral-1">Tentang</p>
@@ -121,7 +122,7 @@ function Navbar() {
                 handleChevronLeave();
                 handleAboutDropDownClose();
               }}
-              to="/ourprogram"
+              to={isMobile ? "/ourprogram" : "#"}
               className="flex px-4 py-3 items-center gap-2"
             >
               <p className="text-base font-normal text-neutral-1">
@@ -149,8 +150,8 @@ function Navbar() {
           </NavLink>
         </div>
         <div className="cta hidden lg:flex items-start gap-2 -ml-28 lg:gap-3">
-          <ButtonLink caption="Login" to="#" border={true}></ButtonLink>
-          <ButtonLink border={false} caption="Daftar" to="#">
+          <ButtonLink caption="Login" to="" border={true}></ButtonLink>
+          <ButtonLink border={false} caption="Daftar" to="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -201,7 +202,10 @@ function Navbar() {
           }`}
         >
           <div className="py-4 h-5 -mt-3 border-b w-40  border-gray-400">
-            <NavLink to="#" className="flex px-4 py-3 mt-4 items-center gap-2">
+            <NavLink
+              to="/about-us"
+              className="flex px-4 py-3 mt-4 items-center gap-2"
+            >
               <p className="text-base font-normal text-neutral-1">Sekolah</p>
             </NavLink>
             <NavLink
@@ -236,12 +240,15 @@ function Navbar() {
           }`}
         >
           <div className="py-4 h-5 -mt-3 border-b border-gray-400 ">
-            <NavLink to="#" className="flex px-4 py-3 mt-4 items-center gap-2">
+            <NavLink
+              to="/ourprogram"
+              className="flex px-4 py-3 mt-4 items-center gap-2"
+            >
               <p className="text-base font-normal text-neutral-1">
                 Digital Schooling
               </p>
             </NavLink>
-            <NavLink to="#" className="flex px-4  pt-3 items-center gap-2">
+            <NavLink to="" className="flex px-4  pt-3 items-center gap-2">
               <p className="text-base font-normal text-neutral-1">
                 Short Course
               </p>
