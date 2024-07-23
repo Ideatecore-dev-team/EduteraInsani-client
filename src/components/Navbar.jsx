@@ -119,28 +119,30 @@ function Navbar() {
             </NavLink>
             {activeDropdown === 1 && (
               <div
-                className={`${
+                className={` lg:rounded-xl ${
                   isMobile
                     ? "flex flex-col items-start"
-                    : "absolute dropdown-hover w-[152px] bottom-[-110px] shadow-b-md bg-white"
+                    : "absolute dropdown-hover w-[152px] bottom-[-110px] bg-white"
                 }`}
               >
-                <NavLink
-                  to="/about-us"
-                  className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
-                >
-                  <p className="text-base font-normal text-neutral-1">
-                    Sekolah
-                  </p>
-                </NavLink>
-                <NavLink
-                  to="/curriculum"
-                  className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
-                >
-                  <p className="text-base font-normal text-neutral-1">
-                    Kurikulum Kami
-                  </p>
-                </NavLink>
+                <div className=" lg:border-t-2 lg:mt-5 lg:border-gray-300 lg:shadow-md lg:rounded-b-xl bg-white">
+                  <NavLink
+                    to="/about-us"
+                    className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
+                  >
+                    <p className="text-base font-normal text-neutral-1">
+                      Sekolah
+                    </p>
+                  </NavLink>
+                  <NavLink
+                    to="/curriculum"
+                    className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
+                  >
+                    <p className="text-base font-normal text-neutral-1">
+                      Kurikulum Kami
+                    </p>
+                  </NavLink>
+                </div>
               </div>
             )}
           </div>
@@ -166,28 +168,30 @@ function Navbar() {
             </NavLink>
             {activeDropdown === 2 && (
               <div
-                className={`${
+                className={` ${
                   isMobile
                     ? "flex flex-col items-start"
-                    : "absolute dropdown-hover w-[161px] bottom-[-110px] shadow-b-md bg-white"
+                    : "absolute dropdown-hover w-[161px] bottom-[-110px]"
                 }`}
               >
-                <NavLink
-                  to="/ourprogram"
-                  className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
-                >
-                  <p className="text-base font-normal text-neutral-1">
-                    Digital Schooling
-                  </p>
-                </NavLink>
-                <NavLink
-                  to="/shortcourse"
-                  className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
-                >
-                  <p className="text-base font-normal text-neutral-1">
-                    Short Course
-                  </p>
-                </NavLink>
+                <div className=" lg:border-t-2 lg:mt-5 lg:border-gray-300 lg:shadow-md lg:rounded-b-xl bg-white">
+                  <NavLink
+                    to="/ourprogram"
+                    className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
+                  >
+                    <p className="text-base font-normal text-neutral-1">
+                      Digital Schooling
+                    </p>
+                  </NavLink>
+                  <NavLink
+                    to="/shortcourse"
+                    className="flex lg:px-4 px-8 py-3 items-start lg:items-center gap-2"
+                  >
+                    <p className="text-base font-normal text-neutral-1">
+                      Short Course
+                    </p>
+                  </NavLink>
+                </div>
               </div>
             )}
           </div>
