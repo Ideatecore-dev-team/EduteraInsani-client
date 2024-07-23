@@ -207,10 +207,15 @@ function Navbar() {
             <ButtonLink
               caption="Login"
               width={true}
-              to=""
+              to="login"
               border={true}
             ></ButtonLink>
-            <ButtonLink border={false} width={true} caption="Daftar" to="">
+            <ButtonLink
+              border={false}
+              width={true}
+              caption="Daftar"
+              to="/register"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -242,8 +247,8 @@ function Navbar() {
         </div>
 
         <div className="cta hidden lg:flex items-center gap-3">
-          <ButtonLink caption="Login" to="" border={true}></ButtonLink>
-          <ButtonLink border={false} caption="Daftar" to="">
+          <ButtonLink caption="Login" to="/login" border={true}></ButtonLink>
+          <ButtonLink border={false} caption="Daftar" to="/register">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

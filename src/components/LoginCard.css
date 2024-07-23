@@ -1,0 +1,8 @@
+.login-card {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  border: 2px solid #a88646;
+}
+
+.login-input {
+  border: 2px solid #0b4068;
+}
