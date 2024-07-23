@@ -108,7 +108,7 @@ function Navbar() {
             <NavLink
               onClick={() => isMobile && handleDropdownClick(1)}
               to="#"
-              className="flex px-4 py-3 items-center gap-2"
+              className="flex xs:w-full xs:justify-between px-4 py-3 items-center gap-2"
             >
               <p className="text-base font-normal text-neutral-1">Tentang</p>
               <IoChevronDown
@@ -155,7 +155,7 @@ function Navbar() {
             <NavLink
               onClick={() => isMobile && handleDropdownClick(2)}
               to="#"
-              className="flex px-4 py-3 items-center xs:justify-between gap-2"
+              className="flex xs:w-full xs:justify-between px-4 py-3 items-center gap-2"
             >
               <p className="text-base font-normal text-neutral-1">
                 Program Kami
