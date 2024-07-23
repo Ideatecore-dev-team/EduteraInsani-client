@@ -52,8 +52,14 @@ const DetailClassHeroPersyaratanSection = function () {
               caption="Konsultasi dulu"
               to=""
               border={true}
+              width={true}
             />
-            <ButtonLink border={false} caption="Daftar Sekarang" to="" />
+            <ButtonLink
+              border={false}
+              width={true}
+              caption="Daftar Sekarang"
+              to=""
+            />
           </div>
         </div>
       </div>

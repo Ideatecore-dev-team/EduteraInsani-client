@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./ButtonDetailClass.css";
 
-function ButtonCtg({ caption, buttonFn, isActive }) {
+function ButtonCtg({ caption, buttonFn, isActive, width }) {
   const [isSlideBackground, setIsSlideBackground] = useState({});
+  const widthFull = width ? "w-full" : "w-auto";
 
   useEffect(() => {
     if (isActive) {
@@ -20,7 +21,7 @@ function ButtonCtg({ caption, buttonFn, isActive }) {
 
   return (
     <button
-      className={`btn-ctg py-3 lg:px-4 px-3 items-center gap-2 text-base rounded-rounded32`}
+      className={`btn-ctg py-3 lg:px-4 px-3 items-center gap-2 text-base lg:${widthFull} rounded-rounded32`}
       onClick={buttonFn}
       style={isSlideBackground}
     >
