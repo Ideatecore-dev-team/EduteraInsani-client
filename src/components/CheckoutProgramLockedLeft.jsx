@@ -7,7 +7,7 @@ const CheckoutProgramLockedLeft = function () {
   return (
     <>
       <div className=" left flex flex-col w-width-7">
-        <div className="bg-white  rounded-md p-6">
+        <div className="bg-white  rounded-2xl p-6">
           <div className="flex gap-6 items-center">
             <img className="w-width-3" src={ClassBanner} alt="" />
             <div className="flex flex-col">
@@ -34,7 +34,7 @@ const CheckoutProgramLockedLeft = function () {
             </div>
           </div>
         </div>
-        <div className="bg-white rounded-md p-6 mt-8">
+        <div className="bg-white rounded-3xl p-6 mt-8">
           <h4 className="text-2xl text-primary font-semibold mb-6">
             Daftarkan Data Diri Anak
           </h4>

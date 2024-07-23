@@ -7,7 +7,7 @@ const CheckoutProgramLockedRight = function () {
   return (
     <>
       <div className="right w-width-5">
-        <div className="bg-white p-6 rounded-xl border-2 border-secondary shadow-lg">
+        <div className="bg-white p-6 rounded-[2rem] border-2 border-secondary shadow-lg">
           <div className="flex flex-col">
             <h4 className="text-2xl text-primary font-semibold mb-2">
               Metode Pembayaran
