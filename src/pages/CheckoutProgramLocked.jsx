@@ -1,14 +1,18 @@
 import React from "react";
-import ClassBanner from "/public/images/Class Banner.png";
-import ButtonLink from "../components/Buttons/LinkButton";
-import { IoIosLock } from "react-icons/io";
+import { useState } from "react";
 import CheckoutProgramLockedLeft from "../components/CheckoutProgramLockedLeft";
 import CheckoutProgramLockedRight from "../components/ChekoutProgramLockedRight";
+import CheckoutProgramLockedMobile from "../components/CheckoutProgramLockedMobile";
 
 const CheckoutProgramLocked = function () {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   return (
     <>
-      <div className="flex bg-background justify-center">
+      <div
+        className={` bg-background justify-center ${
+          isMobile ? "hidden" : "flex"
+        }`}
+      >
         <div className=" w-base-content mt-32 pb-24">
           <h2 className="text-4xl font-semibold text-center text-primary">
             Checkout Program
@@ -21,6 +25,9 @@ const CheckoutProgramLocked = function () {
             <CheckoutProgramLockedRight />
           </div>
         </div>
+      </div>
+      <div className={`${isMobile ? "flex flex-col" : "hidden"}`}>
+        <CheckoutProgramLockedMobile />
       </div>
     </>
   );
