@@ -3,7 +3,7 @@ import Logo from "/images/edulogo.png";
 
 function LoginTagline() {
   return (
-    <div className="login-tagline w-full flex flex-col items-center justify-center self-stretch relative">
+    <div className="login-tagline w-full flex flex-col items-center justify-center self-stretch relative xs:hidden">
       <div className="icon-1 absolute xs:hidden !top-[98px] !left-[446px] ">
         <svg
           xmlns="http://www.w3.org/2000/svg"

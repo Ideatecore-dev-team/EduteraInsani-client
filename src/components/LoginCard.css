@@ -6,3 +6,10 @@
 .login-input {
   border: 2px solid #0b4068;
 }
+
+@media (max-width: 639px) {
+  .login-card {
+    box-shadow: none;
+    border: none;
+  }
+}
