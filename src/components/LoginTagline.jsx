@@ -3,8 +3,8 @@ import Logo from "/images/edulogo.png";
 
 function LoginTagline() {
   return (
-    <div className="login-tagline w-full flex flex-col items-center justify-center self-stretch relative xs:hidden">
-      <div className="icon-1 absolute xs:hidden !top-[98px] !left-[446px] ">
+    <div className="login-tagline w-full flex flex-col items-center justify-center relative xs:hidden">
+      <div className="icon-1 absolute xs:hidden !top-[-45px] !right-[121px] ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="48"
@@ -34,7 +34,7 @@ function LoginTagline() {
           </defs>
         </svg>
       </div>
-      <div className="icon-2 absolute xs:hidden !top-[175px] !left-[41px]">
+      <div className="icon-2 absolute xs:hidden !top-[10px] !left-[5px] bottom-{">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="48"
@@ -84,7 +84,7 @@ function LoginTagline() {
           </defs>
         </svg>
       </div>
-      <div className="icon-3 absolute xs:hidden !top-[351px] !left-[523px]">
+      <div className="icon-3 absolute xs:hidden !bottom-[-62.5px] !right-[42px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="59"
