@@ -49,7 +49,7 @@ function RemoteLearning() {
     cardContent.map((card, index) => (
       <div
         key={index}
-        className="card-why lg:ml-0 flex lg:flex-row flex-col bg-white rounded-2xl w-mobile-6 xs:h-[399px] lg:w-width-9 lg:p-6 p-4 items-start gap-4"
+        className="card-why lg:ml-0 flex lg:flex-row flex-col bg-white rounded-2xl w-[342px] xs:h-[399px] lg:w-[956px] lg:p-6 p-4 items-start gap-4"
       >
         <img src={card.img} className="size-20" alt="icon" />
         <div className="flex-col gap-6 ">
@@ -63,13 +63,15 @@ function RemoteLearning() {
       </div>
     ));
 
+    
+
   return (
-    <div className="remote flex items-center lg:pb-24 pb-12 lg:flex-col lg:block bg-background">
+    <div className="remote flex lg:items-center content-center lg:pb-24 pb-12 lg:flex-col lg:block bg-background">
       <div className="remote-container w-base-content flex flex-col gap-6 lg:gap-7 items-center justify-center mx-auto">
         <h2 className=" text-primary text-2xl lg:text-4xl font-semibold text-center">
           Pembelajaran Remote <br /> Learning
         </h2>
-        <div className="card-remote flex bg-white rounded-2xl lg:text-4xl w-mobile-6 lg:w-width-9 lg:p-6 p-4 lg:flex-col items-start gap-4">
+        <div className="card-remote flex bg-white rounded-2xl lg:text-4xl w-[342px] lg:w-width-9 lg:p-6 p-4 lg:flex-col items-start gap-4">
           <p className="text-neutral-2 text-base text-justify font-normal">
             Metode pembelajaran remote learning di Edu Tera Insani menggabungkan
             teknologi canggih dan pendekatan personal. Siswa mengikuti sesi
@@ -79,7 +81,7 @@ function RemoteLearning() {
             belajar yang fleksibel dan komprehensif.
           </p>
         </div>
-        <div className="cards-why flex lg:flex-col xs:w-mobile-6 items-center lg:items-start gap-6 overflow-hidden">
+        <div className="cards-why flex lg:flex-col xs:w-[342px] items-center lg:items-start gap-6 overflow-hidden">
           {isMobile ? (
             <Swiper
               freeMode={true}
@@ -89,13 +91,13 @@ function RemoteLearning() {
               loop={false}
               modules={[Pagination, FreeMode, Navigation]}
               slidesPerView={1}
-              className="w-width-sm relative"
+              className="w-[342px] relative"
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             >
               {cardContent.map((card, index) => (
                 <SwiperSlide key={index}>{renderCards()[index]}</SwiperSlide>
               ))}
-              <div className="navigation-why flex justify-between w-width-3.2 mt-4 relative">
+              <div className="navigation-why flex justify-between w-full mt-4 relative">
                 <CarouselButton direction="prev" isVisible={activeIndex > 0} />
                 <CarouselButton
                   direction="next"

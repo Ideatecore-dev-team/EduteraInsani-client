@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Hero from "../components/Hero";
 import WhyEdutera from "../components/WhyEdutera";
 import Digital from "../components/Digital";
-import OurProgram from "../components/OurProgram";
+import OurProgram from "../components/OurProgramComponents";
 import HomeCurriculum from "../components/HomeCurriculum";
 import LearningPath from "../components/LearningPath";
 import Teacher from "../components/Teacher";

@@ -1,13 +1,26 @@
-.btn-link{
+.btn-link {
   border-radius: 32px;
   justify-content: center;
 }
-.btn-width-full{
+.btn-width-full {
   width: 100%;
 }
 
-.btn-width-normal{
-  width: 14.0628rem;
+.btn-width-normal {
+  /* width: 14.0628rem; */
+}
+
+.buttons .btn-link {
+  box-shadow: 0px 12px 24px 0px rgba(168, 134, 70, 0.4);
+}
+
+.login-card .btn-link:nth-of-type(2) {
+  background: white;
+  color: #212121;
+}
+
+.login-card .btn-link:nth-of-type(2):hover {
+  background: #f7f5f2;
 }
 
 .border-class {
