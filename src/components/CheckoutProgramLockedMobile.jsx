@@ -15,7 +15,7 @@ const CheckoutProgramLockedMobile = function () {
     // Memeriksa token dari localStorage
     const token = localStorage.getItem("token");
     if (token) {
-      setHasToken(true);
+      setHasToken(false);
     }
   }, []);
 
@@ -24,8 +24,8 @@ const CheckoutProgramLockedMobile = function () {
       <div className="flex bg-background justify-center">
         <div className="w-mobile-6 mt-32 pb-6">
           <h2 className="text-4xl font-semibold text-primary">Checkout</h2>
-          <p className="text-[0.875rem]  text-neutral-2">
-            Lengkapi data calon siswa dan lanjutkan <br /> payment
+          <p className="text-sm self-stretch text-neutral-2 mb-6">
+            Lengkapi data calon siswa dan lanjutkan payment
           </p>
           <h4 className="text-lg text-primary font-semibold mb-3">Program</h4>
           <div className="bg-white w-mobile-6 rounded-2xl p-4 mb-6">
@@ -105,14 +105,14 @@ const CheckoutProgramLockedMobile = function () {
         </div>
       </div>
       <div className="w-mobile-7 bg-background flex-col flex items-center justify-center mt-3 mb-36">
-        <p className=" text-[0.875rem] text-primary text-center ">
+        <p className=" text-sm text-primary text-center ">
           Butuh bantuan?{" "}
           <a className="text-secondary underline" href="">
             Hubungi Customer Service
           </a>
         </p>
         <div className="w-mobile-6 bg-white p-6 rounded-2xl mt-6">
-          <h4 className="text-lg text-primary font-bold">
+          <h4 className="text-lg text-primary font-bold mb-4">
             Daftarkan Data Diri Anak
           </h4>
           {hasToken ? (
@@ -120,7 +120,9 @@ const CheckoutProgramLockedMobile = function () {
           ) : (
             <ButtonLink>
               <IoIosLock />
-              <p>Login atau Daftar untuk Melanjutkan</p>
+              <p className="text-sm w-full">
+                Login atau Daftar untuk Melanjutkan
+              </p>
             </ButtonLink>
           )}
         </div>

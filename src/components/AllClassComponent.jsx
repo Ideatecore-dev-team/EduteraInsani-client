@@ -151,7 +151,8 @@ const AllClassComponent = ({ category }) => {
         filteredClasses.map((category) => (
           <div
             key={category.id}
-            className="digital-schooling-card w-width-4 bg-white rounded-2xl lg:shadow-xl"
+            className="digital-schooling-card w-width-4 bg-white rounded-2xl"
+            // style={{ boxShadow: "0px 4px 8px 0px rgba(0, 0, 0, 0.15)" }}
           >
             <img
               src={category.image_banner}
