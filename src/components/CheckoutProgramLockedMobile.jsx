@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ClassBanner from "/public/images/Class Banner.png";
 import ButtonLink from "../components/Buttons/LinkButton";
 import { IoIosLock } from "react-icons/io";
+import CheckoutProgramForm from "./CheckoutProgramForm";
 
 const CheckoutProgramLockedMobile = function () {
+  const [hasToken, setHasToken] = useState(false);
+
+  useEffect(() => {
+    // Menambahkan token dummy ke localStorage untuk simulasi
+    const dummyToken = "dummyToken123";
+    localStorage.setItem("token", dummyToken);
+
+    // Memeriksa token dari localStorage
+    const token = localStorage.getItem("token");
+    if (token) {
+      setHasToken(true);
+    }
+  }, []);
+
   return (
     <>
       <div className="flex bg-background justify-center">
@@ -89,22 +104,44 @@ const CheckoutProgramLockedMobile = function () {
           </div>
         </div>
       </div>
-      <div className="w-mobile-7 flex-col flex items-center justify-center mt-3">
+      <div className="w-mobile-7 bg-background flex-col flex items-center justify-center mt-3 mb-36">
         <p className=" text-[0.875rem] text-primary text-center ">
           Butuh bantuan?{" "}
           <a className="text-secondary underline" href="">
             Hubungi Customer Service
           </a>
         </p>
-        <div className="w-mobile-6">
-          <h4 className="text-lg text-primary font-bold p-4 mt-6">
+        <div className="w-mobile-6 bg-white p-6 rounded-2xl mt-6">
+          <h4 className="text-lg text-primary font-bold">
             Daftarkan Data Diri Anak
           </h4>
-          <ButtonLink>
-            <IoIosLock />
-            <p>Login atau Daftar untuk Melanjutkan</p>
-          </ButtonLink>
+          {hasToken ? (
+            <CheckoutProgramForm />
+          ) : (
+            <ButtonLink>
+              <IoIosLock />
+              <p>Login atau Daftar untuk Melanjutkan</p>
+            </ButtonLink>
+          )}
         </div>
+      </div>
+      <div
+        style={{ boxShadow: "0px -4px 8px 0px rgba(0, 0, 0, 0.15)" }}
+        className="bg-white shadow fixed top-[38.9rem] z-50 w-width-4.5 py-4 px-6"
+      >
+        <div className="flex gap-2 w-mobile-6 mb-4">
+          <input
+            className="w-6 h-6 border-secondary border-2"
+            type="checkbox"
+          />
+          <p className="text-sm text-primary">
+            Saya setuju dengan{" "}
+            <a href="#" className="text-secondary underline text-sm">
+              Syarat dan Ketentuan
+            </a>{" "}
+          </p>
+        </div>
+        <ButtonLink caption="Login atau Daftar" />
       </div>
     </>
   );

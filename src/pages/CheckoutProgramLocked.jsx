@@ -26,7 +26,7 @@ const CheckoutProgramLocked = function () {
           </div>
         </div>
       </div>
-      <div className={`${isMobile ? "flex flex-col" : "hidden"}`}>
+      <div className={`${isMobile ? "flex flex-col" : "hidden"} bg-background`}>
         <CheckoutProgramLockedMobile />
       </div>
     </>

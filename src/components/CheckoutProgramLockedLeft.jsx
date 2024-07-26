@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ClassBanner from "/public/images/Class Banner.png";
 import ButtonLink from "../components/Buttons/LinkButton";
 import { IoIosLock } from "react-icons/io";
+import CheckoutProgramForm from "./CheckoutProgramForm";
 
 const CheckoutProgramLockedLeft = function () {
+  const [hasToken, setHasToken] = useState(false);
+
+  useEffect(() => {
+    const dummyToken = "dummyToken123";
+    localStorage.setItem("token", dummyToken);
+
+    const token = localStorage.getItem("token");
+    if (token) {
+      setHasToken(true);
+    }
+  }, []);
+
   return (
     <>
-      <div className=" left flex flex-col w-width-7">
-        <div className="bg-white  rounded-2xl p-6">
+      <div className="left flex flex-col w-width-7">
+        <div className="bg-white rounded-2xl p-6">
           <div className="flex gap-6 items-center">
-            <img className="w-width-3" src={ClassBanner} alt="" />
+            <img className="w-width-3" src={ClassBanner} alt="Class Banner" />
             <div className="flex flex-col">
               <h3 className="text-3xl font-semibold text-primary">
                 Kelas 7 SMP
@@ -38,16 +51,20 @@ const CheckoutProgramLockedLeft = function () {
           <h4 className="text-2xl text-primary font-semibold mb-6">
             Daftarkan Data Diri Anak
           </h4>
-          <ButtonLink to="" border={false}>
-            <div className="flex gap-2 items-center">
-              <IoIosLock className="w-6 h-6" />
-              <p className="text-base text-white">
-                Yuk <span className=" font-semibold">Login</span> atau{" "}
-                <span className="font-semibold">Register</span> dulu sebelum
-                mendaftarkan data diri anak
-              </p>
-            </div>
-          </ButtonLink>
+          {hasToken ? (
+            <CheckoutProgramForm />
+          ) : (
+            <ButtonLink to="" border={false}>
+              <div className="flex gap-2 items-center">
+                <IoIosLock className="w-6 h-6" />
+                <p className="text-base text-white">
+                  Yuk <span className="font-semibold">Login</span> atau{" "}
+                  <span className="font-semibold">Register</span> dulu sebelum
+                  mendaftarkan data diri anak
+                </p>
+              </div>
+            </ButtonLink>
+          )}
         </div>
       </div>
     </>
