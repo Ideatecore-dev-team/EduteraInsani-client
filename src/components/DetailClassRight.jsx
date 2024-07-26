@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import ClassBanner from "../../public/images/Class Banner.png";
 import CopyIcon from "../../public/images/IoIosCopy.png";
 import ButtonDetailClass from "./Buttons/ButtonDetailClass";
@@ -18,14 +19,12 @@ const DetailClassHeroPersyaratanSection = function () {
 
   return (
     <div className="right-container -mt-14 lg:-mt-0 w-mobile-6 lg:w-auto flex flex-col items-start gap-6 mb-24">
-      <div className="program-card flex flex-col items-start rounded-2xl lg:bg-white lg:shadow-xl">
-        <img src={ClassBanner} alt="" />
-        <div className="card-content flex p-6 flex-col items-start gap-12 self-stretch rounded-2xl lg:bg-white lg:shadow-xl">
+      <div className="card-content flex  flex-col items-start self-stretch lg:border-2 lg:border-secondary rounded-2xl lg:bg-white lg:shadow-xl">
+        <img className="" src={ClassBanner} alt="" />
+        <div className="lg:p-6 pt-6 flex-col items-start gap-12 self-stretch">
           <div className="all-content flex flex-col items-start gap-6 self-stretch">
             <div className="kelas flex-col lg:flex hidden  items-start self-stretch">
-              <h3 className="text-3xl font-semibold text-primary">
-                Kelas 7 SMP
-              </h3>
+              <h3 className="text-3xl font-semibold text-primary">SMP 7</h3>
               <h3 className="text-xl w-full font-semibold text-primary">
                 T.A Angkatan 2024/2025
               </h3>
@@ -47,18 +46,24 @@ const DetailClassHeroPersyaratanSection = function () {
               </h4>
             </div>
           </div>
-          <div className="buttons lg:flex hidden flex-col items-start gap-3 self-stretch">
+          <div className="buttons lg:flex hidden mt-12 flex-col items-start gap-3 self-stretch">
             <ButtonLink
               className="flex py-3 px-4 content-center items-center gap-2 self-stretch w-[288px]"
               caption="Konsultasi dulu"
-              to="#"
+              to=""
               border={true}
+              width={true}
             />
-            <ButtonLink border={false} caption="Daftar Sekarang" to="#" />
+            <ButtonLink
+              border={false}
+              width={true}
+              caption="Daftar Sekarang"
+              to=""
+            />
           </div>
         </div>
       </div>
-      <div className="code-container w-mobile-6 flex lg:w-width-4 p-6 flex-col items-start gap-12 rounded-2xl bg-white shadow-xl mt-8 lg:mt-[380px]">
+      <div className="code-container w-mobile-6 flex lg:w-width-4 p-6 flex-col items-start gap-12 rounded-2xl bg-white shadow-xl mt-8 ">
         <div className="all-content flex flex-col items-start gap-6 self-stretch ">
           <h4 className="lg:text-2xl text-lg font-semibold text-primary">
             Kode Promo

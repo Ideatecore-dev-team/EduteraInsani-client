@@ -6,6 +6,8 @@ import Curriculum from "../pages/Curriculum";
 import Bantuan from "../pages/BantuanUs";
 import DetailClass from "../pages/DetailCalss";
 import OurProgram from "../pages/OurProgram";
+import CheckoutProgramLocked from "../pages/CheckoutProgramLocked";
+import Login from "../pages/Login";
 
 const ListRouter = createBrowserRouter([
   {
@@ -15,6 +17,10 @@ const ListRouter = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
       {
         path: "/about-us",
@@ -35,6 +41,10 @@ const ListRouter = createBrowserRouter([
       {
         path: "/detail-class",
         element: <DetailClass />,
+      },
+      {
+        path: "/checkout-program-locked",
+        element: <CheckoutProgramLocked />,
       },
     ],
   },

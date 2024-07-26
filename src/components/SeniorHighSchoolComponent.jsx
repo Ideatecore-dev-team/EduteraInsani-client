@@ -76,7 +76,7 @@ const SeniorHighSchoolComponent = function () {
                 <div className="buttons lg:flex hidden flex-col items-start gap-3 self-stretch">
                   <ButtonLink
                     className="flex py-3 px-4 content-center items-center gap-2 self-stretch w-[288px]"
-                    caption="Konsultasi dulu"
+                    caption="Detail Kelas"
                     to="#"
                     border={false}
                     width={true}

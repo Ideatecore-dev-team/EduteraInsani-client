@@ -1,14 +1,17 @@
 // App.js
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
+  const location = useLocation();
+  const showFooter = location.pathname !== "/checkout-program-locked";
+
   return (
     <>
       <Navbar />
       <Outlet />
-      <Footer />
+      {showFooter && <Footer />}
     </>
   );
 }
