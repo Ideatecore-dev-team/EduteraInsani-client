@@ -3,6 +3,14 @@ import Logo from "/public/images/digitalschooling-curriculum.png";
 import ButtonLink from "./Buttons/LinkButton";
 
 function Curriculum() {
+    
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+            });
+        };
+    
     return (
         <div className="curriculum bg-background flex lg:py-24 py-12 items-center">
         <div className="curriculum-container lg:w-base-content w-width-3.2 flex lg:flex-row flex-col justify-center items-center gap-6 mx-auto">
@@ -18,6 +26,7 @@ function Curriculum() {
                     border={true}
                     caption="Lihat lebih lanjut"
                     to="/ourprogram"
+                    onClick={scrollToTop}
                 >
                     <svg
                     xmlns="http://www.w3.org/2000/svg"

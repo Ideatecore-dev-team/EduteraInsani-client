@@ -169,7 +169,7 @@ function CurriculumHero() {
         <ButtonLink
           border={true}
           caption="Pelajari lebih lanjut"
-          to="/curriculum"
+          to="/ourprogram"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
