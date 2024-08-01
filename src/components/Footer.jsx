@@ -128,13 +128,13 @@ function Footer() {
               <p className="text-primary text-base font-semibold">
                 Program Kami
               </p>
-              <Link className=" text-base text-neutral-2" to="/about-us">
-                <p>Senior Highschool</p>
-              </Link>
-              <Link className=" text-base text-neutral-2" to="/curriculum">
+              <Link className=" text-base text-neutral-2" to="/ourprogram">
                 <p>Junior Highschool</p>
               </Link>
-              <Link className=" text-base text-neutral-2" to="/help">
+              <Link className=" text-base text-neutral-2" to="/ourprogram">
+                <p>Senior Highschool</p>
+              </Link>
+              <Link className=" text-base text-neutral-2" to="/shortcourse">
                 <p>Short Course</p>
               </Link>
             </div>
