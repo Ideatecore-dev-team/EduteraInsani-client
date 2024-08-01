@@ -129,8 +129,7 @@ const AllClassComponent = ({ category }) => {
                     <a href={"https://wa.me/" + category.contact} className="buttons flex py-[12px] px-[16px] justify-center items-center gap-2 self-stretch rounded-[32px] bg-secondary shadow-shortCourse">
                         <p className="text-base text-center text-white font-normal flex items-center justify-center space-x-1">
                             <span className="block lg:inline">Daftar</span>
-                            <span className="lg:inline hidden">kelas</span>
-                            <span className="lg:hidden inline">kelas</span>
+                            <span className="lg:hidden inline">Kelas</span>
                             <span className="hidden lg:inline">melalui Whatsapp</span>
                         </p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -190,8 +189,7 @@ const AllClassComponent = ({ category }) => {
                     <a href={"https://wa.me/" + category.contact} className="buttons flex py-[12px] px-[16px] justify-center items-center gap-2 self-stretch rounded-[32px] bg-secondary shadow-shortCourse">
                         <p className="text-base text-center text-white font-normal flex items-center justify-center space-x-1">
                             <span className="block lg:inline">Daftar</span>
-                            <span className="lg:inline hidden">kelas</span>
-                            <span className="lg:hidden inline">kelas</span>
+                            <span className="lg:hidden inline">Kelas</span>
                             <span className="hidden lg:inline">melalui Whatsapp</span>
                         </p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
