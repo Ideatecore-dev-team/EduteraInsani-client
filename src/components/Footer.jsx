@@ -142,7 +142,7 @@ function Footer() {
               <p className="text-primary text-base font-semibold">
                 Bantuan dan Panduan
               </p>
-              <Link className=" text-base text-neutral-2" to="/about-us">
+              <Link className=" text-base text-neutral-2" to="/help">
                 <p>Bantuan</p>
               </Link>
               <Link className=" text-base text-neutral-2" to="/curriculum">
