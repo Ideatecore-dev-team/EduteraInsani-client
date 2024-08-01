@@ -83,7 +83,7 @@ const AllClassComponent = ({ category }) => {
             >
             {filteredClasses.map((category) => (
                 <SwiperSlide key={category.id}>
-                <div className="sc-card flex lg:w-[368px] w-[227px] lg:h-[523px] h-auto flex-col items-start bg-white rounded-2xl">
+                <div className="sc-card flex lg:w-[368px] w-[227px] lg:h-[523px] h-auto flex-col items-start bg-white rounded-2xl shadow-digitalSchooling">
                 <img src={category.image_banner} alt="card-banner" className="w-full"/>
                 <div className="card-content flex lg:h-[351px] lg:p-6  p-[14.674px] flex-col lg:justify-between items-start lg:flex-shrink-0 gap-[29.348px] self-stretch bg-white rounded-[32px]">
                     <div className="all-content flex flex-col items-start gap-4 self-stretch">
@@ -143,7 +143,7 @@ const AllClassComponent = ({ category }) => {
             </Swiper>
         ) : (
             filteredClasses.map((category) => (
-            <div key={category.id} className="sc-card flex lg:w-[368px] w-[227px] lg:h-[523px] h-[420.793px] flex-col items-start bg-white rounded-2xl">
+            <div key={category.id} className="sc-card flex lg:w-[368px] w-[227px] lg:h-[523px] h-[420.793px] flex-col items-start bg-white rounded-2xl shadow-digitalSchooling">
                 <img src={category.image_banner} alt="card-banner" className="w-full"/>
                 <div className="card-content flex lg:h-[351px] lg:p-6  p-[14.674px] flex-col lg:justify-between items-start lg:flex-shrink-0 gap-[auto] self-stretch bg-white rounded-[32px]">
                     <div className="all-content flex flex-col items-start gap-4 self-stretch">

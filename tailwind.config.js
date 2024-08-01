@@ -72,7 +72,8 @@ export default {
         trackingMinus048: "-0.48px",
       },
       boxShadow : {
-        shortCourse : "0px 12px 24px 0px rgba(168, 134, 70, 0.40)"
+        shortCourse : "0px 12px 24px 0px rgba(168, 134, 70, 0.40)",
+        digitalSchooling : "0px 4px 8px 0px rgba(0, 0, 0, 0.15)"
       }
     },
   },

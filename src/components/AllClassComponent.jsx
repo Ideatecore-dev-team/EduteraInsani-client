@@ -78,7 +78,7 @@ const AllClassComponent = ({ category }) => {
       : categoryClass;
 
   return (
-    <div className="digital-schooling-cards flex flex-wrap w-[14.1875rem] lg:w-[1152px] lg:justify-center items-center gap-6">
+    <div className="digital-schooling-cards flex flex-wrap w-[14.1875rem] lg:w-[1152px] lg:justify-center items-center gap-6 shadow-digitalSchooling">
       {isMobile ? (
         <Swiper
           spaceBetween={25}
@@ -151,7 +151,7 @@ const AllClassComponent = ({ category }) => {
         filteredClasses.map((category) => (
           <div
             key={category.id}
-            className="digital-schooling-card w-width-4 bg-white rounded-2xl"
+            className="digital-schooling-card w-width-4 bg-white rounded-2xl shadow-digitalSchooling"
             // style={{ boxShadow: "0px 4px 8px 0px rgba(0, 0, 0, 0.15)" }}
           >
             <img
