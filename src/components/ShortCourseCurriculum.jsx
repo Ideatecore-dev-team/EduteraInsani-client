@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "/public/images/shortcourse-curriculum.png";
+import Logo from "/public/images/digitalschooling-curriculum.png";
 import ButtonLink from "./Buttons/LinkButton";
 
 function Curriculum() {

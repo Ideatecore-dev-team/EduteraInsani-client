@@ -71,6 +71,9 @@ export default {
         trackingMinus072: "-0.72px",
         trackingMinus048: "-0.48px",
       },
+      boxShadow : {
+        shortCourse : "0px 12px 24px 0px rgba(168, 134, 70, 0.40)"
+      }
     },
   },
   plugins: [],
