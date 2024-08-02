@@ -19,7 +19,7 @@ const DetailClassHeroPersyaratanSection = function () {
 
   return (
     <div className="right-container -mt-14 lg:-mt-0 w-mobile-6 lg:w-auto flex flex-col items-start gap-6 mb-24">
-      <div className="card-content flex  flex-col items-start self-stretch lg:border-2 lg:border-secondary rounded-2xl lg:bg-white lg:shadow-xl">
+      <div className="card-content flex  flex-col items-start self-stretch border-2 lg:p-0 p-6 border-secondary rounded-2xl lg:bg-white shadow-xl">
         <img className="" src={ClassBanner} alt="" />
         <div className="lg:p-6 pt-6 flex-col items-start gap-12 self-stretch">
           <div className="all-content flex flex-col items-start gap-6 self-stretch">
@@ -50,7 +50,7 @@ const DetailClassHeroPersyaratanSection = function () {
             <ButtonLink
               className="flex py-3 px-4 content-center items-center gap-2 self-stretch w-[288px]"
               caption="Konsultasi dulu"
-              to=""
+              to="/help"
               border={true}
               width={true}
             />
@@ -58,7 +58,7 @@ const DetailClassHeroPersyaratanSection = function () {
               border={false}
               width={true}
               caption="Daftar Sekarang"
-              to=""
+              to="/checkout-program-locked"
             />
           </div>
         </div>
