@@ -16,7 +16,7 @@ const CheckoutProgramLockedMobile = function () {
     // Memeriksa token dari localStorage
     const token = localStorage.getItem("token");
     if (token) {
-      setHasToken(false);
+      setHasToken(true);
     }
   }, []);
 
