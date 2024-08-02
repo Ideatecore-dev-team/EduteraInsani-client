@@ -18,7 +18,7 @@ function AboutHero() {
             Rasakan pembelajaran daring yang menyenangkan dan interaktif dengan
             proyek integratif yang mendorong kemandirian belajar anak.
           </p>
-          <ButtonLink border={true} caption="Daftar Trial Sekarang" to="/">
+          <ButtonLink border={true} caption="Daftar Trial Sekarang" to="/daftar-trial">
             <ArrowRightIcon />
           </ButtonLink>
         </div>

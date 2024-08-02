@@ -6,12 +6,13 @@ import Footer from "./components/Footer";
 function App() {
   const location = useLocation();
   const showFooter = location.pathname !== "/checkout-program-locked";
+  const showFooter2 = location.pathname !== "/daftar-trial";
 
   return (
     <>
       <Navbar />
       <Outlet />
-      {showFooter && <Footer />}
+      {showFooter && showFooter2 && <Footer />}
     </>
   );
 }

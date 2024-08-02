@@ -7,7 +7,9 @@ import Bantuan from "../pages/BantuanUs";
 import DetailClass from "../pages/DetailCalss";
 import OurProgram from "../pages/OurProgram";
 import CheckoutProgramLocked from "../pages/CheckoutProgramLocked";
+import DaftarTrial from "../pages/DaftarTrial";
 import Login from "../pages/Login";
+import ShortCourse from "../pages/ShortCourse"
 
 const ListRouter = createBrowserRouter([
   {
@@ -45,6 +47,13 @@ const ListRouter = createBrowserRouter([
       {
         path: "/checkout-program-locked",
         element: <CheckoutProgramLocked />,
+      },
+      {
+        path: "/daftar-trial",
+        element: <DaftarTrial />,
+      },      {
+        path: "/shortcourse",
+        element: <ShortCourse />,
       },
     ],
   },

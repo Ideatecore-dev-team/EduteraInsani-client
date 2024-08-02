@@ -1,31 +1,31 @@
 import React from "react";
-import Logo from "/public/images/shortcourse-curriculum.png";
+import Logo from "/public/images/digitalschooling-curriculum.png";
 import ButtonLink from "./Buttons/LinkButton";
 
-function HomeCurriculum() {
-
+function Curriculum() {
+    
     const scrollToTop = () => {
         window.scrollTo({
-          top: 0,
-          behavior: 'smooth', // Gunakan 'smooth' agar scroll terlihat halus
-        });
-      };
-
+            top: 0,
+            behavior: 'smooth',
+            });
+        };
+    
     return (
-        <div className="curriculum bg-white flex lg:py-24 py-12 items-center">
+        <div className="curriculum bg-background flex lg:py-24 py-12 items-center">
         <div className="curriculum-container lg:w-base-content w-width-3.2 flex lg:flex-row flex-col justify-center items-center gap-6 mx-auto">
             <img src={Logo} alt="curriculum" className="size-[226px] lg:size-[270px]" />  
             <div className="curriculum-content flex flex-col lg:w-width-7 w-[342px] lg:items-start items-center gap-4 xs:text-center">
                 <h2 className="text-primary text-2xl lg:text-4xl font-semibold">
-                    Edu tera Insani menyediakan kelas tambahan untuk Short Course
+                    Program utama Digital Schooling untuk masa depan anak
                 </h2>
                 <p className="text-base text-neutral-2">
-                    Kelas tambahan seperti Bahasa Asing, Seni Lukis, dan Kelas Kepenulisan untuk mengembangkan keterampilan siswa di luar kurikulum utama.
+                    Digital Schooling Edu Tera Insani menawarkan pembelajaran daring yang interaktif dan fleksibel, memungkinkan siswa untuk belajar dari mana saja dengan akses ke materi terorganisir dan guru ahli.
                 </p>
                 <ButtonLink
                     border={true}
                     caption="Lihat lebih lanjut"
-                    to="/shortcourse"
+                    to="/ourprogram"
                     onClick={scrollToTop}
                 >
                     <svg
@@ -61,4 +61,4 @@ function HomeCurriculum() {
     );
 }
 
-export default HomeCurriculum;
+export default Curriculum;
