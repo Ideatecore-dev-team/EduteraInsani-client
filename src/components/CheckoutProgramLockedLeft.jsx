@@ -13,7 +13,7 @@ const CheckoutProgramLockedLeft = function () {
 
     const token = localStorage.getItem("token");
     if (token) {
-      setHasToken(false);
+      setHasToken(true);
     }
   }, []);
 
