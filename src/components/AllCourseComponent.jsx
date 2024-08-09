@@ -26,44 +26,48 @@ const AllClassComponent = ({ category }) => {
         image_banner: ClassBanner_1,
         kelas: "Kelas Bahasa Arab",
         desc: "Tingkatkan kemampuan berbahasa Arab Anda dengan kelas intensif yang mencakup percakapan, tata bahasa, dan budaya.",
-        price_pendaftaran: "200.000",
-        price_bulanan: "250.000",
+        price_pendaftaran: 200000,
+        price_bulanan: 250000,
         contact: "6289690697474"
         },{
         id: 2,
         image_banner: ClassBanner_2,
         kelas: "Kelas Bahasa Jepang",
         desc: "Pelajari bahasa Jepang dengan fokus pada percakapan sehari-hari, tata bahasa, dan budaya Jepang.",
-        price_pendaftaran: "220.000",
-        price_bulanan: "250.000",
+        price_pendaftaran: 220000,
+        price_bulanan: 250000,
         contact: "6289690697474"
         },{
         id: 3,
         image_banner: ClassBanner_3,
         kelas: "Kelas Melukis",
         desc: "Kembangkan kreativitas Anda dengan mempelajari teknik-teknik melukis dan menggambar dari dasar hingga tingkat lanjut.",
-        price_pendaftaran: "150.000",
-        price_bulanan: "300.000",
+        price_pendaftaran: 150000,
+        price_bulanan: 300000,
         contact: "6289690697474"
         },{
         id: 4,
         image_banner: ClassBanner_4,
         kelas: "Kelas Kepenulisan",
         desc: "Asah kemampuan menulis Anda dengan berbagai latihan menulis kreatif, mulai dari cerita pendek hingga puisi.",
-        price_pendaftaran: "100.000",
-        price_bulanan: "250.000",
+        price_pendaftaran: 100000,
+        price_bulanan: 250000,
         contact: "6289690697474"
         },{
         id: 5,
         image_banner: ClassBanner_5,
         kelas: "Pemograman Dasar",
         desc: "Pelajari dasar-dasar pemrograman mulai dari struktur kontrol, hingga teknik-teknik pengkodean dasar.",
-        price_pendaftaran: "250.000",
-        price_bulanan: "400.000",
-        contact: "6289690697474"
+        price_pendaftaran: 250000,
+        price_bulanan: 400000,
+        contact: "6289690697474" 
         },
     ];
-
+    function formatPrice(price) {
+        console.log(price);
+        return price.toLocaleString("id-ID").replace(/,/g, ".")
+    }
+    
     const filteredClasses =
         category === 1
         ? categoryClass.filter((item) => item.kelas.includes("Kelas Bahasa"))
@@ -113,7 +117,7 @@ const AllClassComponent = ({ category }) => {
                                 Pendaftaran
                                 </p>
                                 <p className=" self-stretch text-base font-semibold text-primary">
-                                    Rp {category.price_pendaftaran}
+                                Rp{formatPrice(category.price_pendaftaran)}
                                 </p>
                             </div>
                             <div className="bulanan-container flex flex-col items-start gap-1">
@@ -121,7 +125,7 @@ const AllClassComponent = ({ category }) => {
                                 Bulanan
                                 </p>
                                 <p className=" self-stretch text-base font-semibold text-secondary">
-                                    Rp {category.price_bulanan}
+                                Rp{formatPrice(category.price_bulanan)}
                                 </p>
                             </div>
                         </div>
@@ -173,7 +177,7 @@ const AllClassComponent = ({ category }) => {
                                 Pendaftaran
                                 </p>
                                 <p className=" self-stretch text-base font-semibold text-primary">
-                                    Rp {category.price_pendaftaran}
+                                Rp{formatPrice(category.price_pendaftaran)}
                                 </p>
                             </div>
                             <div className="bulanan-container flex flex-col items-start gap-1">
@@ -181,7 +185,7 @@ const AllClassComponent = ({ category }) => {
                                 Bulanan
                                 </p>
                                 <p className=" self-stretch text-base font-semibold text-secondary">
-                                    Rp {category.price_bulanan}
+                                    Rp{formatPrice(category.price_bulanan)}
                                 </p>
                             </div>
                         </div>

@@ -25,50 +25,56 @@ const AllClassComponent = ({ category }) => {
       image_banner: ClassBanner,
       kelas: "Kelas 7 SMP",
       point: "Utk anak berusia 12 - 13 thn",
-      price_smester: "700.000",
-      price_first: "3.500.000",
+      price_semester: 700000,
+      price_pendaftaran: 3500000,
     },
     {
       id: 2,
       image_banner: ClassBanner,
       kelas: "Kelas 8 SMP",
       point: "Utk anak berusia 13 - 14 thn",
-      price_smester: "765.000",
-      price_first: "3.575.000",
+      price_semester: 765000,
+      price_pendaftaran: 3575000,
     },
     {
       id: 3,
       image_banner: ClassBanner,
       kelas: "Kelas 9 SMP",
       point: "Utk anak berusia 14 - 15 thn",
-      price_smester: "765.000",
-      price_first: "3.625.000",
+      price_semester: 765000,
+      price_pendaftaran: 3625000,
     },
     {
       id: 4,
       image_banner: ClassBannerGold,
       kelas: "Kelas 10 SMA",
       point: "Utk anak berusia 15 - 16 thn",
-      price_smester: "765.000",
-      price_first: "4.500.000",
+      price_semester: 765000,
+      price_pendaftaran: 4500000,
     },
     {
       id: 5,
       image_banner: ClassBannerGold,
       kelas: "Kelas 11 SMA",
       point: "Utk anak berusia 16 - 17 thn",
-      price_smester: "765.000",
-      price_first: "4.500.000",
+      price_semester: 765000,
+      price_pendaftaran: 4500000,
     },
     {
       id: 6,
       image_banner: ClassBannerGold,
       kelas: "Kelas 12 SMA",
       point: "Utk anak berusia 17 - 18 thn",
-      price_smester: "765.000",
-      price_first: "4.500.000",
+      price_semester: 765000,
+      price_pendaftaran: 4500000,
     },
   ];
+
+  function formatPrice(price) {
+    console.log(price);
+    return price.toLocaleString("id-ID").replace(/,/g, ".")
+  }
+
 
   const filteredClasses =
     category === 1
@@ -120,7 +126,7 @@ const AllClassComponent = ({ category }) => {
                         Bayaran/Semester
                       </p>
                       <h2 className="lg:text-4xl text-2xl font-semibold text-primary">
-                        {category.price_smester}
+                      Rp{formatPrice(category.price_semester)}
                       </h2>
                     </div>
                     <div className="payment flex flex-col items-start self-stretch">
@@ -128,7 +134,7 @@ const AllClassComponent = ({ category }) => {
                         Pembayaran Pertama:
                       </p>
                       <h4 className="lg:text-2xl text-lg font-semibold text-secondary">
-                        {category.price_first}
+                      Rp{formatPrice(category.price_pendaftaran)}
                       </h4>
                     </div>
                   </div>
@@ -184,7 +190,7 @@ const AllClassComponent = ({ category }) => {
                     Bayaran/Semester
                   </p>
                   <h2 className="lg:text-4xl text-2xl font-semibold text-primary">
-                    {category.price_smester}
+                  Rp{formatPrice(category.price_semester)}
                   </h2>
                 </div>
                 <div className="payment flex flex-col items-start self-stretch">
@@ -192,7 +198,7 @@ const AllClassComponent = ({ category }) => {
                     Pembayaran Pertama:
                   </p>
                   <h4 className="lg:text-2xl text-lg font-semibold text-secondary">
-                    {category.price_first}
+                  Rp{formatPrice(category.price_pendaftaran)}
                   </h4>
                 </div>
               </div>

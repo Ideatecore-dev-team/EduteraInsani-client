@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { IoChevronDown } from "react-icons/io5";
 
 const DaftarTrialForm = function () {
+  const [dropdownTahunAjaran, setDropdownTahunAjaran] = useState(false);
+  const [dropdownJenjangKelas, setDropdownJenjangKelas] = useState(false);
+  const [dropdownJenisKelamin, setDropdownJenisKelamin] = useState(false);
+
+  const [tahunAjaran, setTahunAjaran] = useState("");
+  const [jenjangKelas, setJenjangKelas] = useState("");
+  const [jenisKelamin, setJenisKelamin] = useState("");
+
+  const handleDropdownTahunAjaran = () => {
+    setDropdownTahunAjaran((prev) => !prev);
+  };
+
+  const handleDropdownJenjangKelas = () => {
+    setDropdownJenjangKelas((prev) => !prev);
+  };
+
+  const handleDropdownJenisKelamin = () => {
+    setDropdownJenisKelamin((prev) => !prev);
+  };
+
   return (
     <>
       <div className="">
@@ -13,29 +33,102 @@ const DaftarTrialForm = function () {
           >
             Pilih Tahun Ajaran <span className="text-secondary">*</span>
           </label>
-          <div className="flex relative w-full">
-            <input
-              id="tahun-ajaran"
-              className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
-              type="text"
-              placeholder="--Pilih Tahun Ajaran--"
-            />
-            <IoChevronDown className="absolute left-64 top-3.5 w-6 h-6 lg:left-[35.5rem] text-primary" />
+          <div className="relative w-full">
+            <div className="flex items-center">
+              <input
+                id="tahun-ajaran"
+                className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
+                type="text"
+                placeholder="--Pilih Tahun Ajaran--"
+                defaultValue={tahunAjaran}
+                readOnly
+              />
+              <button
+                type="button"
+                onClick={handleDropdownTahunAjaran}
+                className="absolute right-3 top-3.5"
+              >
+                <IoChevronDown className="w-6 h-6 text-primary" />
+              </button>
+            </div>
+            <div
+              className={`absolute bg-white border-primary border-2 duration-500 rounded-lg w-full z-10 transition-all ease-in-out overflow-hidden ${
+                dropdownTahunAjaran
+                  ? "max-h-32 opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <div
+                className="px-4 py-2 cursor-pointer hover:bg-gray-200"
+                onClick={() => {
+                  setTahunAjaran("2023/2024");
+                  setDropdownTahunAjaran(false);
+                }}
+              >
+                2023/2024
+              </div>
+              <div
+                className="px-4 py-2 cursor-pointer hover:bg-gray-200"
+                onClick={() => {
+                  setTahunAjaran("2024/2025");
+                  setDropdownTahunAjaran(false);
+                }}
+              >
+                2024/2025
+              </div>
+            </div>
           </div>
+
           <label
-            htmlFor="jenjeang-kelas"
+            htmlFor="jenjang-kelas"
             className="text-primary text-base mb-2 mt-6"
           >
             Pilih Jenjang Kelas <span className="text-secondary">*</span>
           </label>
-          <div className="flex relative w-full">
-            <input
-              id="jenjang-kelas"
-              className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
-              type="text"
-              placeholder="--Pilih Kelas--"
-            />
-            <IoChevronDown className="absolute left-64 top-3.5 w-6 h-6 lg:left-[35.5rem] text-primary" />
+          <div className="relative w-full">
+            <div className="flex items-center">
+              <input
+                id="jenjang-kelas"
+                className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
+                type="text"
+                placeholder="--Pilih Kelas--"
+                defaultValue={jenjangKelas}
+                readOnly
+              />
+              <button
+                type="button"
+                onClick={handleDropdownJenjangKelas}
+                className="absolute right-3 top-3.5"
+              >
+                <IoChevronDown className="w-6 h-6 text-primary" />
+              </button>
+            </div>
+            <div
+              className={`absolute bg-white border-primary border-2 duration-500 rounded-lg w-full z-10 transition-all ease-in-out overflow-hidden ${
+                dropdownJenjangKelas
+                  ? "max-h-32 opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <div
+                className="px-4 py-2 cursor-pointer hover:bg-gray-200"
+                onClick={() => {
+                  setJenjangKelas("Kelas 1");
+                  setDropdownJenjangKelas(false);
+                }}
+              >
+                Kelas 1
+              </div>
+              <div
+                className="px-4 py-2 cursor-pointer hover:bg-gray-200"
+                onClick={() => {
+                  setJenjangKelas("Kelas 2");
+                  setDropdownJenjangKelas(false);
+                }}
+              >
+                Kelas 2
+              </div>
+            </div>
           </div>
           <label
             htmlFor="nama-calon-siswa"
@@ -88,14 +181,50 @@ const DaftarTrialForm = function () {
           >
             Jenis Kelamin <span className="text-secondary">*</span>
           </label>
-          <div className="flex relative w-full">
-            <input
-              id="jenis-kelamin"
-              className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
-              type="text"
-              placeholder="--Pilih jenis kelamin--"
-            />
-            <IoChevronDown className="absolute left-64 top-3.5 w-6 h-6 lg:left-[35.5rem] text-primary" />
+          <div className="relative w-full">
+            <div className="flex items-center">
+              <input
+                id="jenis-kelamin"
+                className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
+                type="text"
+                placeholder="--Pilih jenis kelamin--"
+                defaultValue={jenisKelamin}
+                readOnly
+              />
+              <button
+                type="button"
+                onClick={handleDropdownJenisKelamin}
+                className="absolute right-3 top-3.5"
+              >
+                <IoChevronDown className="w-6 h-6 text-primary" />
+              </button>
+            </div>
+            <div
+              className={`absolute bg-white border-primary border-2 duration-500 rounded-lg w-full z-10 transition-all ease-in-out overflow-hidden ${
+                dropdownJenisKelamin
+                  ? "max-h-32 opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <div
+                className="px-4 py-2 cursor-pointer hover:bg-gray-200"
+                onClick={() => {
+                  setJenisKelamin("Laki-laki");
+                  setDropdownJenisKelamin(false);
+                }}
+              >
+                Laki-laki
+              </div>
+              <div
+                className="px-4 py-2 cursor-pointer hover:bg-gray-200"
+                onClick={() => {
+                  setJenisKelamin("Perempuan");
+                  setDropdownJenisKelamin(false);
+                }}
+              >
+                Perempuan
+              </div>
+            </div>
           </div>
           <label htmlFor="alamat" className="text-primary text-base mb-2 mt-6">
             Alamat <span className="text-secondary">*</span>
@@ -146,7 +275,7 @@ const DaftarTrialForm = function () {
             Nomor orang Tua (aktif) <span className="text-secondary">*</span>
           </label>
           <input
-            id="nama-orangtua-ibu"
+            id="nomor-orangtua-activ"
             className="px-4 py-3 bg-background border-primary border-2 rounded-lg"
             type="text"
             placeholder="Masukkan nomor orang tua"

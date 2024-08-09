@@ -7,7 +7,7 @@ const FooterMobileDaftar = function () {
     <>
       <div
         style={{ boxShadow: "0px -4px 8px 0px rgba(0, 0, 0, 0.15)" }}
-        className="bg-white shadow fixed top-[38.9rem] z-50 w-width-4.5 py-4 px-6"
+        className="bg-white shadow fixed top-[38.9rem] z-50 w-full py-4 px-6"
       >
         <div className="flex gap-2 w-mobile-6 mb-4">
           <input

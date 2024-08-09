@@ -7,7 +7,7 @@ import DigitalSchooling from "../components/ShortCourse";
 const ShortCourse = function () {
     return (
         <>
-        <Hero />
+        {/* <Hero /> */}
         <DigitalSchooling />
         <Kelebihan />
         <Curriculum />
