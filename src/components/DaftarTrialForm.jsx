@@ -7,6 +7,10 @@ const DaftarTrialForm = function () {
   const [dropdownJenjangKelas, setDropdownJenjangKelas] = useState(false);
   const [dropdownJenisKelamin, setDropdownJenisKelamin] = useState(false);
 
+  const [tahunAjaran, setTahunAjaran] = useState("");
+  const [jenjangKelas, setJenjangKelas] = useState("");
+  const [jenisKelamin, setJenisKelamin] = useState("");
+
   const handleDropdownTahunAjaran = () => {
     setDropdownTahunAjaran((prev) => !prev);
   };
@@ -36,6 +40,7 @@ const DaftarTrialForm = function () {
                 className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
                 type="text"
                 placeholder="--Pilih Tahun Ajaran--"
+                defaultValue={tahunAjaran}
                 readOnly
               />
               <button
@@ -55,18 +60,25 @@ const DaftarTrialForm = function () {
             >
               <div
                 className="px-4 py-2 cursor-pointer hover:bg-gray-200"
-                onClick={() => setDropdownTahunAjaran(false)}
+                onClick={() => {
+                  setTahunAjaran("2023/2024");
+                  setDropdownTahunAjaran(false);
+                }}
               >
                 2023/2024
               </div>
               <div
                 className="px-4 py-2 cursor-pointer hover:bg-gray-200"
-                onClick={() => setDropdownTahunAjaran(false)}
+                onClick={() => {
+                  setTahunAjaran("2024/2025");
+                  setDropdownTahunAjaran(false);
+                }}
               >
                 2024/2025
               </div>
             </div>
           </div>
+
           <label
             htmlFor="jenjang-kelas"
             className="text-primary text-base mb-2 mt-6"
@@ -80,6 +92,7 @@ const DaftarTrialForm = function () {
                 className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
                 type="text"
                 placeholder="--Pilih Kelas--"
+                defaultValue={jenjangKelas}
                 readOnly
               />
               <button
@@ -99,13 +112,19 @@ const DaftarTrialForm = function () {
             >
               <div
                 className="px-4 py-2 cursor-pointer hover:bg-gray-200"
-                onClick={() => setDropdownJenjangKelas(false)}
+                onClick={() => {
+                  setJenjangKelas("Kelas 1");
+                  setDropdownJenjangKelas(false);
+                }}
               >
                 Kelas 1
               </div>
               <div
                 className="px-4 py-2 cursor-pointer hover:bg-gray-200"
-                onClick={() => setDropdownJenjangKelas(false)}
+                onClick={() => {
+                  setJenjangKelas("Kelas 2");
+                  setDropdownJenjangKelas(false);
+                }}
               >
                 Kelas 2
               </div>
@@ -169,6 +188,7 @@ const DaftarTrialForm = function () {
                 className="px-4 py-3 bg-background border-primary border-2 rounded-lg w-full"
                 type="text"
                 placeholder="--Pilih jenis kelamin--"
+                defaultValue={jenisKelamin}
                 readOnly
               />
               <button
@@ -188,13 +208,19 @@ const DaftarTrialForm = function () {
             >
               <div
                 className="px-4 py-2 cursor-pointer hover:bg-gray-200"
-                onClick={() => setDropdownJenisKelamin(false)}
+                onClick={() => {
+                  setJenisKelamin("Laki-laki");
+                  setDropdownJenisKelamin(false);
+                }}
               >
                 Laki-laki
               </div>
               <div
                 className="px-4 py-2 cursor-pointer hover:bg-gray-200"
-                onClick={() => setDropdownJenisKelamin(false)}
+                onClick={() => {
+                  setJenisKelamin("Perempuan");
+                  setDropdownJenisKelamin(false);
+                }}
               >
                 Perempuan
               </div>
