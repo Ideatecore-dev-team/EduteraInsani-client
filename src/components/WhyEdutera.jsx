@@ -77,7 +77,7 @@ function WhyEdutera() {
               loop={false}
               modules={[Pagination, FreeMode, Navigation]}
               slidesPerView={1}
-              className="w-width-sm relative"
+              className="w-[342px] relative"
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             >
               {cardContent.map((card, index) => (
