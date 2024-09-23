@@ -158,7 +158,7 @@ function Footer() {
           <hr />
           <div className="bottom-content flex lg:flex-row flex-col lg:gap-0 gap-5 justify-between items-start self-stretch">
             <p className="text-primary text-base font-semibold">
-              Copyright 2024 SMM. All rights reserved.
+              Copyright 2024 Edu Tera Insani. All rights reserved.
             </p>
             <div className="icon flex items-center gap-4">
               <svg
