@@ -17,10 +17,19 @@ function ButtonLink({
   const widthFull = width ? "btn-width-full" : "btn-width-normal";
   const shadowButton = shadow ? "shadow-lg shadow-zinc-500" : "shadow-none";
 
+  const handleClick = (event) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
   return (
     <Link
       to={to}
-      onClick={onClick}
+      onClick={handleClick}
       className={`btn-link flex lg:py-3 lg:px-4 items-center gap-2 lg:text-base px-2 py-3 ${borderClass} ${widthFull} ${shadowButton}`}
     >
       {icon && <img src={icon} alt="icon" className="icon-class" />}
