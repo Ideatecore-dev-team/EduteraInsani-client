@@ -21,8 +21,8 @@ function Hero({ onCardHeroClick }) {
             <br /> Building Future.
           </h1>
           <p className=" text-neutral-2 text-base font-normal lg:w-width-5">
-            Bergabunglah dengan kami dalam membina pikiran dan membangun masa
-            depan di Digital Schooling Edu Tera Insani.
+            Bersama Edu Tera Insani, ciptakan masa depan cerah melalui pembelajaran 
+            digital yang inovatif dan bermakna.
           </p>
           <div className="cta flex items-start gap-2 lg:gap-3">
             <ButtonLink
