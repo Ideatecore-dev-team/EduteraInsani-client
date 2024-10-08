@@ -26,24 +26,24 @@ function OurProgram() {
   let padding = "";
   let additionalContent = null;
 
-  // if (path === "/about-us") {
-  //   padding = "py-24";
-  //   additionalContent = (
-  //     <div className="additional-content flex lg:w-width-8 w-[310px] lg:p-6 p-4 justify-center items-center xs:self-stretch bg-white rounded-2xl">
-  //       <p className="text-center text-base text-neutral-2 font-normal">
-  //       Edu Tera Insani menawarkan program-program menarik seperti 
-  //       <span className=" font-semibold">Teacher Workshop</span> 
-  //       untuk pengajar meningkatkan keahlian mengajar, <span className=" font-semibold">
-  //         Digital Course</span> yang mencakup kursus bahasa Inggris, Prancis, Arab, dan 
-  //         Jepang, serta <span className=" font-semibold">Bimbel Online</span> yang menyediakan 
-  //         bimbingan belajar bagi siswa dalam menghadapi ujian dan tugas sekolah.
-  //       </p>
-  //     </div>
-  //   );
-  // } else {
-  //   padding = "lg:pb-24 pb-12";
-  //   additionalContent = <div className="additional-content hidden"></div>;
-  // }
+  if (path === "/about-us") {
+    padding = "lg:py-24 py-12";
+    // additionalContent = (
+    //   <div className="additional-content flex lg:w-width-8 w-[310px] lg:p-6 p-4 justify-center items-center xs:self-stretch bg-white rounded-2xl">
+    //     <p className="text-center text-base text-neutral-2 font-normal">
+    //     Edu Tera Insani menawarkan program-program menarik seperti 
+    //     <span className=" font-semibold">Teacher Workshop</span> 
+    //     untuk pengajar meningkatkan keahlian mengajar, <span className=" font-semibold">
+    //       Digital Course</span> yang mencakup kursus bahasa Inggris, Prancis, Arab, dan 
+    //       Jepang, serta <span className=" font-semibold">Bimbel Online</span> yang menyediakan 
+    //       bimbingan belajar bagi siswa dalam menghadapi ujian dan tugas sekolah.
+    //     </p>
+    //   </div>
+    // );
+  } else {
+    padding = "lg:pb-24 pb-12";
+    additionalContent = <div className="additional-content hidden"></div>;
+  }
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -105,11 +105,11 @@ function OurProgram() {
           </div>
         )}
       </div>
-    ));
+    ))
 
   return (
     <div className={`our-program flex items-center bg-background ${padding}`}>
-      <div className="program-container mx-auto lg:w-[956px] w-[342px] flex flex-col items-center gap-12 lg:pb-24 pb-12">
+      <div className="program-container mx-auto lg:w-[956px] w-[342px] flex flex-col items-center gap-12">
         <div className="program title flex flex-col gap-6 items-center">
           <h2 className="text-primary lg:text-4xl text-2xl font-semibold ">
             Program Kami
