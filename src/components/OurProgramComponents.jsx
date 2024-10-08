@@ -109,14 +109,14 @@ function OurProgram() {
 
   return (
     <div className={`our-program flex items-center bg-background ${padding}`}>
-      <div className="program-container mx-auto w-[956px] flex flex-col items-center gap-12 lg:pb-24 pb-12">
+      <div className="program-container mx-auto lg:w-[956px] w-[342px] flex flex-col items-center gap-12 lg:pb-24 pb-12">
         <div className="program title flex flex-col gap-6 items-center">
           <h2 className="text-primary lg:text-4xl text-2xl font-semibold ">
             Program Kami
           </h2>
           {additionalContent}
         </div>
-        <div className="additional-content flex lg:w-width-8 w-[310px] lg:p-6 p-4 justify-center items-center xs:self-stretch bg-white rounded-2xl">
+        <div className="additional-content flex lg:w-width-8 w-[342px] lg:p-6 p-4 justify-center items-center xs:self-stretch bg-white rounded-2xl">
         <p className="text-center text-base text-neutral-2 font-normal">
         Edu Tera Insani menawarkan program-program menarik seperti 
         <span className=" font-semibold">Teacher Workshop</span> 
