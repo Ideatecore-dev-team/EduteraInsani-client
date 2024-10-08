@@ -23,12 +23,11 @@ function LearningPath() {
             Bagaimana Cara Belajarnya?
           </h2>
           <p className="text-base text-neutral-2 w-mobile-6 ">
-            Jelajahi bagaimana Edu Tera Insani membimbing siswa melalui
-            perjalanan belajar terstruktur dan personal untuk kesuksesan
-            akademis optimal.
+          Pendaftaran di Edu Tera Insani mudah dan cepat, mulai perjalanan 
+          belajar Anda sekarang!
           </p>
         </div>
-        <img src={Learning} alt="Learning Plan" />
+        <img src={Learning} className="lg:w-[760px] w-[342px]" alt="Learning Plan" />
       </div>
     </div>
   );
