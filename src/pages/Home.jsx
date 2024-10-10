@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Hero from "../components/Hero";
 import WhyEdutera from "../components/WhyEdutera";
-import Digital from "../components/Digital";
+import Digital from "../components/Trailer";
 import OurProgram from "../components/OurProgramComponents";
 import HomeCurriculum from "../components/HomeCurriculum";
 import LearningPath from "../components/LearningPath";

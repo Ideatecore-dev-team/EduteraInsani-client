@@ -2,7 +2,7 @@
 import React from "react";
 import "./Hero.css";
 import ButtonLink from "./Buttons/LinkButton";
-import Banner from "/images/Main Banner.png";
+import Banner from "/images/HeroBanner.png";
 import MobileBanner from "/images/banner-mobile.png";
 import Teacher1 from "/images/teacher-1.png";
 import Teacher2 from "/images/teacher-2.png";
@@ -21,8 +21,8 @@ function Hero({ onCardHeroClick }) {
             <br /> Building Future.
           </h1>
           <p className=" text-neutral-2 text-base font-normal lg:w-width-5">
-            Bersama Edu Tera Insani, ciptakan masa depan cerah melalui pembelajaran 
-            digital yang inovatif dan bermakna.
+            Bersama Edu Tera Insani, ciptakan masa depan cerah melalui
+            pembelajaran digital yang inovatif dan bermakna.
           </p>
           <div className="cta flex items-start gap-2 lg:gap-3">
             <ButtonLink

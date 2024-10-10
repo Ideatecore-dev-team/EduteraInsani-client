@@ -51,3 +51,22 @@
 .border-class:hover svg path {
   fill: white;
 }
+
+.curriculum-content .border-class {
+  border: 2px solid white;
+  background: linear-gradient(to right, white 50%, #a88646 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
+  color: white;
+}
+
+.curriculum-content .border-class:hover {
+  background-position: left bottom;
+
+  color: black;
+}
+
+.curriculum-content .border-class:hover svg path {
+  fill: black;
+}
